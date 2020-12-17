@@ -1,18 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  function createMoviesList(films, parent) {
-    parent.innerHTML = "";
-    sortArr(films);
-    films.forEach((item, i) => {
-      parent.innerHTML += ` <li class="promo__interactive-item"> ${
-        i + 1
-      }) ${item}
-      <div class="delete"></div>
-    </li>`;
-    });
-  }
-  const sortArr = (arr) => {
-    arr.sort();
-  };
   const movieDB = {
     movies: [
       "Логан",
@@ -27,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form.add");
   const input = form.querySelector(".adding__input");
   const checkbox = form.querySelector("[type='checkbox']");
-  document.querySelectorAll(".delete").forEach((item, i) => {
+  const bin = document.querySelectorAll(".delete");
+
+  bin.forEach((item, i) => {
     item.addEventListener("click", () => {
       item.parentElement.remove();
       movieDB.movies.splice(i, 1);
@@ -53,4 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Введите корректные данные");
     }
   });
+
+  function createMoviesList(films, parent) {
+    parent.innerHTML = "";
+    sortArr(films);
+    films.forEach((item, i) => {
+      parent.innerHTML += ` <li class="promo__interactive-item"> ${
+        i + 1
+      }) ${item}
+      <div class="delete"></div>
+    </li>`;
+    });
+  }
+
+  const sortArr = (arr) => {
+    arr.sort();
+  };
 });
