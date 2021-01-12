@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
-  // Countdown timer
+  // Countdown food delivery
   const deadline = "2021-05-11";
   function getTimeRemaining(endTime) {
     let now = new Date();
@@ -75,5 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-  setTimer(".timer", deadline);
+  setTimer(".food delivery", deadline);
 });
