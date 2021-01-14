@@ -11,13 +11,6 @@
 a {
   text-decoration: none
 }
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
 
 .fade {
   animation-name: fade;
@@ -396,7 +389,7 @@ a {
   display: block;
   width: 16px;
   height: 16px;
-  background: url(../icons/switch.svg) center center/cover no-repeat
+  background: url(assets/icons/switch.svg) center center/cover no-repeat
 }
 
 .calculating__choose {
@@ -730,5 +723,13 @@ a {
   display: block;
   width: 280px;
   margin: 0 auto
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 

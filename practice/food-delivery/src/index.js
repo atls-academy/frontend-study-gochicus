@@ -12,11 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.remove("tabheader__item_active");
     });
   }
+
   function showContent(i = 0) {
     menuImage[i].classList.add("show", "fade");
     menuImage[i].classList.remove("hide");
     menuItems[i].classList.add("tabheader__item_active");
   }
+
   hideContent();
   showContent();
 
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const target = evt.target;
     if (target && target.classList.contains("tabheader__item")) {
       menuItems.forEach((item, i) => {
-        if (target == item) {
+        if (target === item) {
           hideContent();
           showContent(i);
         }
