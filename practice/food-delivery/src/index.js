@@ -33,4 +33,49 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+  // Countdown timer food delivery
+  const deadline = "2021-05-11";
+  function getTimeRemaining(endTime) {
+    let now = new Date();
+    const t = Date.parse(endTime) - now,
+      days = Math.floor(t / (1000 * 60 * 60 * 24)),
+      hours = Math.floor((t / (1000 * 60 * 60)) % 24),
+      minutes = Math.floor((t / 1000 / 60) % 60),
+      seconds = Math.floor((t / 1000) % 60);
+
+    return {
+      total: t,
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds,
+    };
+  }
+  function getZero(num) {
+    if (num >= 0 && num < 10) {
+      return `0${num}`;
+    } else {
+      return num;
+    }
+  }
+  function setTimer(selector, endTime) {
+    const timer = document.querySelector(selector);
+    const days = timer.querySelector("#days");
+    const hours = timer.querySelector("#hours");
+    const minutes = timer.querySelector("#minutes");
+    const seconds = timer.querySelector("#seconds");
+    const timeInterval = setInterval(updateTimer, 1000);
+    updateTimer();
+    function updateTimer() {
+      const t = getTimeRemaining(endTime);
+      days.innerHTML = getZero(t.days);
+      hours.innerHTML = getZero(t.hours);
+      minutes.innerHTML = getZero(t.minutes);
+      seconds.innerHTML = getZero(t.seconds);
+      if (t.total <= 0) {
+        clearInterval(timeInterval);
+      }
+    }
+  }
+  setTimer(".timer", deadline);
 });
