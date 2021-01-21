@@ -9,24 +9,24 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
   };
 
-  const ul = document.querySelector(".promo__interactive-list");
-  const form = document.querySelector("form.add");
-  const input = form.querySelector(".adding__input");
-  const checkbox = form.querySelector("[type='checkbox']");
-  const bin = document.querySelectorAll(".delete");
+  const ul: HTMLElement = document.querySelector(".promo__interactive-list");
+  const form: HTMLFormElement = document.querySelector("form.add");
+  const input: HTMLInputElement = form.querySelector(".adding__input");
+  const checkbox: HTMLInputElement = form.querySelector("[type='checkbox']");
+  const bin: NodeListOf<Element> = document.querySelectorAll(".delete");
 
   bin.forEach((item, i) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (): void => {
       item.parentElement.remove();
       movieDB.movies.splice(i, 1);
       createMoviesList(movieDB.movies, ul);
     });
   });
 
-  form.addEventListener("submit", (evt) => {
+  form.addEventListener("submit", (evt): void => {
     evt.preventDefault();
-    let newFilm = input.value;
-    const check = checkbox.checked;
+    let newFilm: string = input.value;
+    const check: boolean = checkbox.checked;
     if (newFilm.length > 21) {
       newFilm = `${newFilm.substr(0, 22)}...`;
     }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  function createMoviesList(films, parent) {
+  function createMoviesList(films: Array<string>, parent: HTMLElement): void {
     parent.innerHTML = "";
     sortArr(films);
     films.forEach((item, i) => {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const sortArr = (arr) => {
+  const sortArr = (arr: Array<string>): void => {
     arr.sort();
   };
 });

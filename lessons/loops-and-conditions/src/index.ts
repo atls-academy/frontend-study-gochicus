@@ -1,4 +1,3 @@
-
 const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
@@ -10,10 +9,10 @@ const personalMovieDB = {
 };
 
 for (let i = 0; i < 2; i++) {
-  const a = prompt("Один из последних просмотренных Вами фильмов?", "");
-  const b = prompt("Какую оценку вы бы ему поставили?", "");
+  const a: string = prompt("Один из последних просмотренных Вами фильмов?", "");
+  const b: number = +prompt("Какую оценку вы бы ему поставили?", "");
 
-  if (a != null && b != null && a !== "" && b !== "" && a.length < 50) {
+  if (a != null && b != null && a !== "" && a.length < 50) {
     personalMovieDB.movies[a] = b;
   } else {
     i--;

@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuParent = document.querySelector(".tabheader__items");
-  const menuImage = document.querySelectorAll(".tabcontent");
-  const menuItems = document.querySelectorAll(".tabheader__item");
+  const menuParent: HTMLElement = document.querySelector(".tabheader__items");
+  const menuImage: NodeListOf<Element> = document.querySelectorAll(
+    ".tabcontent"
+  );
+  const menuItems: NodeListOf<Element> = document.querySelectorAll(
+    ".tabheader__item"
+  );
 
-  function hideContent() {
+  function hideContent(): void {
     menuImage.forEach((image) => {
       image.classList.add("hide");
       image.classList.remove("show", "fade");
@@ -22,10 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
   hideContent();
   showContent();
 
-  menuParent.addEventListener("click", (evt) => {
-    const target = evt.target;
-    if (target && target.classList.contains("tabheader__item")) {
-      menuItems.forEach((item, i) => {
+  menuParent.addEventListener("click", (evt): void => {
+    const target: EventTarget = evt.target;
+    if (
+      target &&
+      (target as HTMLElement).classList.contains("tabheader__item")
+    ) {
+      menuItems.forEach((item: HTMLElement, i: number) => {
         if (target === item) {
           hideContent();
           showContent(i);
@@ -34,14 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   // Countdown timer food delivery
-  const deadline = "2021-05-11";
-  function getTimeRemaining(endTime) {
-    let now = new Date();
+  const deadline: string = "2021-05-11";
+  function getTimeRemaining(endTime: string) {
+    let now: any = new Date();
     const t = Date.parse(endTime) - now,
-      days = Math.floor(t / (1000 * 60 * 60 * 24)),
-      hours = Math.floor((t / (1000 * 60 * 60)) % 24),
-      minutes = Math.floor((t / 1000 / 60) % 60),
-      seconds = Math.floor((t / 1000) % 60);
+      days: number = Math.floor(t / (1000 * 60 * 60 * 24)),
+      hours: number = Math.floor((t / (1000 * 60 * 60)) % 24),
+      minutes: number = Math.floor((t / 1000 / 60) % 60),
+      seconds: number = Math.floor((t / 1000) % 60);
 
     return {
       total: t,
@@ -51,22 +58,22 @@ document.addEventListener("DOMContentLoaded", () => {
       seconds: seconds,
     };
   }
-  function getZero(num) {
+  function getZero(num: number) {
     if (num >= 0 && num < 10) {
       return `0${num}`;
     } else {
       return num;
     }
   }
-  function setTimer(selector, endTime) {
-    const timer = document.querySelector(selector);
-    const days = timer.querySelector("#days");
-    const hours = timer.querySelector("#hours");
-    const minutes = timer.querySelector("#minutes");
-    const seconds = timer.querySelector("#seconds");
+  function setTimer(selector: any, endTime: any) {
+    const timer: any = document.querySelector(selector);
+    const days: any = timer.querySelector("#days");
+    const hours: any = timer.querySelector("#hours");
+    const minutes: any = timer.querySelector("#minutes");
+    const seconds: any = timer.querySelector("#seconds");
     const timeInterval = setInterval(updateTimer, 1000);
     updateTimer();
-    function updateTimer() {
+    function updateTimer(): void {
       const t = getTimeRemaining(endTime);
       days.innerHTML = getZero(t.days);
       hours.innerHTML = getZero(t.hours);
