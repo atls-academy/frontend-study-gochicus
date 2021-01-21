@@ -7,7 +7,7 @@ const movieDB = {
     "Скотт Пилигрим против...",
   ],
 };
-function replaceOrder(): void {
+function replaceOrder() {
   const filmOrder: Array<string> = movieDB.movies.sort();
   const ul: HTMLElement = document.querySelector(".promo__interactive-list");
   ul.innerHTML = "";
@@ -28,14 +28,14 @@ function removeAds(): void {
   });
 }
 removeAds();
-function changeGenre(): void {
+function changeGenre(): string {
   const genre: HTMLElement = document.querySelector(".promo__genre");
-  genre.textContent = "Драма";
+  return (genre.textContent = "Драма");
 }
 changeGenre();
 
-function changeBackground(): void {
+function changeBackground(): string {
   const bg: HTMLElement = document.querySelector(".promo__bg");
-  bg.style.backgroundImage = 'url("img/bg.jpg")';
+  return (bg.style.backgroundImage = 'url("img/bg.jpg")');
 }
 changeBackground();

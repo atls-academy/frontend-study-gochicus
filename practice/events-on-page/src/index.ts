@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  form.addEventListener("submit", (evt): void => {
-    evt.preventDefault();
+  form.addEventListener("submit", (event): void => {
+    event.preventDefault();
     let newFilm: string = input.value;
     const check: boolean = checkbox.checked;
     if (newFilm.length > 21) {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  function createMoviesList(films: Array<string>, parent: HTMLElement): void {
+  function createMoviesList(films: Array<string>, parent: HTMLElement) {
     parent.innerHTML = "";
     sortArr(films);
     films.forEach((item, i) => {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const sortArr = (arr: Array<string>): void => {
-    arr.sort();
+  const sortArr = (array: Array<string>): void => {
+    array.sort();
   };
 });

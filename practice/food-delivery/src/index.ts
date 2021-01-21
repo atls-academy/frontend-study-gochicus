@@ -42,44 +42,44 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // Countdown timer food delivery
   const deadline: string = "2021-05-11";
-  function getTimeRemaining(endTime: string) {
-    let now: any = new Date();
-    const t = Date.parse(endTime) - now,
-      days: number = Math.floor(t / (1000 * 60 * 60 * 24)),
-      hours: number = Math.floor((t / (1000 * 60 * 60)) % 24),
-      minutes: number = Math.floor((t / 1000 / 60) % 60),
-      seconds: number = Math.floor((t / 1000) % 60);
+  function getTimeRemaining(endTime: string): Object {
+    let now: Date = new Date();
+    const timeCurrent: number = Date.parse(endTime) - Number(now),
+      days: number = Math.floor(timeCurrent / (1000 * 60 * 60 * 24)),
+      hours: number = Math.floor((timeCurrent / (1000 * 60 * 60)) % 24),
+      minutes: number = Math.floor((timeCurrent / 1000 / 60) % 60),
+      seconds: number = Math.floor((timeCurrent / 1000) % 60);
 
     return {
-      total: t,
+      total: timeCurrent,
       days: days,
       hours: hours,
       minutes: minutes,
       seconds: seconds,
     };
   }
-  function getZero(num: number) {
+  function getZero(num: number): string | number {
     if (num >= 0 && num < 10) {
       return `0${num}`;
     } else {
       return num;
     }
   }
-  function setTimer(selector: any, endTime: any) {
-    const timer: any = document.querySelector(selector);
-    const days: any = timer.querySelector("#days");
-    const hours: any = timer.querySelector("#hours");
-    const minutes: any = timer.querySelector("#minutes");
-    const seconds: any = timer.querySelector("#seconds");
+  function setTimer(selector: any, endTime: string) {
+    const timer: HTMLElement = document.querySelector(selector);
+    const days: HTMLElement = timer.querySelector("#days");
+    const hours: HTMLElement = timer.querySelector("#hours");
+    const minutes: HTMLElement = timer.querySelector("#minutes");
+    const seconds: HTMLElement = timer.querySelector("#seconds");
     const timeInterval = setInterval(updateTimer, 1000);
     updateTimer();
-    function updateTimer(): void {
-      const t = getTimeRemaining(endTime);
-      days.innerHTML = getZero(t.days);
-      hours.innerHTML = getZero(t.hours);
-      minutes.innerHTML = getZero(t.minutes);
-      seconds.innerHTML = getZero(t.seconds);
-      if (t.total <= 0) {
+    function updateTimer() {
+      const time: any = getTimeRemaining(endTime);
+      days.innerHTML = String(getZero(time.days));
+      hours.innerHTML = String(getZero(time.hours));
+      minutes.innerHTML = String(getZero(time.minutes));
+      seconds.innerHTML = String(getZero(time.seconds));
+      if (time.total <= 0) {
         clearInterval(timeInterval);
       }
     }
