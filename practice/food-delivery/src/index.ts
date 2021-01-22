@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuParent: HTMLElement = document.querySelector(".tabheader__items");
   const menuImage: NodeListOf<Element> = document.querySelectorAll(
-    ".tabcontent"
+    ".slidecontent"
   );
   const menuItems: NodeListOf<Element> = document.querySelectorAll(
-    ".tabheader__item"
+    ".slideheader__item"
   );
 
   function hideContent(): void {
@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
       image.classList.remove("show", "fade");
     });
     menuItems.forEach((item) => {
-      item.classList.remove("tabheader__item_active");
+      item.classList.remove("slideheader__item_active");
     });
   }
 
-  function showContent(i = 0) {
-    menuImage[i].classList.add("show", "fade");
-    menuImage[i].classList.remove("hide");
-    menuItems[i].classList.add("tabheader__item_active");
+  function showContent(index = 0): void {
+    menuImage[index].classList.add("show", "fade");
+    menuImage[index].classList.remove("hide");
+    menuItems[index].classList.add("slideheader__item_active");
   }
 
   hideContent();
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const target: EventTarget = evt.target;
     if (
       target &&
-      (target as HTMLElement).classList.contains("tabheader__item")
+      (target as HTMLElement).classList.contains("slideheader__item")
     ) {
       menuItems.forEach((item: HTMLElement, i: number) => {
         if (target === item) {

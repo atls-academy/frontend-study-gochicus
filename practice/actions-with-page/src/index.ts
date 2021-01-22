@@ -20,10 +20,10 @@ function replaceOrder() {
 replaceOrder();
 
 function removeAds(): void {
-  const el: NodeListOf<Element> = document.querySelectorAll(
+  const element: NodeListOf<Element> = document.querySelectorAll(
     ".promo__adv-title ~ img "
   );
-  el.forEach((item, i): void => {
+  element.forEach((item, i): void => {
     item.remove();
   });
 }
@@ -35,7 +35,7 @@ function changeGenre(): string {
 changeGenre();
 
 function changeBackground(): string {
-  const bg: HTMLElement = document.querySelector(".promo__bg");
-  return (bg.style.backgroundImage = 'url("img/bg.jpg")');
+  const backgroundImage: HTMLElement = document.querySelector(".promo__bg");
+  return (backgroundImage.style.backgroundImage = 'url("img/bg.jpg")');
 }
 changeBackground();

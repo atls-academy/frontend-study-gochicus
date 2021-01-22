@@ -11,11 +11,17 @@ const personalMoviesDB = {
   },
   rememberMyFilms: (): Object => {
     for (let i = 0; i < 2; i++) {
-      let a = prompt("Один из последних просмотренных фильмов?", "");
-      let b = prompt("Какую оценку вы бы ему поставили?", "");
+      let lastFilm = prompt("Один из последних просмотренных фильмов?", "");
+      let filmRating = prompt("Какую оценку вы бы ему поставили?", "");
 
-      if (a != null && b != null && a !== "" && b !== "" && a.length < 50) {
-        return (personalMoviesDB.movies[a] = b);
+      if (
+        lastFilm != null &&
+        filmRating != null &&
+        lastFilm !== "" &&
+        filmRating !== "" &&
+        lastFilm.length < 50
+      ) {
+        return (personalMoviesDB.movies[lastFilm] = filmRating);
       } else {
         i--;
       }

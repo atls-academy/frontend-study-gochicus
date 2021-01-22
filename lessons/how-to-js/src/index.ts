@@ -1,4 +1,4 @@
-let numberofFilms: number = +prompt("Сколько фильмов вы просмотрели?", "");
+let numberOfFilms: number = +prompt("Сколько фильмов вы просмотрели?", "");
 interface Database {
   count: number;
   movies: Object;
@@ -7,18 +7,18 @@ interface Database {
   private: boolean;
 }
 const personalMoviesDB: Database = {
-  count: numberofFilms,
+  count: numberOfFilms,
   movies: {},
   actors: {},
   genres: [],
   private: false,
 };
-const a: string = prompt("Последний просмотренный фильм?", "");
-const b: number = +prompt("На сколько оцените его?", "");
-const c: string = prompt("Последний просмотренный фильм?", "");
-const d: number = +prompt("На сколько оцените его?", "");
+const lastFilm: string = prompt("Последний просмотренный фильм?", "");
+const filmRating: number = +prompt("На сколько оцените его?", "");
+const nextLastFilm: string = prompt("Последний просмотренный фильм?", "");
+const nextFilmRating: number = +prompt("На сколько оцените его?", "");
 
-personalMoviesDB.movies[a] = b;
-personalMoviesDB.movies[c] = d;
+personalMoviesDB.movies[lastFilm] = filmRating;
+personalMoviesDB.movies[nextLastFilm] = nextFilmRating;
 
 console.log(personalMoviesDB);

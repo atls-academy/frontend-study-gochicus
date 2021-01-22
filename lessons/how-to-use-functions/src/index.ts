@@ -24,11 +24,19 @@ let personalMoviesDB: Database = {
 
 function rememberMyFilms(): unknown {
   for (let i = 0; i < 2; i++) {
-    let a: string = prompt("Один из последних просмотренных фильмов?", "");
-    let b: number = +prompt("Какую оценку вы бы ему поставили?", "");
+    let lastFilm: string = prompt(
+      "Один из последних просмотренных фильмов?",
+      ""
+    );
+    let filmRating: number = +prompt("Какую оценку вы бы ему поставили?", "");
 
-    if (typeof a != null && typeof b != null && a !== "" && a.length < 50) {
-      return (personalMoviesDB.movies[a] = b);
+    if (
+      typeof lastFilm != null &&
+      typeof filmRating != null &&
+      lastFilm !== "" &&
+      lastFilm.length < 50
+    ) {
+      return (personalMoviesDB.movies[lastFilm] = filmRating);
     } else {
       i--;
     }
