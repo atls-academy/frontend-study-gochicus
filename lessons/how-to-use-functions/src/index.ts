@@ -22,7 +22,7 @@ let personalMoviesDB: Database = {
   private: false,
 };
 
-function rememberMyFilms(): unknown {
+function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
     let lastFilm: string = prompt(
       "Один из последних просмотренных фильмов?",
@@ -36,7 +36,7 @@ function rememberMyFilms(): unknown {
       lastFilm !== "" &&
       lastFilm.length < 50
     ) {
-      return (personalMoviesDB.movies[lastFilm] = filmRating);
+      personalMoviesDB.movies[lastFilm] = filmRating;
     } else {
       i--;
     }

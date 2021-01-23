@@ -9,7 +9,7 @@ const personalMoviesDB = {
     }
     return personalMoviesDB.count;
   },
-  rememberMyFilms: (): Object => {
+  rememberMyFilms: () => {
     for (let i = 0; i < 2; i++) {
       let lastFilm = prompt("Один из последних просмотренных фильмов?", "");
       let filmRating = prompt("Какую оценку вы бы ему поставили?", "");
@@ -21,7 +21,7 @@ const personalMoviesDB = {
         filmRating !== "" &&
         lastFilm.length < 50
       ) {
-        return (personalMoviesDB.movies[lastFilm] = filmRating);
+        personalMoviesDB.movies[lastFilm] = filmRating;
       } else {
         i--;
       }
