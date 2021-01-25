@@ -1,7 +1,7 @@
 let numberOfFilms: number = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const moviesCount = (): void => {
-  while (typeof numberOfFilms === null || isNaN(numberOfFilms)) {
+  while (numberOfFilms === null || isNaN(numberOfFilms)) {
     numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
   }
 };
@@ -14,7 +14,7 @@ interface Database {
   genres: Array<string>;
   private: boolean;
 }
-let personalMoviesDB: Database = {
+const personalMoviesDB: Database = {
   count: numberOfFilms,
   movies: {},
   actors: {},
@@ -24,15 +24,15 @@ let personalMoviesDB: Database = {
 
 function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
-    let lastFilm: string = prompt(
+    const lastFilm: string = prompt(
       "Один из последних просмотренных фильмов?",
       ""
     );
-    let filmRating: number = +prompt("Какую оценку вы бы ему поставили?", "");
+    const filmRating: number = +prompt("Какую оценку вы бы ему поставили?", "");
 
     if (
-      typeof lastFilm != null &&
-      typeof filmRating != null &&
+      lastFilm != null &&
+      filmRating != null &&
       lastFilm !== "" &&
       lastFilm.length < 50
     ) {

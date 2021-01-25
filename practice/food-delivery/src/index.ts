@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showContent();
 
   menuParent.addEventListener("click", (evt): void => {
-    const target: EventTarget = evt.target;
+    const { target } = evt;
     if (
       target &&
       (target as HTMLElement).classList.contains("slideheader__item")
@@ -43,27 +43,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Countdown timer food delivery
   const deadline: string = "2021-05-11";
   function getTimeRemaining(endTime: string): Object {
-    let now: Date = new Date();
-    const timeCurrent: number = Date.parse(endTime) - Number(now),
-      days: number = Math.floor(timeCurrent / (1000 * 60 * 60 * 24)),
-      hours: number = Math.floor((timeCurrent / (1000 * 60 * 60)) % 24),
-      minutes: number = Math.floor((timeCurrent / 1000 / 60) % 60),
-      seconds: number = Math.floor((timeCurrent / 1000) % 60);
+    const now: Date = new Date();
+    const timeCurrent: number = Date.parse(endTime) - Number(now);
+    const days: number = Math.floor(timeCurrent / (1000 * 60 * 60 * 24));
+    const hours: number = Math.floor((timeCurrent / (1000 * 60 * 60)) % 24);
+    const minutes: number = Math.floor((timeCurrent / 1000 / 60) % 60);
+    const seconds: number = Math.floor((timeCurrent / 1000) % 60);
 
     return {
       total: timeCurrent,
-      days: days,
-      hours: hours,
-      minutes: minutes,
-      seconds: seconds,
+      days,
+      hours,
+      minutes,
+      seconds,
     };
   }
   function getZero(num: number): string | number {
     if (num >= 0 && num < 10) {
       return `0${num}`;
-    } else {
-      return num;
     }
+    return num;
   }
   function setTimer(selector: any, endTime: string) {
     const timer: HTMLElement = document.querySelector(selector);

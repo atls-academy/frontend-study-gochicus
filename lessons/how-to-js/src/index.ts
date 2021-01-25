@@ -1,4 +1,4 @@
-let numberOfFilms: number = +prompt("Сколько фильмов вы просмотрели?", "");
+const numberOfFilms: number = +prompt("Сколько фильмов вы просмотрели?", "");
 interface Database {
   count: number;
   movies: Object;

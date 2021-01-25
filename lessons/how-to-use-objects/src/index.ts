@@ -11,8 +11,8 @@ const personalMoviesDB = {
   },
   rememberMyFilms: () => {
     for (let i = 0; i < 2; i++) {
-      let lastFilm = prompt("Один из последних просмотренных фильмов?", "");
-      let filmRating = prompt("Какую оценку вы бы ему поставили?", "");
+      const lastFilm = prompt("Один из последних просмотренных фильмов?", "");
+      const filmRating = prompt("Какую оценку вы бы ему поставили?", "");
 
       if (
         lastFilm != null &&
@@ -54,7 +54,7 @@ const personalMoviesDB = {
   },
   writeYourGenres: (): void => {
     for (let i = 1; i <= 3; i++) {
-      let genre: string = prompt(`Ваш любимый жанр № ${i}?`);
+      const genre: string = prompt(`Ваш любимый жанр № ${i}?`);
       if (genre === "" || genre === null) {
         alert("Вы ввели некорректные данные");
         i--;

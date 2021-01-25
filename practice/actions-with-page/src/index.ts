@@ -28,14 +28,14 @@ function removeAds(): void {
   });
 }
 removeAds();
-function changeGenre(): string {
+function changeGenre() {
   const genre: HTMLElement = document.querySelector(".promo__genre");
-  return (genre.textContent = "Драма");
+  genre.textContent = "Драма";
 }
 changeGenre();
 
-function changeBackground(): string {
+function changeBackground() {
   const backgroundImage: HTMLElement = document.querySelector(".promo__bg");
-  return (backgroundImage.style.backgroundImage = 'url("img/bg.jpg")');
+  backgroundImage.style.backgroundImage = 'url("img/bg.jpg")';
 }
 changeBackground();
