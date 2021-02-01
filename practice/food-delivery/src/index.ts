@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
   })
-  // Countdown timer food delivery
+  /* Countdown timer food delivery */
   const deadline: string = '2021-05-11'
   function getTimeRemaining(endTime: string): Object {
     const now: Date = new Date()
