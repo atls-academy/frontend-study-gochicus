@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const form: HTMLFormElement = document.querySelector('form.add')
   const input: HTMLInputElement = form.querySelector('.adding__input')
   const checkbox: HTMLInputElement = form.querySelector("[type='checkbox']")
-  const binIcon: NodeListOf<Element> = document.querySelectorAll('.delete')
+  const remove: NodeListOf<Element> = document.querySelectorAll('.delete')
 
-  binIcon.forEach((item, i) => {
+  remove.forEach((item, i) => {
     item.addEventListener('click', (): void => {
       item.parentElement.remove()
       movieDB.movies.splice(i, 1)
