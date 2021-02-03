@@ -77,4 +77,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   setTimer('.timer', deadline)
+  /* Modal Window */
+  const modalTrigger: NodeListOf<Element> = document.querySelectorAll('[data-modal]')
+  const modalWindow: HTMLElement = document.querySelector('.modal')
+  const modalCloseButton: HTMLElement = document.querySelector('[data-close]')
+
+  modalTrigger.forEach(function (button) {
+    button.addEventListener('click', openModal)
+  })
+  function closeModal() {
+    modalWindow.classList.add('hide')
+    modalWindow.classList.remove('show')
+    document.body.style.overflow = ''
+  }
+  function openModal() {
+    modalWindow.classList.add('show')
+    modalWindow.classList.remove('hide')
+    document.body.style.overflow = 'hidden'
+  }
+  modalCloseButton.addEventListener('click', closeModal)
+  modalWindow.addEventListener('click', function (event) {
+    if (event.target === modalWindow) {
+      closeModal()
+    }
+  })
 })
