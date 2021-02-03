@@ -3,8 +3,7 @@ name: lintcheck
 on: pull_request
 
 jobs:
-  run:
-    name: Run
+  lintcheck:
     runs-on: ubuntu-latest
 
     steps:
