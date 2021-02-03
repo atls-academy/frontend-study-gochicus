@@ -2,7 +2,7 @@
   "license": "BSD 3-Clause",
   "private": true,
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --fix '.**/*.{ts,js}'"
+    "lint": "./node_modules/.bin/eslint --fix './**/*.{ts,js}'"
   },
   "devDependencies": {
     "@atlantis-lab/tsconfig": "^0.1.2",
