@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalWindow: HTMLElement = document.querySelector('.modal')
   const modalCloseButton: HTMLElement = document.querySelector('[data-close]')
 
-  modalTrigger.forEach(function (button) {
+  modalTrigger.forEach((button) => {
     button.addEventListener('click', openModal)
   })
   function closeModal() {
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden'
   }
   modalCloseButton.addEventListener('click', closeModal)
-  modalWindow.addEventListener('click', function (event) {
+  modalWindow.addEventListener('click', (event) => {
     if (event.target === modalWindow) {
       closeModal()
     }
