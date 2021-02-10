@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuParent: HTMLElement = document.querySelector('.tabheader__items')
+  const menuParent: HTMLElement = document.querySelector('.slideheader__items')
   const menuImage: NodeListOf<Element> = document.querySelectorAll('.slidecontent')
   const menuItems: NodeListOf<Element> = document.querySelectorAll('.slideheader__item')
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   hideContent()
   showContent()
 
-  menuParent.addEventListener('click', (evt): void => {
+  menuParent.addEventListener('click', (evt) => {
     const { target } = evt
     if (target && (target as HTMLElement).classList.contains('slideheader__item')) {
       menuItems.forEach((item: HTMLElement, i: number) => {
@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Modal Window */
   const modalTrigger: NodeListOf<Element> = document.querySelectorAll('[data-modal]')
   const modalWindow: HTMLElement = document.querySelector('.modal')
-  const modalCloseButton: HTMLElement = document.querySelector('[data-close]')
 
   modalTrigger.forEach((button) => {
     button.addEventListener('click', openModal)
@@ -95,9 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     modalWindow.classList.remove('hide')
     document.body.style.overflow = 'hidden'
   }
-  modalCloseButton.addEventListener('click', closeModal)
+
   modalWindow.addEventListener('click', (event) => {
-    if (event.target === modalWindow) {
+    if (
+      event.target === modalWindow ||
+      (event.target as HTMLElement).getAttribute('data-close') === ''
+    ) {
       closeModal()
     }
   })
@@ -161,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.parentSelector.append(element)
     }
   }
+
   new MenuCard(
     '../src/assets/img/tabs/vegy.jpg',
     'fitness',
@@ -172,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.menu .container',
     'menu__item'
   ).render()
+
   new MenuCard(
     '../src/assets/img/tabs/elite.jpg',
     'premium',
@@ -194,4 +198,75 @@ document.addEventListener('DOMContentLoaded', () => {
     '.menu .container',
     'menu__item'
   ).render()
+
+  const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll('form')
+  const serverMessage = {
+    loading: '../src/assets/img/spinner.svg',
+    success: 'Спасибо! Скоро мы с вами свяжемся',
+    error: 'Что-то пошло не так...',
+  }
+
+  forms.forEach((item: HTMLFormElement) => {
+    postData(item)
+  })
+
+  function postData(form: HTMLFormElement) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+
+      const statusMessage: HTMLImageElement = document.createElement('img')
+      statusMessage.src = serverMessage.loading
+      statusMessage.style.cssText = `
+                display: block;
+                margin: 0 auto;
+            `
+      form.insertAdjacentElement('afterend', statusMessage)
+
+      const request: XMLHttpRequest = new XMLHttpRequest()
+      request.open('POST', 'https://jsonplaceholder.typicode.com/users')
+      request.setRequestHeader('Content-type', 'application/json')
+      const formData: FormData = new FormData(form)
+
+      const rawFormData: Object = {}
+      formData.forEach((value, key) => {
+        rawFormData[key] = value
+      })
+      const refactoredData: string = JSON.stringify(rawFormData)
+
+      request.send(refactoredData)
+
+      request.addEventListener('load', () => {
+        if (request.status === 201) {
+          showThanksModal(serverMessage.success)
+          statusMessage.remove()
+          form.reset()
+        } else {
+          showThanksModal(serverMessage.error)
+        }
+      })
+    })
+  }
+
+  function showThanksModal(thanksMessage: string) {
+    const previousModalDialog = document.querySelector('.modal__dialog')
+
+    previousModalDialog.classList.add('hide')
+    openModal()
+
+    const thanksModal = document.createElement('div')
+    thanksModal.classList.add('modal__dialog')
+    thanksModal.innerHTML = `
+            <div class="modal__content">
+                <div class="modal__close" data-close>×</div>
+                <div class="modal__title">${thanksMessage}</div>
+            </div>
+        `
+    document.querySelector('.modal').append(thanksModal)
+    setTimeout(() => {
+      thanksModal.remove()
+      previousModalDialog.classList.add('show')
+      previousModalDialog.classList.remove('hide')
+      closeModal()
+    }, 4000)
+  }
 })
