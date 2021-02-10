@@ -231,9 +231,9 @@ document.addEventListener('DOMContentLoaded', () => {
       formData.forEach((value, key) => {
         rawFormData[key] = value
       })
-      const refactoredData: string = JSON.stringify(rawFormData)
+      const toJSON: string = JSON.stringify(rawFormData)
 
-      request.send(refactoredData)
+      request.send(toJSON)
 
       request.addEventListener('load', () => {
         if (request.status === 201) {
