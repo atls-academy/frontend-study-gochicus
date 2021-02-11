@@ -221,29 +221,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 margin: 0 auto;
             `
       form.insertAdjacentElement('afterend', statusMessage)
-
-      const request: XMLHttpRequest = new XMLHttpRequest()
-      request.open('POST', 'https://jsonplaceholder.typicode.com/users')
-      request.setRequestHeader('Content-type', 'application/json')
       const formData: FormData = new FormData(form)
-
       const rawFormData: Object = {}
       formData.forEach((value, key) => {
         rawFormData[key] = value
       })
-      const toJSON: string = JSON.stringify(rawFormData)
 
-      request.send(toJSON)
-
-      request.addEventListener('load', () => {
-        if (request.status === 201) {
-          showThanksModal(serverMessage.success)
-          statusMessage.remove()
-          form.reset()
-        } else {
-          showThanksModal(serverMessage.error)
-        }
+      fetch('https://jsonplaceholder.typicode.com/users', {
+        method: 'POST',
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify(rawFormData),
       })
+        .then((response: Response) => {
+          if (response.status === 201) {
+            return Promise.resolve(response).then(() => {
+              showThanksModal(serverMessage.success)
+              statusMessage.remove()
+            })
+          }
+          return Promise.reject(response).then(() => {
+            showThanksModal(serverMessage.error)
+          })
+        })
+        .catch(() => {
+          showThanksModal(serverMessage.error)
+        })
+        .finally(() => {
+          form.reset()
+        })
     })
   }
 
