@@ -163,43 +163,44 @@ document.addEventListener('DOMContentLoaded', () => {
       this.parentSelector.append(element)
     }
   }
+  /* client-server interaction */
 
-  new MenuCard(
-    '../src/assets/img/tabs/vegy.jpg',
-    'fitness',
-    `Меню "Фитнес"`,
-    `Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и   фруктов. 
-    Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким
-  качеством!`,
-    10,
-    '.menu .container',
-    'menu__item'
-  ).render()
+  getResource('https://6027afc0dd4afd001754a9b0.mockapi.io/api/menu').then((data) => {
+    data.forEach(({ imgSrc, alt, title, description, price }) => {
+      new MenuCard(
+        imgSrc,
+        alt,
+        title,
+        description,
+        price,
+        '.menu .container',
+        'menu__item'
+      ).render()
+    })
+  })
+  async function getResource(url) {
+    const res = await fetch(url)
 
-  new MenuCard(
-    '../src/assets/img/tabs/elite.jpg',
-    'premium',
-    `Меню “Премиум”`,
-    `В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд.
-     Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!`,
-    18,
-    '.menu .container',
-    'menu__item'
-  ).render()
+    if (!res.ok) {
+      throw new Error(`Could not fetch ${url}, status: ${res.status}`)
+    }
 
-  new MenuCard(
-    '../src/assets/img/tabs/post.jpg',
-    'post',
-    `Меню "Постное"`,
-    `Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов  животного происхождения, 
-    молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет
-    тофу и импортных вегетарианских стейков.`,
-    22,
-    '.menu .container',
-    'menu__item'
-  ).render()
+    return res.json()
+  }
+  async function sendFormData(url: string, data: string) {
+    const result: Response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: data,
+    })
+
+    return result.json()
+  }
 
   const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll('form')
+
   const serverMessage = {
     loading: '../src/assets/img/spinner.svg',
     success: 'Спасибо! Скоро мы с вами свяжемся',
@@ -221,19 +222,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 margin: 0 auto;
             `
       form.insertAdjacentElement('afterend', statusMessage)
-      const formData: FormData = new FormData(form)
-      const rawFormData: Object = {}
-      formData.forEach((value, key) => {
-        rawFormData[key] = value
-      })
 
-      fetch('https://jsonplaceholder.typicode.com/users', {
-        method: 'POST',
-        headers: { 'Content-type': 'application/json' },
-        body: JSON.stringify(rawFormData),
-      })
+      const formData: FormData = new FormData(form)
+
+      const toJSON = JSON.stringify(Object.fromEntries(formData.entries()))
+
+      sendFormData('https://6027afc0dd4afd001754a9b0.mockapi.io/api/users', toJSON)
         .then((response: Response) => {
-          if (response.status === 201) {
+          if (response.ok) {
             return Promise.resolve(response).then(() => {
               showThanksModal(serverMessage.success)
               statusMessage.remove()
