@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   /* client-server interaction */
 
-  getResource('http://localhost:3005/menu').then((data) => {
+  getResource('https://6027afc0dd4afd001754a9b0.mockapi.io/api/menu').then((data) => {
     data.forEach(({ imgSrc, alt, title, description, price }) => {
       new MenuCard(
         imgSrc,
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const toJSON = JSON.stringify(Object.fromEntries(formData.entries()))
 
-      sendFormData('http://localhost:3005/requests/', toJSON)
+      sendFormData('https://6027afc0dd4afd001754a9b0.mockapi.io/api/users', toJSON)
         .then((response: Response) => {
           if (response.ok) {
             return Promise.resolve(response).then(() => {
