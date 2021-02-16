@@ -307,17 +307,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function changeSlide() {
+  function changeSlide(num: number) {
+    slideIndex += num
     showSlides(slideIndex)
   }
 
   previousSlide.addEventListener('click', () => {
-    slideIndex -= 1
-    changeSlide()
+    changeSlide(-1)
   })
 
   nextSlide.addEventListener('click', () => {
-    slideIndex += 1
-    changeSlide()
+    changeSlide(1)
   })
 })
