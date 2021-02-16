@@ -280,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   slidesCounter()
   showSlides(slideIndex)
+
   function slidesCounter() {
     if (offerSlides.length < 10) {
       totalSlidesCount.textContent = `0${offerSlides.length}`
@@ -287,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
       totalSlidesCount.textContent = `${offerSlides.length}`
     }
   }
+
   function showSlides(index: number) {
     if (index > offerSlides.length) {
       slideIndex = 1
@@ -294,29 +296,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (index < 1) {
       slideIndex = offerSlides.length
     }
-  }
-  offerSlides.forEach((slide: HTMLElement) => slide.classList.add('hide'))
-  offerSlides[slideIndex - 1].classList.add('show')
-  offerSlides[slideIndex - 1].classList.remove('hide')
+    offerSlides.forEach((slide: HTMLElement) => slide.classList.add('hide'))
+    offerSlides[slideIndex - 1].classList.add('show')
+    offerSlides[slideIndex - 1].classList.remove('hide')
 
-  if (offerSlides.length < 10) {
-    currentSlide.textContent = `0${slideIndex}`
-  } else {
-    currentSlide.textContent = `${slideIndex}`
+    if (offerSlides.length < 10) {
+      currentSlide.textContent = `0${slideIndex}`
+    } else {
+      currentSlide.textContent = `${slideIndex}`
+    }
   }
+
   function changeSlide() {
     showSlides(slideIndex)
   }
 
   previousSlide.addEventListener('click', () => {
-    slideIndex += 1
+    slideIndex -= 1
     changeSlide()
-    slidesCounter()
   })
 
   nextSlide.addEventListener('click', () => {
-    slideIndex -= 1
+    slideIndex += 1
     changeSlide()
-    slidesCounter()
   })
 })
