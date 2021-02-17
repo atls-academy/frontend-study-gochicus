@@ -270,4 +270,53 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal()
     }, 4000)
   }
+  /* slider */
+  const offerSlides: NodeListOf<HTMLElement> = document.querySelectorAll('.offer__slide')
+  const previousSlide: HTMLElement = document.querySelector('.offer__slider-prev')
+  const nextSlide: HTMLElement = document.querySelector('.offer__slider-next')
+  const totalSlidesCount: HTMLElement = document.querySelector('#total')
+  const currentSlide = document.querySelector('#current')
+  let slideIndex: number = 1
+
+  slidesCounter()
+  showSlides(slideIndex)
+
+  function slidesCounter() {
+    if (offerSlides.length < 10) {
+      totalSlidesCount.textContent = `0${offerSlides.length}`
+    } else {
+      totalSlidesCount.textContent = `${offerSlides.length}`
+    }
+  }
+
+  function showSlides(index: number) {
+    if (index > offerSlides.length) {
+      slideIndex = 1
+    }
+    if (index < 1) {
+      slideIndex = offerSlides.length
+    }
+    offerSlides.forEach((slide: HTMLElement) => slide.classList.add('hide'))
+    offerSlides[slideIndex - 1].classList.add('show')
+    offerSlides[slideIndex - 1].classList.remove('hide')
+
+    if (offerSlides.length < 10) {
+      currentSlide.textContent = `0${slideIndex}`
+    } else {
+      currentSlide.textContent = `${slideIndex}`
+    }
+  }
+
+  function changeSlide(num: number) {
+    slideIndex += num
+    showSlides(slideIndex)
+  }
+
+  previousSlide.addEventListener('click', () => {
+    changeSlide(-1)
+  })
+
+  nextSlide.addEventListener('click', () => {
+    changeSlide(1)
+  })
 })
