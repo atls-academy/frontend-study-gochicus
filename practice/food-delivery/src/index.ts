@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuParent: HTMLElement = document.querySelector('.slideheader__items')
-  const menuImage: NodeListOf<Element> = document.querySelectorAll('.slidecontent')
-  const menuItems: NodeListOf<Element> = document.querySelectorAll('.slideheader__item')
+  const menuParent: HTMLElement = document.querySelector('.slideHeaderItems')
+  const menuImage: NodeListOf<Element> = document.querySelectorAll('.slideContent')
+  const menuItems: NodeListOf<Element> = document.querySelectorAll('.slideHeaderItem')
 
   function hideContent(): void {
     menuImage.forEach((image) => {
