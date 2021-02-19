@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuParent: HTMLElement = document.querySelector('.slideheader__items')
-  const menuImage: NodeListOf<Element> = document.querySelectorAll('.slidecontent')
-  const menuItems: NodeListOf<Element> = document.querySelectorAll('.slideheader__item')
+  const menuParent: HTMLElement = document.querySelector('.slideHeaderItems')
+  const menuImage: NodeListOf<Element> = document.querySelectorAll('.slideContent')
+  const menuItems: NodeListOf<Element> = document.querySelectorAll('.slideHeaderItem')
 
   function hideContent(): void {
     menuImage.forEach((image) => {
@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
       image.classList.remove('show', 'fade')
     })
     menuItems.forEach((item) => {
-      item.classList.remove('slideheader__item_active')
+      item.classList.remove('slideHeaderItem-active')
     })
   }
 
   function showContent(index = 0): void {
     menuImage[index].classList.add('show', 'fade')
     menuImage[index].classList.remove('hide')
-    menuItems[index].classList.add('slideheader__item_active')
+    menuItems[index].classList.add('slideHeaderItem-active')
   }
 
   hideContent()
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   menuParent.addEventListener('click', (evt) => {
     const { target } = evt
-    if (target && (target as HTMLElement).classList.contains('slideheader__item')) {
+    if (target && (target as HTMLElement).classList.contains('slideHeaderItem')) {
       menuItems.forEach((item: HTMLElement, i: number) => {
         if (target === item) {
           hideContent()
