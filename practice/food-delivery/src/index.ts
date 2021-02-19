@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
       image.classList.remove('show', 'fade')
     })
     menuItems.forEach((item) => {
-      item.classList.remove('slideheader__item_active')
+      item.classList.remove('slideHeaderItemActive')
     })
   }
 
   function showContent(index = 0): void {
     menuImage[index].classList.add('show', 'fade')
     menuImage[index].classList.remove('hide')
-    menuItems[index].classList.add('slideheader__item_active')
+    menuItems[index].classList.add('slideHeaderItemActive')
   }
 
   hideContent()
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   menuParent.addEventListener('click', (evt) => {
     const { target } = evt
-    if (target && (target as HTMLElement).classList.contains('slideheader__item')) {
+    if (target && (target as HTMLElement).classList.contains('slideHeaderItem')) {
       menuItems.forEach((item: HTMLElement, i: number) => {
         if (target === item) {
           hideContent()
