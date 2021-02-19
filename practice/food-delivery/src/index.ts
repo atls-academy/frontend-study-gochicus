@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
       image.classList.remove('show', 'fade')
     })
     menuItems.forEach((item) => {
-      item.classList.remove('slideHeaderItemActive')
+      item.classList.remove('slideHeaderItem-Active')
     })
   }
 
   function showContent(index = 0): void {
     menuImage[index].classList.add('show', 'fade')
     menuImage[index].classList.remove('hide')
-    menuItems[index].classList.add('slideHeaderItemActive')
+    menuItems[index].classList.add('slideHeaderItem-Active')
   }
 
   hideContent()
