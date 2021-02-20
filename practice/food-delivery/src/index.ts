@@ -319,4 +319,28 @@ document.addEventListener('DOMContentLoaded', () => {
   nextSlide.addEventListener('click', () => {
     changeSlide(1)
   })
+  /* slider pagination */
+
+  const slider: HTMLElement = document.querySelector('.offer__slider')
+  slider.style.position = 'relative'
+
+  const dotContainer: HTMLOListElement = document.createElement('ol')
+  const dots: Array<HTMLElement> = []
+
+  dotContainer.classList.add('carouselIndicators')
+  slider.append(dotContainer)
+
+  for (let i = 0; i < offerSlides.length; i += 1) {
+    const dot = document.createElement('li')
+    dot.classList.add('dot')
+    dotContainer.append(dot)
+    dots.push(dot)
+    dot.addEventListener('click', () => {
+      offerSlides.forEach((slide: HTMLElement) => slide.classList.add('hide'))
+      offerSlides[i].classList.add('show')
+      offerSlides[i].classList.remove('hide')
+      dots.forEach((element: HTMLElement) => element.classList.remove('currentDot'))
+      dots[i].classList.add('currentDot')
+    })
+  }
 })
