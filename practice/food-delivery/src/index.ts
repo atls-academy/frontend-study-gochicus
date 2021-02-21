@@ -327,12 +327,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotContainer: HTMLOListElement = document.createElement('ol')
   const dots: Array<HTMLElement> = []
 
-  dotContainer.classList.add('carouselIndicators')
+  dotContainer.classList.add('sliderIndicators')
   slider.append(dotContainer)
 
   for (let i = 0; i < offerSlides.length; i += 1) {
     const dot = document.createElement('li')
-    dot.classList.add('dot')
+    dot.classList.add('sliderDot')
     dotContainer.append(dot)
     dots.push(dot)
     dot.addEventListener('click', () => {
@@ -341,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
       offerSlides[i].classList.remove('hide')
       dots.forEach((element: HTMLElement) => element.classList.remove('currentDot'))
       dots[i].classList.add('currentDot')
+      currentSlide.textContent = `0${i + 1}`
     })
   }
 })
