@@ -762,7 +762,7 @@ a {
   transition: opacity .6s ease;
 }
 
-.currentDot {
+.sliderDot-current {
   box-sizing: content-box;
   flex: 0 1 auto;
   width: 30px;

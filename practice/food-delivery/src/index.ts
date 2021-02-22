@@ -339,8 +339,8 @@ document.addEventListener('DOMContentLoaded', () => {
       offerSlides.forEach((slide: HTMLElement) => slide.classList.add('hide'))
       offerSlides[i].classList.add('show')
       offerSlides[i].classList.remove('hide')
-      dots.forEach((element: HTMLElement) => element.classList.remove('currentDot'))
-      dots[i].classList.add('currentDot')
+      dots.forEach((element: HTMLElement) => element.classList.remove('sliderDot-current'))
+      dots[i].classList.add('sliderDot-current')
       currentSlide.textContent = `0${i + 1}`
     })
   }
