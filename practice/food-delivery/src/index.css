@@ -399,7 +399,7 @@ a {
   justify-content: center
 }
 
-.calculatingChoose-item {
+.calculatingChooseItem {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -421,19 +421,19 @@ a {
   background-color: #54ed39
 }
 
-.calculatingChoose-medium {
+.calculatingChooseMedium {
   width: 743px;
   justify-content: space-between;
   margin: 30px auto 0 auto
 }
 
-.calculatingChoose-big {
+.calculatingChooseBig {
   width: 930px;
   justify-content: space-between;
   margin: 30px auto 0 auto
 }
 
-.calculatingChoose-big .calculatingChoose-item {
+.calculatingChooseBig .calculatingChooseItem {
   width: 200px
 }
 

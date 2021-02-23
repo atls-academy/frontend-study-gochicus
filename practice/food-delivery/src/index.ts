@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initLocalSettings('#gender', 'calculatingChooseItem-active')
-  initLocalSettings('.calculatingChoose-big', 'calculatingChooseItem-active')
+  initLocalSettings('.calculatingChooseBig', 'calculatingChooseItem-active')
 
   function calculateTotal() {
     if (!sex || !heightData || !weightData || !ageData || !activityLevel) {
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   getStaticInformation('#gender div', 'calculatingChooseItem-active')
-  getStaticInformation('.calculatingChoose-big div', 'calculatingChooseItem-active')
+  getStaticInformation('.calculatingChooseBig div', 'calculatingChooseItem-active')
 
   function getDynamicInformation(selector: string) {
     const inputField: HTMLInputElement = document.querySelector(selector)
