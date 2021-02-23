@@ -399,7 +399,7 @@ a {
   justify-content: center
 }
 
-.calculating-chooseItem {
+.calculatingChoose-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,24 +416,24 @@ a {
   transition: .3s all
 }
 
-.calculating-chooseItemActive {
+.calculatingChoose-itemActive {
   color: #ffffff;
   background-color: #54ed39
 }
 
-.calculating-chooseMedium {
+.calculatingChoose-medium {
   width: 743px;
   justify-content: space-between;
   margin: 30px auto 0 auto
 }
 
-.calculating-chooseBig {
+.calculatingChoose-big {
   width: 930px;
   justify-content: space-between;
   margin: 30px auto 0 auto
 }
 
-.calculating-chooseBig .calculating-chooseItem {
+.calculatingChoose-big .calculatingChoose-item {
   width: 200px
 }
 
