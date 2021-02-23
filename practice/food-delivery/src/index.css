@@ -416,7 +416,7 @@ a {
   transition: .3s all
 }
 
-.calculatingChoose-itemActive {
+.calculatingChooseItem-active {
   color: #ffffff;
   background-color: #54ed39
 }
