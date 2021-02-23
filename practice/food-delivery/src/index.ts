@@ -348,9 +348,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const calcResultValue: HTMLElement = document.querySelector('.calculatingResult span')
   let sex: string = 'female'
-  let heightData
-  let weightData
-  let ageData
+  let heightData: number
+  let weightData: number
+  let ageData: number
   let activityLevel: number = 1.375
 
   if (localStorage.getItem('sex')) {
