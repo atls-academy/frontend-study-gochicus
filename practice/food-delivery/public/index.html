@@ -134,41 +134,41 @@
         <div class="container">
             <h2 class="title">Рассчитаем вашу потребность в калориях?
             </h2>
-            <div class="calculating__field">
-                <div class="calculating__subtitle">
+            <div class='calculatingField'>
+                <div class='calculatingSubtitle'>
                     Ваш пол
                 </div>
-                <div class="calculating__choose" id="gender">
-                    <div class="calculating__choose-item calculating__choose-item_active">Женщина</div>
-                    <div class="calculating__choose-item">Мужчина</div>
+                <div class='calculatingChoose' id="gender">
+                    <div id = "female" class='calculatingChooseItem calculatingChooseItem-active'>Женщина</div>
+                    <div  id = "male" class='calculatingChooseItem'>Мужчина</div>
                 </div>
 
-                <div class="calculating__subtitle">
+                <div class='calculatingSubtitle'>
                     Ваша конституция
                 </div>
-                <div class="calculating__choose calculating__choose_medium">
-                    <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item">
-                    <input type="text" id="weight" placeholder="Введите вес"  class="calculating__choose-item">
-                    <input type="text" id="age" placeholder="Введите возраст" class="calculating__choose-item">
+                <div class='calculatingChoose calculatingChooseMedium'>
+                    <input type="text" id="height" placeholder="Введите рост" class='calculatingChooseItem'>
+                    <input type="text" id="weight" placeholder="Введите вес"  class='calculatingChooseItem'>
+                    <input type="text" id="age" placeholder="Введите возраст" class='calculatingChooseItem'>
                 </div>
 
-                <div class="calculating__subtitle">
+                <div class='calculatingSubtitle'>
                     Выберите вашу физическая активность
                 </div>
-                <div class="calculating__choose calculating__choose_big">
-                    <div id="low" class="calculating__choose-item">Низкая активность </div>
-                    <div id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
-                    <div id="medium" class="calculating__choose-item">Умеренная активность</div>
-                    <div id="high" class="calculating__choose-item">Высокая активность</div>
+                <div class='calculatingChoose calculatingChooseBig'>
+                    <div data-activityLevel="1.2" id="low" class='calculatingChooseItem'>Низкая активность </div>
+                    <div data-activityLevel="1.375" id="small" class='calculatingChooseItem calculatingChooseItem-active'>Невысокая активность</div>
+                    <div data-activityLevel="1.55" id="medium" class='calculatingChooseItem'>Умеренная активность</div>
+                    <div data-activityLevel="1.725" id="high" class='calculatingChooseItem'>Высокая активность</div>
                 </div>
 
-                <div class="calculating__divider"></div>
+                <div class='calculatingDivider'></div>
 
-                <div class="calculating__total">
-                    <div class="calculating__subtitle">
+                <div class='calculatingTotal'>
+                    <div class='calculatingSubtitle'>
                         Ваша суточная норма калорий:
                     </div>
-                    <div class="calculating__result">
+                    <div class='calculatingResult'>
                         <span>2700</span> ккал
                     </div>
                 </div>
