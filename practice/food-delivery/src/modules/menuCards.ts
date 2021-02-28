@@ -1,53 +1,50 @@
-import { getResource } from '../services/service'
+class MenuCard {
+  imageSrc: string
 
-function menu() {
-  class MenuCard {
-    imageSrc: string
+  alt: string
 
-    alt: string
+  title: string
 
-    title: string
+  description: string
 
-    description: string
+  price: number
 
-    price: number
+  parentSelector: HTMLElement
 
-    parentSelector: HTMLElement
+  classes: string[]
 
-    classes: string[]
+  defaultClass: string
 
-    defaultClass: string
+  constructor(
+    src: string,
+    alt: string,
+    title: string,
+    description: string,
+    price: number,
+    parentSelector: string,
+    defaultClass: string,
+    ...classes: string[]
+  ) {
+    this.imageSrc = src
+    this.alt = alt
+    this.title = title
+    this.description = description
+    this.price = price
+    this.classes = classes
+    this.defaultClass = 'menu__item'
+    this.parentSelector = document.querySelector(parentSelector)
+  }
 
-    constructor(
-      src: string,
-      alt: string,
-      title: string,
-      description: string,
-      price: number,
-      parentSelector: string,
-      defaultClass: string,
-      ...classes: string[]
-    ) {
-      this.imageSrc = src
-      this.alt = alt
-      this.title = title
-      this.description = description
-      this.price = price
-      this.classes = classes
-      this.defaultClass = 'menu__item'
-      this.parentSelector = document.querySelector(parentSelector)
+  render() {
+    const element = document.createElement('div')
+
+    if (this.classes.length === 0) {
+      element.classList.add(this.defaultClass)
+    } else {
+      this.classes.forEach((className) => element.classList.add(className))
     }
 
-    render() {
-      const element = document.createElement('div')
-
-      if (this.classes.length === 0) {
-        element.classList.add(this.defaultClass)
-      } else {
-        this.classes.forEach((className) => element.classList.add(className))
-      }
-
-      element.innerHTML = `
+    element.innerHTML = `
                 <img src=${this.imageSrc} alt=${this.alt}>
                 <h3 class="menu__item-subtitle">${this.title}</h3>
                 <div class="menu__item-descr">${this.description}</div>
@@ -57,22 +54,8 @@ function menu() {
                     <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
                 </div>
             `
-      this.parentSelector.append(element)
-    }
+    this.parentSelector.append(element)
   }
-  getResource('https://6027afc0dd4afd001754a9b0.mockapi.io/api/menu').then((data) => {
-    data.forEach(({ imgSrc, alt, title, description, price }) => {
-      new MenuCard(
-        imgSrc,
-        alt,
-        title,
-        description,
-        price,
-        '.menu .container',
-        'menu__item'
-      ).render()
-    })
-  })
 }
 
-export { menu }
+export default MenuCard
