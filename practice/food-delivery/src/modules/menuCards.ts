@@ -1,3 +1,5 @@
+import { getResource } from '../services/service'
+
 class MenuCard {
   imageSrc: string
 
@@ -57,5 +59,21 @@ class MenuCard {
     this.parentSelector.append(element)
   }
 }
+function menuRender(url: string) {
+  getResource(url).then((data) => {
+    data.forEach(({ imgSrc, alt, title, description, price }) => {
+      new MenuCard(
+        imgSrc,
+        alt,
+        title,
+        description,
+        price,
+        '.menu .container',
+        'menu__item'
+      ).render()
+    })
+  })
+}
 
 export default MenuCard
+export { menuRender }
