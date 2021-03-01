@@ -1,7 +1,5 @@
 import React from 'react'
 
-import '../../style/post-status-filter.css'
-
 const PostStatusFilter = () => {
   return (
     <div className="btn-group">
