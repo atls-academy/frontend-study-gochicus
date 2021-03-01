@@ -1,0 +1,14 @@
+{
+  "name": "@practice/react-app",
+  "version": "0.0.0",
+  "license": "BSD 3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "lint": "eslint"
+  }
+}
