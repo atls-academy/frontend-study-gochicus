@@ -9,7 +9,6 @@
   "dependencies": {
     "react": "^17.0.1",
     "@ui/button": "0.0.0",
-    "@ui/input": "0.0.0",
-    "@style/css": "0.0.0"
+    "@ui/input": "0.0.0"
   }
 }

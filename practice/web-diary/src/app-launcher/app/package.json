@@ -14,7 +14,6 @@
     "@ui/post-list-item": "0.0.0",
     "@ui/filter": "0.0.0",
     "@ui/search": "0.0.0",
-    "@app-launcher/app": "0.0.0",
-    "@style/css": "0.0.0"
+    "@app-launcher/app": "0.0.0"
   }
 }
