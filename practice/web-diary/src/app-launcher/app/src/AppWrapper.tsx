@@ -1,9 +1,9 @@
 import React from 'react'
-import AppHeader from '../../app-header/src'
-import SearchPanel from '../../search-panel/src'
-import PostStatusFilter from '../../post-status-filter/src'
-import PostList from '../../post-list/src'
-import PostAddForm from '../../post-add-form/src'
+import AppHeader from '@ui/app-header'
+import SearchPanel from '@ui/search'
+import PostStatusFilter from '@ui/filter'
+import PostList from '@ui/post-list'
+import PostAddForm from '@ui/post-add-form'
 
 export const AppWrapper = () => {
   return (

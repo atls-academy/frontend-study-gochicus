@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonInfo, { ButtonSecondary } from '../../../ui/button/src'
+import ButtonInfo, { ButtonSecondary } from '@ui/button'
 
 const PostStatusFilter = () => {
   return (

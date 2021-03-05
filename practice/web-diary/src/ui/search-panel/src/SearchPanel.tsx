@@ -1,8 +1,8 @@
 import React from 'react'
 
-import '../../../style/search-panel.css'
+import '../../../style/src/search-panel.css'
 
-import { InputSearch } from '../../../ui/input/src/InputSearch'
+import InputSearch from '@ui/input'
 
 const SearchPanel = () => {
   return <InputSearch />

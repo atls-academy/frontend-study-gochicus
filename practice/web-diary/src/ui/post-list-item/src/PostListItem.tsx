@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../../style/post-list-item.css'
-import { ButtonStar, ButtonTrash } from '../../../ui/button/src'
+import '../../../style/src/post-list-item.css'
+import { ButtonStar, ButtonTrash } from '@ui/button'
 
 const PostListItem = () => {
   return (

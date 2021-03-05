@@ -1,7 +1,7 @@
 import React from 'react'
 
-import '../../../style/app.css'
-import { AppWrapper } from './AppWrapper'
+import '../../../style/src/app.css'
+import { AppWrapper } from '@app-launcher/app'
 
 const App = () => {
   return <AppWrapper />
