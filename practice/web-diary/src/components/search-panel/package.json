@@ -1,0 +1,13 @@
+{
+  "name": "@components/search",
+  "version": "0.0.0",
+  "license": "BSD 3-Clause",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "@ui/input": "0.0.0"
+  }
+}

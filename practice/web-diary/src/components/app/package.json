@@ -1,0 +1,18 @@
+{
+  "name": "@components/app",
+  "version": "0.0.0",
+  "license": "BSD 3-Clause",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "@components/app-header": "0.0.0",
+    "@components/post-add-form": "0.0.0",
+    "@components/post-item": "0.0.0",
+    "@components/post-list-item": "0.0.0",
+    "@components/filter": "0.0.0",
+    "@components/search": "0.0.0"
+  }
+}
