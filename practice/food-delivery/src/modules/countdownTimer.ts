@@ -26,9 +26,9 @@ function setTimer(selector: any, endTime: string) {
   const hours: HTMLElement = timer.querySelector('#hours')
   const minutes: HTMLElement = timer.querySelector('#minutes')
   const seconds: HTMLElement = timer.querySelector('#seconds')
-  const timeInterval = setInterval(updateTimer, 1000)
-  updateTimer()
+
   function updateTimer() {
+    const timeInterval = setInterval(updateTimer, 1000)
     const time: any = getTimeRemaining(endTime)
     days.innerHTML = String(getZero(time.days))
     hours.innerHTML = String(getZero(time.hours))
@@ -38,6 +38,7 @@ function setTimer(selector: any, endTime: string) {
       clearInterval(timeInterval)
     }
   }
+  updateTimer()
 }
 
 export { setTimer }

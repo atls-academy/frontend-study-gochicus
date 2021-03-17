@@ -1,12 +1,7 @@
+/* eslint-disable no-alert, no-console */
 const numberOfFilms: number = +prompt('Сколько фильмов вы просмотрели?', '')
-interface Database {
-  count: number
-  movies: Object
-  actors: Object
-  genres: Array<string>
-  private: boolean
-}
-const personalMoviesDB: Database = {
+
+const personalMoviesDB = {
   count: numberOfFilms,
   movies: {},
   actors: {},

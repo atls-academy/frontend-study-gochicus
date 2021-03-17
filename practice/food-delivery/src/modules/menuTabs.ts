@@ -4,11 +4,11 @@ function menuTabs(slideSelector, itemsSelector, slideParentSelector) {
   const menuItems: NodeListOf<Element> = document.querySelectorAll(itemsSelector)
 
   function hideContent(): void {
-    menuImage.forEach((image) => {
+    menuImage.forEach(image => {
       image.classList.add('hide')
       image.classList.remove('show', 'fade')
     })
-    menuItems.forEach((item) => {
+    menuItems.forEach(item => {
       item.classList.remove('slideHeaderItem-active')
     })
   }
@@ -22,7 +22,7 @@ function menuTabs(slideSelector, itemsSelector, slideParentSelector) {
   hideContent()
   showContent()
 
-  menuParent.addEventListener('click', (evt) => {
+  menuParent.addEventListener('click', evt => {
     const { target } = evt
     if (target && (target as HTMLElement).classList.contains('slideHeaderItem')) {
       menuItems.forEach((item: HTMLElement, i: number) => {

@@ -6,9 +6,6 @@ function productSlider({ container, image, nextArrow, previousArrow, totalCount,
   const currentSlide = document.querySelector(currentCount)
   let slideIndex: number = 1
 
-  slidesCounter()
-  showSlides(slideIndex)
-
   function slidesCounter() {
     if (offerSlides.length < 10) {
       totalSlidesCount.textContent = `0${offerSlides.length}`
@@ -34,6 +31,9 @@ function productSlider({ container, image, nextArrow, previousArrow, totalCount,
       currentSlide.textContent = `${slideIndex}`
     }
   }
+
+  slidesCounter()
+  showSlides(slideIndex)
 
   function changeSlide(num: number) {
     slideIndex += num
