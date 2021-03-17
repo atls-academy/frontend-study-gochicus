@@ -1,22 +1,40 @@
-import { openModal } from './modalWindow'
-import { closeModal } from './modalWindow'
 import { sendFormData } from '../services/service'
+import { openModal }    from './modalWindow'
+import { closeModal }   from './modalWindow'
+
+const serverMessage = {
+  loading: '../src/assets/img/spinner.svg',
+  success: 'Спасибо! Скоро мы с вами свяжемся',
+  error: 'Что-то пошло не так...',
+}
+
+function showThanksModal(thanksMessage: string) {
+  const previousModalDialog = document.querySelector('.modal__dialog')
+
+  previousModalDialog.classList.add('hide')
+  openModal()
+
+  const thanksModal = document.createElement('div')
+  thanksModal.classList.add('modal__dialog')
+  thanksModal.innerHTML = `
+            <div class="modal__content">
+                <div class="modal__close" data-close>×</div>
+                <div class="modal__title">${thanksMessage}</div>
+            </div>
+        `
+  document.querySelector('.modal').append(thanksModal)
+  setTimeout(() => {
+    thanksModal.remove()
+    previousModalDialog.classList.add('show')
+    previousModalDialog.classList.remove('hide')
+    closeModal()
+  }, 4000)
+}
 
 function formDataExtraction(formSelector: string) {
   const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll(formSelector)
-
-  const serverMessage = {
-    loading: '../src/assets/img/spinner.svg',
-    success: 'Спасибо! Скоро мы с вами свяжемся',
-    error: 'Что-то пошло не так...',
-  }
-
-  forms.forEach((item: HTMLFormElement) => {
-    postData(item)
-  })
-
   function postData(form: HTMLFormElement) {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', event => {
       event.preventDefault()
 
       const statusMessage: HTMLImageElement = document.createElement('img')
@@ -52,28 +70,9 @@ function formDataExtraction(formSelector: string) {
     })
   }
 
-  function showThanksModal(thanksMessage: string) {
-    const previousModalDialog = document.querySelector('.modal__dialog')
-
-    previousModalDialog.classList.add('hide')
-    openModal()
-
-    const thanksModal = document.createElement('div')
-    thanksModal.classList.add('modal__dialog')
-    thanksModal.innerHTML = `
-            <div class="modal__content">
-                <div class="modal__close" data-close>×</div>
-                <div class="modal__title">${thanksMessage}</div>
-            </div>
-        `
-    document.querySelector('.modal').append(thanksModal)
-    setTimeout(() => {
-      thanksModal.remove()
-      previousModalDialog.classList.add('show')
-      previousModalDialog.classList.remove('hide')
-      closeModal()
-    }, 4000)
-  }
+  forms.forEach((item: HTMLFormElement) => {
+    postData(item)
+  })
 }
 
 export { formDataExtraction }

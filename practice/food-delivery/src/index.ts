@@ -1,10 +1,10 @@
-import { menuTabs } from './modules/menuTabs'
-import { productSlider } from './modules/productSlider'
 import { caloriesCalculator } from './modules/caloriesCalculator'
-import { menuRender } from './modules/menuCards'
+import { setTimer }           from './modules/countdownTimer'
 import { formDataExtraction } from './modules/formsDataExtraction'
-import { setTimer } from './modules/countdownTimer'
-import { userModalWindow } from './modules/modalWindow'
+import { menuRender }         from './modules/menuCards'
+import { menuTabs }           from './modules/menuTabs'
+import { userModalWindow }    from './modules/modalWindow'
+import { productSlider }      from './modules/productSlider'
 
 document.addEventListener('DOMContentLoaded', () => {
   menuTabs('.slideContent', '.slideHeaderItem', '.slideHeaderItems')

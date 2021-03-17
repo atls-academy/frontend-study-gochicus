@@ -1,8 +1,9 @@
-let numberOfFilms: number = +prompt('Сколько фильмов вы уже посмотрели?', '')
+/* eslint-disable no-alert, no-console */
+let countOfFilms: number = +prompt('Сколько фильмов вы уже посмотрели?', '')
 
 const moviesCount = (): void => {
-  while (numberOfFilms === null || isNaN(numberOfFilms)) {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')
+  while (countOfFilms === null || Number.isNaN(countOfFilms)) {
+    countOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')
   }
 }
 
@@ -14,8 +15,8 @@ interface Database {
   genres: Array<string>
   private: boolean
 }
-const personalMoviesDB: Database = {
-  count: numberOfFilms,
+const MoviesDB: Database = {
+  count: countOfFilms,
   movies: {},
   actors: {},
   genres: [],
@@ -23,14 +24,14 @@ const personalMoviesDB: Database = {
 }
 
 function rememberMyFilms() {
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i += 1) {
     const lastFilm: string = prompt('Один из последних просмотренных фильмов?', '')
     const filmRating: number = +prompt('Какую оценку вы бы ему поставили?', '')
 
     if (lastFilm != null && filmRating != null && lastFilm !== '' && lastFilm.length < 50) {
-      personalMoviesDB.movies[lastFilm] = filmRating
+      MoviesDB.movies[lastFilm] = filmRating
     } else {
-      i--
+      i -= 1
     }
   }
 }
@@ -38,11 +39,11 @@ function rememberMyFilms() {
 rememberMyFilms()
 
 function detectPersonalLevel(): void {
-  if (personalMoviesDB.count < 10) {
+  if (MoviesDB.count < 10) {
     console.log('Вы смотрите фильмы довольно редко')
-  } else if (personalMoviesDB.count >= 10 && personalMoviesDB.count < 30) {
+  } else if (MoviesDB.count >= 10 && MoviesDB.count < 30) {
     console.log('Обычный кинозритель')
-  } else if (personalMoviesDB.count >= 30) {
+  } else if (MoviesDB.count >= 30) {
     console.log('Да вы киноман!')
   } else {
     console.log('Ошибка!')
@@ -52,20 +53,20 @@ function detectPersonalLevel(): void {
 detectPersonalLevel()
 
 function showMyDB() {
-  if (personalMoviesDB.private === true) {
+  if (MoviesDB.private === true) {
     console.log('Отказано в доступе')
   } else {
-    console.log(personalMoviesDB)
+    console.log(MoviesDB)
   }
 }
 
 showMyDB()
 
 function writeYourGenres() {
-  for (let i = 1; i <= 3; i++) {
-    personalMoviesDB.genres[i] = prompt(`Ваш любимый жанр № ${i}?`)
+  for (let i = 1; i <= 3; i += 1) {
+    MoviesDB.genres[i] = prompt(`Ваш любимый жанр № ${i}?`)
   }
-  console.log(personalMoviesDB.genres)
+  console.log(MoviesDB.genres)
 }
 
 writeYourGenres()

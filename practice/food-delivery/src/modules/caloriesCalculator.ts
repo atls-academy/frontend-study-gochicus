@@ -23,7 +23,7 @@ function caloriesCalculator() {
   function initLocalSettings(selector: string, active: string) {
     const elements = document.querySelectorAll(selector)
 
-    elements.forEach((element) => {
+    elements.forEach(element => {
       element.classList.remove(active)
       if (element.getAttribute('id') === localStorage.getItem('sex')) {
         element.classList.add(active)
@@ -46,11 +46,11 @@ function caloriesCalculator() {
 
     if (sex === 'female') {
       calcResultValue.textContent = Math.round(
-        (447.6 + 9.2 * weightData + 3.1 * heightData - 4.3 * ageData) * activityLevel
+        (447.6 + 9.2 * weightData + 3.1 * heightData - 4.3 * ageData) * activityLevel,
       ).toString()
     } else {
       calcResultValue.textContent = Math.round(
-        (88.36 + 13.4 * weightData + 4.8 * heightData - 5.7 * ageData) * activityLevel
+        (88.36 + 13.4 * weightData + 4.8 * heightData - 5.7 * ageData) * activityLevel,
       ).toString()
     }
   }
@@ -66,7 +66,7 @@ function caloriesCalculator() {
           activityLevel = Number((e.target as HTMLElement).getAttribute('data-activityLevel'))
           localStorage.setItem(
             'activityLevel',
-            (e.target as HTMLElement).getAttribute('data-activityLevel')
+            (e.target as HTMLElement).getAttribute('data-activityLevel'),
           )
         } else {
           sex = (e.target as HTMLElement).getAttribute('id')

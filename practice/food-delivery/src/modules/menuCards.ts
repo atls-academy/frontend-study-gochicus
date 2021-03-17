@@ -43,7 +43,7 @@ class MenuCard {
     if (this.classes.length === 0) {
       element.classList.add(this.defaultClass)
     } else {
-      this.classes.forEach((className) => element.classList.add(className))
+      this.classes.forEach(className => element.classList.add(className))
     }
 
     element.innerHTML = `
@@ -60,7 +60,7 @@ class MenuCard {
   }
 }
 export function menuRender(url: string) {
-  getResource(url).then((data) => {
+  getResource(url).then(data => {
     data.forEach(({ imgSrc, alt, title, description, price }) => {
       new MenuCard(
         imgSrc,
@@ -69,7 +69,7 @@ export function menuRender(url: string) {
         description,
         price,
         '.menu .container',
-        'menu__item'
+        'menu__item',
       ).render()
     })
   })
