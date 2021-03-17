@@ -1,18 +1,18 @@
 import { defineMessages } from 'react-intl'
+
 import { name } from '../package.json'
 
 export default defineMessages({
-  info:{
+  info: {
     id: `${name}.header`,
-    defaultMessage: 'всё'
+    defaultMessage: 'всё',
   },
-  like:{
+  like: {
     id: `${name}.header`,
-    defaultMessage: 'Понравилось'
+    defaultMessage: 'Понравилось',
   },
-  add:{
+  add: {
     id: `${name}.header`,
-    defaultMessage: 'Добавить'
+    defaultMessage: 'Добавить',
   },
-
 })

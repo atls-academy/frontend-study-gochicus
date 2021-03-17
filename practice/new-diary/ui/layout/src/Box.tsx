@@ -1,21 +1,30 @@
-import { border, boxShadow, color, flexbox, layout, position, space, system, display } from 'styled-system'
-
-import styled                                                                 from '@emotion/styled'
+import styled from '@emotion/styled'
+import {
+  border,
+  boxShadow,
+  color,
+  display,
+  flexbox,
+  layout,
+  position,
+  space,
+  system,
+} from 'styled-system'
 
 interface Row {
-  system?:({
-           boxSizing: boolean,
-           overflowX: boolean,
-           overflowY: boolean,
-         }),
-  layout?: string,
-  space?: string,
-  color?: string,
-  flexbox?: string,
-  boxShadow?: string,
-  boxSizing?: string,
-  position?: string,
-  border?: string,
+  system?: {
+    boxSizing: boolean
+    overflowX: boolean
+    overflowY: boolean
+  }
+  layout?: string
+  space?: string
+  color?: string
+  flexbox?: string
+  boxShadow?: string
+  boxSizing?: string
+  position?: string
+  border?: string
   display?: string
 }
 
@@ -32,7 +41,7 @@ export const Box = styled.div<Row>(
   boxShadow,
   position,
   border,
-  display
+  display,
 )
 
 Box.defaultProps = {

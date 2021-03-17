@@ -1,17 +1,16 @@
+import styled from '@emotion/styled'
 import { color, flexbox, layout, position, space, system } from 'styled-system'
 
-import styled                                              from '@emotion/styled'
-
 interface Column {
-  width: string,
-  flexDirection: string,
-  display: string,
+  width: string
+  flexDirection: string
+  display: string
 }
 
 interface Row {
-  width: string,
-  flexDirection: string,
-  display: string,
+  width: string
+  flexDirection: string
+  display: string
 }
 interface Layout {
   display?: string
