@@ -16,6 +16,7 @@
     "@ui/search": "0.0.0",
     "@app-launcher/app": "0.0.0",
     "@ui/layout": "0.0.0",
-    "@emotion/styled": "^11.1.5"
+    "@emotion/styled": "^11.1.5",
+    "react-intl": "^5.14.0"
   }
 }

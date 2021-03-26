@@ -1,0 +1,16 @@
+{
+  "name": "@ui/post-add-form",
+  "version": "0.0.0",
+  "license": "BSD 3-Clause",
+  "main": "src/index.tsx",
+  "scripts": {
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "@ui/button": "0.0.0",
+    "@ui/input": "0.0.0",
+    "@emotion/styled": "^11.1.5",
+    "@ui/layout": "0.0.0"
+  }
+}

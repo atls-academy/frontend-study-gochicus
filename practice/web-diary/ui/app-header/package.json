@@ -1,0 +1,14 @@
+{
+  "name": "@ui/app-header",
+  "version": "0.0.0",
+  "license": "BSD 3-Clause",
+  "main": "src/index.tsx",
+  "scripts": {
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "@ui/layout": "0.0.0",
+    "react-intl": "^5.13.5"
+  }
+}
