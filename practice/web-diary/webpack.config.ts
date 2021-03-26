@@ -2,7 +2,7 @@ import * as path from 'path'
 
 module.exports = {
   mode: 'development',
-  entry: './launcher/index.tsx',
+  entry: './app-launcher/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
   },
