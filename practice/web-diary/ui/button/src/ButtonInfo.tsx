@@ -5,9 +5,5 @@ import messages    from '../messages/messages'
 
 export const ButtonInfo = () => {
   const intl = useIntl()
-  return (
-    <button type='button' className='btn'>
-      {intl.formatMessage(messages.info)}
-    </button>
-  )
+  return <button type='button'>{intl.formatMessage(messages.info)}</button>
 }

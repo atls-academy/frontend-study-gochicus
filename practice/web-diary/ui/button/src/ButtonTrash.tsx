@@ -1,9 +1,11 @@
-import React from 'react'
+import React  from 'react'
+import styled from '@emotion/styled'
 
+const TrashButton = styled.button('color: red')
 export const ButtonTrash = () => {
   return (
-    <button type='button' className='btn-sm'>
+    <TrashButton type='button'>
       <i className='fa fa-trash-o' />
-    </button>
+    </TrashButton>
   )
 }

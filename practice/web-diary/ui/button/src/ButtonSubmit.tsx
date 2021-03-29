@@ -5,9 +5,5 @@ import messages    from '../messages/messages'
 
 export const ButtonSubmit = () => {
   const intl = useIntl()
-  return (
-    <button type='submit' className='btn btn-outline-secondary'>
-      {intl.formatMessage(messages.add)}
-    </button>
-  )
+  return <button type='submit'>{intl.formatMessage(messages.add)}</button>
 }

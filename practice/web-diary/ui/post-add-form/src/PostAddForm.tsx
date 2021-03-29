@@ -11,7 +11,7 @@ const PostAddForm = () => {
     <Form>
       <Layout display='flex'>
         <Box>
-          <Input />{' '}
+          <Input />
         </Box>
         <Box flexBasis='40px' />
         <Box>

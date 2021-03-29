@@ -6,7 +6,7 @@ import PostStatusFilter from '@ui/filter'
 import PostAddForm      from '@ui/post-add-form'
 import PostList         from '@ui/post-list'
 import SearchPanel      from '@ui/search'
-import { Layout }       from '@ui/layout'
+import { Box, Layout }  from '@ui/layout'
 
 const Background = styled.div(
   '  margin: 50px 0 0 0;\n' +
@@ -24,8 +24,9 @@ const App = () => {
     <Background>
       <Layout display='flex' flexDirection='column' alignItems='center' margin='0' maxWidth='800'>
         <AppHeader />
-        <Layout display='flex' margin='1 rem 0'>
+        <Layout display='flex' margin='1 rem 0' justifyContent='space-between' alignItems='center'>
           <SearchPanel />
+          <Box flexBasis='40px' />
           <PostStatusFilter />
         </Layout>
         <PostList />
