@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled  from '@emotion/styled'
 import {
   border,
   boxShadow,
@@ -12,26 +12,7 @@ import {
   system,
 } from 'styled-system'
 
-interface Row {
-  system?: {
-    boxSizing: boolean
-    overflowX: boolean
-    overflowY: boolean
-  }
-  layout?: string
-  space?: string
-  color?: string
-  flexbox?: string
-  boxShadow?: string
-  boxSizing?: string
-  position?: string
-  border?: string
-  display?: string
-  justifyContent?: string
-  alignItems?: string
-  minWidth?: string
-  flexBasis?: string
-}
+import { Row } from '../interface/interface'
 
 export const Box = styled.div<Row>(
   system({

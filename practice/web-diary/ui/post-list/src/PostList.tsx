@@ -1,7 +1,5 @@
-import React        from 'react'
-import styled       from '@emotion/styled'
-
-import PostListItem from '@ui/post-list-item'
+import React  from 'react'
+import styled from '@emotion/styled'
 
 const List = styled.ul(
   ' margin-top: 50px;\n' +
@@ -9,14 +7,8 @@ const List = styled.ul(
     ' margin-top: 10px;\n' +
     'min-width: 300px',
 )
-const PostList = () => {
-  return (
-    <List>
-      <PostListItem />
-      <PostListItem />
-      <PostListItem />
-    </List>
-  )
+const PostList = ({ children }) => {
+  return <List>{children}</List>
 }
 
 export default PostList

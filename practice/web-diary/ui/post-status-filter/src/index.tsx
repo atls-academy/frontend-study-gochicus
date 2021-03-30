@@ -1,3 +1,3 @@
 import PostStatusFilter from './PostStatusFilter'
 
-export default PostStatusFilter
+export { PostStatusFilter }

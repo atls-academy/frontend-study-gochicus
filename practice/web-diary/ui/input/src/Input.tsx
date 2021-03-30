@@ -18,6 +18,6 @@ const StyledInput = styled.input`
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 `
 
-export const Input = () => {
-  return <StyledInput type='text' />
+export const Input = ({ text }, { color }) => {
+  return <StyledInput type='text' placeholder={text} color={color} />
 }

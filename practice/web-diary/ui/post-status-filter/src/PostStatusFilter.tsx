@@ -1,22 +1,21 @@
-import React                           from 'react'
-import styled                          from '@emotion/styled'
+import React            from 'react'
+import styled           from '@emotion/styled'
+import { useIntl }      from 'react-intl'
 
-import ButtonInfo, { ButtonSecondary } from '@ui/button'
-import { Box }                         from '@ui/layout'
+import { CommonButton } from '@ui/button'
+import { Box }          from '@ui/layout'
+
+import messages         from '../../post-add-form/messages/messages'
 
 const Filter = styled.div('margin: 1rem 0;', 'min-width: 180px')
 
 const PostStatusFilter = () => {
+  const intl = useIntl()
   return (
     <Filter>
       <Box display='flex' justifyContent='space-between'>
-        <Box>
-          <ButtonInfo />{' '}
-        </Box>
-        <Box>
-          {' '}
-          <ButtonSecondary />
-        </Box>
+        <CommonButton> {intl.formatMessage(messages.info)}</CommonButton>
+        <CommonButton> {intl.formatMessage(messages.like)}</CommonButton>
       </Box>
     </Filter>
   )

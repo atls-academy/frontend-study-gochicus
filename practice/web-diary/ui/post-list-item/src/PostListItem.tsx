@@ -1,8 +1,8 @@
-import React                       from 'react'
-import styled                      from '@emotion/styled'
+import React            from 'react'
+import styled           from '@emotion/styled'
 
-import { ButtonStar, ButtonTrash } from '@ui/button'
-import { Box, Layout }             from '@ui/layout'
+import { CommonButton } from '@ui/button'
+import { Box, Layout }  from '@ui/layout'
 
 const Label = styled.span(
   ' display: block;\n',
@@ -20,8 +20,14 @@ const PostListItem = () => {
       <Layout display='flex' flexDirection='row' justifyContent='space-around'>
         <Label>Hello World</Label>
         <Box display='flex' justifyContent='space-around' alignItems='center' minWidth='100px'>
-          <ButtonStar />
-          <ButtonTrash />
+          <CommonButton>
+            {' '}
+            <i className='fa fa-star' />{' '}
+          </CommonButton>
+          <CommonButton>
+            {' '}
+            <i className='fa fa-trash-o' />{' '}
+          </CommonButton>
           <i className='fa fa-heart' />
         </Box>
       </Layout>

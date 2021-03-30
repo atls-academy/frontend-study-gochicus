@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "license": "BSD 3-Clause",
   "main": "src/index.tsx",
-  "scripts": {
-    "lint": "eslint"
-  },
   "dependencies": {
     "react": "^17.0.1",
     "@ui/app-header": "0.0.0",
@@ -13,7 +10,6 @@
     "@ui/post-list": "0.0.0",
     "@ui/post-list-item": "0.0.0",
     "@ui/filter": "0.0.0",
-    "@ui/search": "0.0.0",
     "@app-launcher/app": "0.0.0",
     "@ui/layout": "0.0.0",
     "@emotion/styled": "^11.1.5",

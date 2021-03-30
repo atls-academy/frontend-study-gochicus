@@ -1,22 +1,7 @@
-import styled                                                    from '@emotion/styled'
-import { color, flexbox, layout, position, size, space, system } from 'styled-system'
+import styled                                            from '@emotion/styled'
+import { color, flexbox, layout, position, size, space } from 'styled-system'
 
-interface RowType {
-  width: string
-  flexDirection: string
-  display: string
-}
-interface LayoutType {
-  display?: string
-  margin?: string
-  maxWidth?: string
-  flexDirection?: string
-  alignItems?: string
-  justifyContent?: string
-}
-const boxSizing = system({
-  boxSizing: true,
-})
+import { LayoutType, RowType, boxSizing }                from '../interface/interface'
 
 export const Row = styled.div<RowType>(layout, space, flexbox, position, boxSizing)
 

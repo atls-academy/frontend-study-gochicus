@@ -1,12 +1,14 @@
-import React            from 'react'
-import styled           from '@emotion/styled'
+import React                from 'react'
+import styled               from '@emotion/styled'
 
-import AppHeader        from '@ui/app-header'
-import PostStatusFilter from '@ui/filter'
-import PostAddForm      from '@ui/post-add-form'
-import PostList         from '@ui/post-list'
-import SearchPanel      from '@ui/search'
-import { Box, Layout }  from '@ui/layout'
+import { AppHeader }        from '@ui/app-header'
+import { PostStatusFilter } from '@ui/filter'
+import { Box, Layout }      from '@ui/layout'
+import { PostAddForm }      from '@ui/post-add-form'
+import { PostList }         from '@ui/post-list'
+
+import { Input }            from '../../../ui/input'
+import { PostListItem }     from '../../../ui/post-list-item'
 
 const Background = styled.div(
   '  margin: 50px 0 0 0;\n' +
@@ -22,14 +24,18 @@ const Background = styled.div(
 const App = () => {
   return (
     <Background>
-      <Layout display='flex' flexDirection='column' alignItems='center' margin='0' maxWidth='800'>
+      <Layout flexDirection='column' alignItems='center' margin='0' maxWidth='800'>
         <AppHeader />
-        <Layout display='flex' margin='1 rem 0' justifyContent='space-between' alignItems='center'>
-          <SearchPanel />
+        <Layout margin='1 rem 0' justifyContent='space-between' alignItems='center'>
+          <Input text='Поиск' />
           <Box flexBasis='40px' />
           <PostStatusFilter />
         </Layout>
-        <PostList />
+        <PostList>
+          <PostListItem />
+          <PostListItem />
+          <PostListItem />
+        </PostList>
         <PostAddForm />
       </Layout>
     </Background>
