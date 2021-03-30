@@ -6,6 +6,6 @@ import { ButtonInterface }                         from '../interfaces/ButtonInt
 
 const Button = styled('button')<ButtonInterface>(border, flexbox, layout, padding, color)
 
-export const CommonButton = ({ children }) => {
+export const CommonButton = ({ children,color }) => {
   return <Button color={color}>{children}</Button>
 }

@@ -25,10 +25,10 @@ const PostListItem = () => {
           <Label>Hello World</Label>
         </Box>
         <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
-          <CommonButton >
+          <CommonButton color='red'>
             <i className='fa fa-star' />
           </CommonButton>
-          <CommonButton>
+          <CommonButton color='yellow'>
             <i className='fa fa-trash-o' />
           </CommonButton>
           <i className='fa fa-heart' />
