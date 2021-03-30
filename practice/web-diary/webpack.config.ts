@@ -1,24 +1,23 @@
 import * as path from 'path'
 
-module.exports = {
-  mode: 'development',
-  entry: './app-launcher/index.tsx',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(ts|js)x?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react'],
-        },
+export const target = 'node'
+export const mode = 'development'
+export const entry = './app-launcher/index.tsx'
+export const output = {
+  path: path.resolve(__dirname, 'dist'),
+}
+export const module = {
+  rules: [
+    {
+      test: /\.(ts|js)x?$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react'],
       },
-    ],
-  },
-  resolve: {
-    extensions: ['.ts', '.json', '.tsx', '.js'],
-  },
+    },
+  ],
+}
+export const resolve = {
+  extensions: ['.ts', '.json', '.tsx', '.js'],
 }
