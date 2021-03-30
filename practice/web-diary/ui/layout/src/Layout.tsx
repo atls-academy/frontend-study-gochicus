@@ -1,7 +1,7 @@
 import styled                                            from '@emotion/styled'
 import { color, flexbox, layout, position, size, space } from 'styled-system'
 
-import { LayoutType, RowType, boxSizing }                from '../interface/interface'
+import { LayoutType, RowType, boxSizing }                from '../interfaces/LayoutInterface'
 
 export const Row = styled.div<RowType>(layout, space, flexbox, position, boxSizing)
 

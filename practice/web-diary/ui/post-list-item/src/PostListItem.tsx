@@ -4,29 +4,32 @@ import styled           from '@emotion/styled'
 import { CommonButton } from '@ui/button'
 import { Box, Layout }  from '@ui/layout'
 
-const Label = styled.span(
-  ' display: block;\n',
-  '  line-height: 35px;\n',
-  '  cursor: pointer;\n',
-  '  user-select: none;\n',
-  '  transition: 0.5s all;',
-)
+const Label = styled('span')(() => ({
+  display: 'block',
+  lineHeight: '35px',
+  cursor: 'pointer',
+  userSelect: 'none',
+  transition: ' 0.5s all',
+}))
 
-const ListItem = styled.li('font-size: 1.25 rem \n', 'display: flex \n', 'justify-content: row')
+const ListItem = styled('div')(() => ({
+  fontSize: '16px',
+  display: 'flex',
+}))
 
 const PostListItem = () => {
   return (
     <ListItem>
-      <Layout display='flex' flexDirection='row' justifyContent='space-around'>
-        <Label>Hello World</Label>
-        <Box display='flex' justifyContent='space-around' alignItems='center' minWidth='100px'>
-          <CommonButton>
-            {' '}
-            <i className='fa fa-star' />{' '}
+      <Layout justifyContent='space-around'>
+        <Box minWidth='100px'>
+          <Label>Hello World</Label>
+        </Box>
+        <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
+          <CommonButton >
+            <i className='fa fa-star' />
           </CommonButton>
           <CommonButton>
-            {' '}
-            <i className='fa fa-trash-o' />{' '}
+            <i className='fa fa-trash-o' />
           </CommonButton>
           <i className='fa fa-heart' />
         </Box>

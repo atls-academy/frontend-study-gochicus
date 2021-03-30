@@ -8,7 +8,11 @@ import { Box, Layout }  from '@ui/layout'
 
 import messages         from '../messages/messages'
 
-const Form = styled.div('margin: 1rem 0;', 'min-width: 400px')
+const Form = styled('div')(() => ({
+  margin: '1rem 0',
+  minWidth: '300px',
+}))
+
 const PostAddForm = () => {
   const intl = useIntl()
   return (

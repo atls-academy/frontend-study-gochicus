@@ -3,23 +3,18 @@ import styled               from '@emotion/styled'
 
 import { AppHeader }        from '@ui/app-header'
 import { PostStatusFilter } from '@ui/filter'
+import { Input }            from '@ui/input'
 import { Box, Layout }      from '@ui/layout'
 import { PostAddForm }      from '@ui/post-add-form'
 import { PostList }         from '@ui/post-list'
+import { PostListItem }     from '@ui/post-list-item'
 
-import { Input }            from '../../../ui/input'
-import { PostListItem }     from '../../../ui/post-list-item'
-
-const Background = styled.div(
-  '  margin: 50px 0 0 0;\n' +
-    '  padding: 0;\n' +
-    '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",\n' +
-    '    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",\n' +
-    '    sans-serif;\n' +
-    '  -webkit-font-smoothing: antialiased;\n' +
-    '  -moz-osx-font-smoothing: grayscale;\n' +
-    '  background-color: #eaf5fc;',
-)
+const Background = styled('div')(() => ({
+  margin: '50px 0 0 0',
+  padding: '0',
+  backgroundColor: '#eaf5fc',
+  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
+}))
 
 const App = () => {
   return (

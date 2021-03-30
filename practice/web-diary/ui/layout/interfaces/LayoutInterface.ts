@@ -14,24 +14,24 @@ export interface Row {
   position?: string
   border?: string
   display?: string
-  flexBasis?: string
   justifyContent?: string
   alignItems?: string
   minWidth?: string
+  flexBasis?: string
 }
 
 export interface RowType {
   width: string
-  flexDirection: string
   display: string
+  flexDirection?: string
 }
 export interface LayoutType {
   display?: string
   margin?: string
-  flexDirection?: string
-  alignItems?: string
   maxWidth?: string
+  flexDirection?: string
   justifyContent?: string
+  alignItems?: string
 }
 export const boxSizing = system({
   boxSizing: true,
