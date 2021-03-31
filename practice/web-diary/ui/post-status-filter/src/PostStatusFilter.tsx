@@ -17,8 +17,8 @@ const PostStatusFilter = () => {
   return (
     <Filter>
       <Box justifyContent='space-between'>
-        <CommonButton > {intl.formatMessage(messages.info)}</CommonButton>
-        <CommonButton> {intl.formatMessage(messages.like)}</CommonButton>
+        <CommonButton color='black'> {intl.formatMessage(messages.info)}</CommonButton>
+        <CommonButton color='black'> {intl.formatMessage(messages.like)}</CommonButton>
       </Box>
     </Filter>
   )

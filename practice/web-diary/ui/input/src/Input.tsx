@@ -14,6 +14,6 @@ const StyledInput = styled('input')(() => ({
   borderRadius: '3px',
 }))
 
-export const Input = ({ text }, { color }) => {
-  return <StyledInput type='text' placeholder={text} color={color} />
+export const Input = ({ text }) => {
+  return <StyledInput type='text' placeholder={text} />
 }

@@ -23,7 +23,7 @@ const PostAddForm = () => {
         </Box>
         <Box flexBasis='40px' />
         <Box>
-          <CommonButton>{intl.formatMessage(messages.add)}</CommonButton>
+          <CommonButton color='black'>{intl.formatMessage(messages.add)}</CommonButton>
         </Box>
       </Layout>
     </Form>

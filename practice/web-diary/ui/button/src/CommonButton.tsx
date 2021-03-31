@@ -1,11 +1,7 @@
-import React                                       from 'react'
-import styled                                      from '@emotion/styled'
-import { border, flexbox, layout, padding,color } from 'styled-system'
+import React      from 'react'
 
-import { ButtonInterface }                         from '../interfaces/ButtonInterface'
+import { Button } from '@ui/button'
 
-const Button = styled('button')<ButtonInterface>(border, flexbox, layout, padding, color)
-
-export const CommonButton = ({ children,color }) => {
+export const CommonButton = ({ children, color }) => {
   return <Button color={color}>{children}</Button>
 }
