@@ -12,7 +12,7 @@ import {
   system,
 } from 'styled-system'
 
-import { Row } from '../interfaces/LayoutInterface'
+import { Row } from './Types'
 
 export const Box = styled.div<Row>(
   system({

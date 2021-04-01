@@ -1,9 +1,9 @@
 import styled                                            from '@emotion/styled'
 import { color, flexbox, layout, position, size, space } from 'styled-system'
 
-import { LayoutType, RowType, boxSizing }                from '../interfaces/LayoutInterface'
+import { LayoutType, RowType }                           from './Types'
 
-export const Row = styled.div<RowType>(layout, space, flexbox, position, boxSizing)
+export const Row = styled.div<RowType>(layout, space, flexbox, position)
 
 Row.defaultProps = {
   width: '100%',
@@ -11,15 +11,7 @@ Row.defaultProps = {
   display: 'flex',
 }
 
-export const Layout = styled.div<LayoutType>(
-  layout,
-  space,
-  flexbox,
-  position,
-  color,
-  boxSizing,
-  size,
-)
+export const Layout = styled.div<LayoutType>(layout, space, flexbox, position, color, size)
 
 Layout.defaultProps = {
   display: 'flex',

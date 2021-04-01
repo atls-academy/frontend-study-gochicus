@@ -1,19 +1,33 @@
-import React  from 'react'
-import styled from '@emotion/styled'
+import React                            from 'react'
+import styled                           from '@emotion/styled'
+import { ReactJSXElement }              from '@emotion/react/types/jsx-namespace'
+import { border, borderRadius, system } from 'styled-system'
 
-const StyledInput = styled('input')(() => ({
+import { InputCSS }                     from './Types'
+
+const bg = system({
+  bg: {
+    property: 'backgroundColor',
+  },
+  border: {
+    property: 'border',
+  },
+  borderRadius: {
+    property: 'borderRadius',
+  },
+})
+
+const StyledInput = styled('input')(({ height, color }) => ({
   display: 'block',
   width: '100%',
-  height: '28px',
-  padding: '2px 2px',
-  fontSize: '12px',
-  color: '#495057',
-  backgroundColor: ' #fff',
   backgroundClip: 'padding-box',
-  border: '1px solid #ced4da',
-  borderRadius: '3px',
+  color,
+  height,
+  bg,
+  border,
+  borderRadius,
 }))
 
-export const Input = ({ text }) => {
-  return <StyledInput type='text' placeholder={text} />
+export const Input = ({ placeholder, style }: InputCSS): ReactJSXElement => {
+  return <StyledInput type='text' placeholder={placeholder} style={style} />
 }

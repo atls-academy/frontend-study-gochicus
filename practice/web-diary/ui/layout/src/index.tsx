@@ -1,5 +1,2 @@
-import { Box }    from './Box'
-import { Layout } from './Layout'
-
-export { Box }
-export { Layout }
+export * from './Layout'
+export * from './Box'

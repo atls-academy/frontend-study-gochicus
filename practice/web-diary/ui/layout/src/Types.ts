@@ -1,5 +1,3 @@
-import { system } from 'styled-system'
-
 export interface Row {
   system?: {
     boxSizing: boolean
@@ -33,6 +31,3 @@ export interface LayoutType {
   justifyContent?: string
   alignItems?: string
 }
-export const boxSizing = system({
-  boxSizing: true,
-})
