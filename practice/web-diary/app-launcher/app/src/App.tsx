@@ -6,7 +6,7 @@ import { PostStatusFilter } from '@ui/filter'
 import { Input }            from '@ui/input'
 import { Box, Layout }      from '@ui/layout'
 import { PostAddForm }      from '@ui/post-add-form'
-import { PostList }         from '@ui/post-list'
+import { Diary, PostList }  from '@ui/post-list'
 
 const Background = styled('div')(() => ({
   margin: '50px 0 0 0',
@@ -25,7 +25,7 @@ const App = () => {
           <Box flexBasis='40px' />
           <PostStatusFilter />
         </Layout>
-        <PostList />
+        <PostList data={Diary}>{Diary}</PostList>
         <PostAddForm />
       </Layout>
     </Background>

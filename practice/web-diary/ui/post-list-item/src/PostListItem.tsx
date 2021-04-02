@@ -1,8 +1,8 @@
 import React           from 'react'
 import styled          from '@emotion/styled'
 
-import { Button }      from '../../button'
-import { Box, Layout } from '../../layout'
+import { Button }      from '@ui/button'
+import { Box, Layout } from '@ui/layout'
 
 const Label = styled('span')(() => ({
   display: 'block',

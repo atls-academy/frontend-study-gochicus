@@ -1,8 +1,7 @@
 import React            from 'react'
 import styled           from '@emotion/styled'
 
-import { PostListItem } from '../../post-list-item'
-import { Diary }        from './Diary'
+import { PostListItem } from '@ui/post-list-item'
 
 const List = styled('div')(() => ({
   marginTop: '10px',
@@ -10,8 +9,8 @@ const List = styled('div')(() => ({
   minWidth: '300px',
 }))
 
-const PostList: any = () => {
-  const elements = Diary.map((item: any) => {
+const PostList: any = ({ data }: any) => {
+  const elements = data.map((item: any) => {
     return (
       <List key={item.id}>
         <PostListItem> {item.post}</PostListItem>

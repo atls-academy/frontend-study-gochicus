@@ -1,4 +1,4 @@
-export interface ButtonChildrenAndColor {
+export interface ButtonProps {
   children?: any
   color?: string
 }
