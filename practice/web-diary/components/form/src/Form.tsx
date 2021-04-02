@@ -8,15 +8,15 @@ import { Box, Layout } from '@ui/layout'
 
 import messages        from '../messages/messages'
 
-const Form = styled('div')(() => ({
+const StyledForm = styled('div')(() => ({
   margin: '1rem 0',
   minWidth: '300px',
 }))
 
-const PostAddForm = () => {
+const Form = () => {
   const intl = useIntl()
   return (
-    <Form>
+    <StyledForm>
       <Layout display='flex'>
         <Box>
           <Input placeholder='Ваша запись' />
@@ -26,8 +26,8 @@ const PostAddForm = () => {
           <Button color='black'>{intl.formatMessage(messages.add)}</Button>
         </Box>
       </Layout>
-    </Form>
+    </StyledForm>
   )
 }
 
-export default PostAddForm
+export default Form
