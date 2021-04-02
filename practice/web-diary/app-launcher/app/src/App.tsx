@@ -2,11 +2,11 @@ import React                from 'react'
 
 import { AppHeader }        from '@components/app-header'
 import { PostAddForm }      from '@components/post-add-form'
-import { PostList }         from '@components/post-list'
 import { Background }       from '@ui/background'
 import { PostStatusFilter } from '@ui/filter'
 import { Input }            from '@ui/input'
 import { Box, Layout }      from '@ui/layout'
+import { List }             from '@ui/list'
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
           <Box flexBasis='40px' />
           <PostStatusFilter />
         </Layout>
-        <PostList
+        <List
           data={[
             { post: 'yesterday', id: 1 },
             { post: 'today', id: 2 },

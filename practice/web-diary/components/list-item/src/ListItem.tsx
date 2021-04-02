@@ -11,7 +11,7 @@ const Label = styled('span')(() => ({
   userSelect: 'none',
   transition: ' 0.5s all',
 }))
-export const PostListItem: any = ({ content }: any) => {
+export const ListItem: any = ({ content }: any) => {
   return (
     <Layout justifyContent='space-around'>
       <Box minWidth='100px'>
