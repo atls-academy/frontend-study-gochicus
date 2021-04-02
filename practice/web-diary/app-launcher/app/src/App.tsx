@@ -22,11 +22,7 @@ const App = () => {
       <Layout flexDirection='column' alignItems='center' margin='0' maxWidth='800'>
         <AppHeader />
         <Layout margin='1 rem 0' justifyContent='space-between' alignItems='center'>
-          <Input
-            display={'block'}
-            placeholder='Поиск'
-
-          />
+          <Input placeholder='Поиск' />
           <Box flexBasis='40px' />
           <PostStatusFilter />
         </Layout>

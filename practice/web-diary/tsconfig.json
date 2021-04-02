@@ -5,5 +5,5 @@
     "module": "UMD"
   },
   "lib": ["es2019.intl"],
-  "include": ["src"]
+  "include": ["./"]
 }

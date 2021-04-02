@@ -1,22 +1,9 @@
-import {LayoutProps} from 'styled-system'
-export interface Row extends LayoutProps{
+export interface Row {
   system?: {
     boxSizing: boolean
     overflowX: boolean
     overflowY: boolean
   }
-  layout?: string
-  space?: string
-  color?: string
-  boxShadow?: string
-  boxSizing?: string
-  position?: string
-  border?: string
-  display?: string
-  justifyContent?: string
-  alignItems?: string
-
-  flexBasis?: string
 }
 
 export interface RowType {

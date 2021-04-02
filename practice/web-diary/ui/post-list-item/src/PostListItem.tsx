@@ -28,9 +28,11 @@ const PostListItem = () => {
           <CommonButton color='red'>
             <i className='fa fa-star' />
           </CommonButton>
+          <Box flexBasis='30px' />
           <CommonButton color='yellow'>
             <i className='fa fa-trash-o' />
           </CommonButton>
+          <Box flexBasis='30px' />
           <i className='fa fa-heart' />
         </Box>
       </Layout>

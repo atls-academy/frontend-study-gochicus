@@ -1,13 +1,15 @@
-import React                            from 'react'
-import styled                           from '@emotion/styled'
-import { ReactJSXElement }              from '@emotion/react/types/jsx-namespace'
-import { border, borderRadius, system, color } from 'styled-system'
+import styled                                                from '@emotion/styled'
+import { border, color, display, layout, space, typography } from 'styled-system'
 
-import { InputCSS }                     from './Types'
+export const Input = styled<any>('input')(border, layout, color, typography, space, display)
 
-
-
-const Input = styled('input')(({display}) => ({
-   display
-}))
-
+Input.defaultProps = {
+  display: 'block',
+  fontSize: '14px',
+  minWidth: '200px',
+  margin: '0 20px 0 0',
+  padding: '6px 10px',
+  background: '#fff',
+  border: '1px solid #ced4da',
+  borderRadius: 4,
+}

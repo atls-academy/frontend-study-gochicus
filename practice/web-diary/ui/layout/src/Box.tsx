@@ -1,30 +1,22 @@
-import styled  from '@emotion/styled'
+import styled from '@emotion/styled'
 import {
   border,
-  boxShadow,
   color,
   display,
   flexbox,
   layout,
   position,
+  shadow,
   size,
   space,
-  system,
 } from 'styled-system'
 
-import { Row } from './Types'
-
-export const Box = styled.div<Row>(
-  system({
-    boxSizing: true,
-    overflowX: true,
-    overflowY: true,
-  }),
+export const Box = styled.div<any>(
   layout,
   space,
   color,
   flexbox,
-  boxShadow,
+  shadow,
   position,
   border,
   display,

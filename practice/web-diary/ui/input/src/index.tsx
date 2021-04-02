@@ -1,5 +1,3 @@
-import { Input }    from './Input'
-import { InputCSS } from './Types'
+import { Input } from './Input'
 
 export { Input }
-export { InputCSS }

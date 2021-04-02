@@ -19,15 +19,7 @@ const PostAddForm = () => {
     <Form>
       <Layout display='flex'>
         <Box>
-          <Input
-            placeholder='Ваша запись'
-            style={{
-              height: '28px',
-              padding: '2px 2px',
-              border: '1px solid #ced4da',
-              borderRadius: '3px',
-            }}
-          />
+          <Input placeholder='Ваша запись' display='block' />
         </Box>
         <Box flexBasis='40px' />
         <Box>
