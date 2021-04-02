@@ -1,4 +1,4 @@
-export interface ButtonInterface {
+export interface ButtonChildrenAndColor {
   children?: any
   color?: string
 }

@@ -1,14 +1,7 @@
 import styled                                                from '@emotion/styled'
 import { border, color, display, layout, space, typography } from 'styled-system'
 
-export const Input = styled<any>('input')(
-  { border },
-  { layout },
-  { color },
-  { typography },
-  { space },
-  { display },
-)
+export const Input = styled<any>('input')(border, layout, color, typography, space, display)
 
 Input.defaultProps = {
   display: 'block',
