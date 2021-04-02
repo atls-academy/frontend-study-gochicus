@@ -1,5 +1,3 @@
-import PostList  from './PostList'
-import { Diary } from './Diary'
+import PostList from './PostList'
 
 export { PostList }
-export { Diary }
