@@ -1,7 +1,7 @@
 import React            from 'react'
 import styled           from '@emotion/styled'
 
-import { PostListItem } from '@ui/post-list-item'
+import { PostListItem } from '@components/post-list-item'
 
 const List = styled('div')(() => ({
   marginTop: '10px',
@@ -13,7 +13,7 @@ const PostList: any = ({ data }: any) => {
   const elements = data.map((item: any) => {
     return (
       <List key={item.id}>
-        <PostListItem> {item.post}</PostListItem>
+        <PostListItem content={item.post} />
       </List>
     )
   })

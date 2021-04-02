@@ -1,19 +1,12 @@
 import React                from 'react'
-import styled               from '@emotion/styled'
 
-import { AppHeader }        from '@ui/app-header'
+import { AppHeader }        from '@components/app-header'
+import { PostAddForm }      from '@components/post-add-form'
+import { PostList }         from '@components/post-list'
+import { Background }       from '@ui/background'
 import { PostStatusFilter } from '@ui/filter'
 import { Input }            from '@ui/input'
 import { Box, Layout }      from '@ui/layout'
-import { PostAddForm }      from '@ui/post-add-form'
-import { PostList }         from '@ui/post-list'
-
-const Background = styled('div')(() => ({
-  margin: '50px 0 0 0',
-  padding: '0',
-  backgroundColor: '#eaf5fc',
-  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
-}))
 
 const App = () => {
   return (

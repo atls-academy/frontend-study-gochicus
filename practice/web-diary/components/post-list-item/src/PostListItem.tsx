@@ -11,11 +11,11 @@ const Label = styled('span')(() => ({
   userSelect: 'none',
   transition: ' 0.5s all',
 }))
-export const PostListItem: any = ({ children }: any) => {
+export const PostListItem: any = ({ content }: any) => {
   return (
     <Layout justifyContent='space-around'>
       <Box minWidth='100px'>
-        <Label>{children} </Label>
+        <Label>{content} </Label>
       </Box>
       <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
         <Button color='red'>
