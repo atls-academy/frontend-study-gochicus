@@ -1,7 +1,7 @@
 import React        from 'react'
 import styled       from '@emotion/styled'
 
-import { ListItem } from '@components/list-item'
+import { ListItem } from '@ui/list'
 
 const StyledList = styled('div')(() => ({
   marginTop: '10px',

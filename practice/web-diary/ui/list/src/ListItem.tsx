@@ -1,16 +1,9 @@
 import React           from 'react'
-import styled          from '@emotion/styled'
 
 import { Button }      from '@ui/button'
 import { Box, Layout } from '@ui/layout'
+import { Label }       from '@ui/list'
 
-const Label = styled('span')(() => ({
-  display: 'block',
-  lineHeight: '35px',
-  cursor: 'pointer',
-  userSelect: 'none',
-  transition: ' 0.5s all',
-}))
 export const ListItem: any = ({ content }: any) => {
   return (
     <Layout justifyContent='space-around'>
