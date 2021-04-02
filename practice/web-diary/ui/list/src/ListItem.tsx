@@ -2,13 +2,13 @@ import React           from 'react'
 
 import { Button }      from '@ui/button'
 import { Box, Layout } from '@ui/layout'
-import { Label }       from '@ui/list'
+import { Text }        from '@ui/text'
 
 export const ListItem: any = ({ content }: any) => {
   return (
     <Layout justifyContent='space-around'>
       <Box minWidth='100px'>
-        <Label>{content} </Label>
+        <Text>{content} </Text>
       </Box>
       <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
         <Button color='red'>
