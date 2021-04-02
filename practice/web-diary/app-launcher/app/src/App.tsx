@@ -1,9 +1,9 @@
 import React           from 'react'
 
 import { AppHeader }   from '@components/app-header'
-import { Filter }      from '@components/filter'
 import { Form }        from '@components/form'
 import { Background }  from '@ui/background'
+import { Filter }      from '@ui/filter'
 import { Input }       from '@ui/input'
 import { Box, Layout } from '@ui/layout'
 import { List }        from '@ui/list'
