@@ -1,15 +1,9 @@
-import styled                                      from '@emotion/styled'
-import { border, color, flexbox, layout, padding } from 'styled-system'
+import styled                             from '@emotion/styled'
+import { border, color, layout, padding } from 'styled-system'
 
-import { ButtonInterface }                         from './types'
+import { ButtonInterface }                from './types'
 
-export const Button = styled<any>('button')<ButtonInterface>(
-  border,
-  flexbox,
-  layout,
-  padding,
-  color,
-)
+export const Button = styled<any>('button')<ButtonInterface>(border, color, layout, padding)
 
 Button.defaultProps = {
   border: '1px solid #6c757d',

@@ -6,6 +6,7 @@
   "dependencies": {
     "react": "^17.0.1",
     "@ui/layout": "0.0.0",
-    "react-intl": "^5.13.5"
+    "react-intl": "^5.13.5",
+    "@ui/text": "0.0.0"
   }
 }

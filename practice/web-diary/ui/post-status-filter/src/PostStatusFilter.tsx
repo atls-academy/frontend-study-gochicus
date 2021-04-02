@@ -1,11 +1,11 @@
-import React            from 'react'
-import styled           from '@emotion/styled'
-import { useIntl }      from 'react-intl'
+import React       from 'react'
+import styled      from '@emotion/styled'
+import { useIntl } from 'react-intl'
 
-import { CommonButton } from '@ui/button'
-import { Box }          from '@ui/layout'
+import { Button }  from '@ui/button'
+import { Box }     from '@ui/layout'
 
-import messages         from '../messages/messages'
+import messages    from '../messages/messages'
 
 const Filter = styled('div')(() => ({
   margin: ' 1rem 0',
@@ -17,8 +17,8 @@ const PostStatusFilter = () => {
   return (
     <Filter>
       <Box justifyContent='space-between'>
-        <CommonButton color='black'> {intl.formatMessage(messages.info)}</CommonButton>
-        <CommonButton color='black'> {intl.formatMessage(messages.like)}</CommonButton>
+        <Button color='black'> {intl.formatMessage(messages.info)}</Button>
+        <Button color='black'> {intl.formatMessage(messages.like)}</Button>
       </Box>
     </Filter>
   )

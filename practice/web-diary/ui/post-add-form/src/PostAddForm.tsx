@@ -1,12 +1,12 @@
-import React            from 'react'
-import styled           from '@emotion/styled'
-import { useIntl }      from 'react-intl'
+import React           from 'react'
+import styled          from '@emotion/styled'
+import { useIntl }     from 'react-intl'
 
-import { CommonButton } from '@ui/button'
-import { Input }        from '@ui/input'
-import { Box, Layout }  from '@ui/layout'
+import { Button }      from '@ui/button'
+import { Input }       from '@ui/input'
+import { Box, Layout } from '@ui/layout'
 
-import messages         from '../messages/messages'
+import messages        from '../messages/messages'
 
 const Form = styled('div')(() => ({
   margin: '1rem 0',
@@ -19,11 +19,11 @@ const PostAddForm = () => {
     <Form>
       <Layout display='flex'>
         <Box>
-          <Input placeholder='Ваша запись' display='block' />
+          <Input placeholder='Ваша запись' />
         </Box>
         <Box flexBasis='40px' />
         <Box>
-          <CommonButton color='black'>{intl.formatMessage(messages.add)}</CommonButton>
+          <Button color='black'>{intl.formatMessage(messages.add)}</Button>
         </Box>
       </Layout>
     </Form>

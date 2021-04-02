@@ -1,5 +1,3 @@
-import { Button }       from './Button'
-import { CommonButton } from './CommonButton'
+import { Button } from './Button'
 
-export { CommonButton }
 export { Button }
