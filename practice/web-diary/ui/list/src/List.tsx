@@ -1,10 +1,10 @@
-import React                                        from 'react'
-import styled                                       from '@emotion/styled'
-import { border, color, layout, space, typography } from 'styled-system'
+import React             from 'react'
+import styled            from '@emotion/styled'
+import { layout, space } from 'styled-system'
 
-import { ListItem }                                 from './ListItem'
+import { ListItem }      from './ListItem'
 
-const StyledList = styled<any>('div')(border, color, layout, space, typography)
+const StyledList = styled<any>('div')(layout, space)
 
 StyledList.defaultProps = {
   marginTop: '10px',

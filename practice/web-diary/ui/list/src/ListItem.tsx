@@ -20,7 +20,6 @@ export const ListItem: any = ({ content }: any) => {
         </Button>
         <Box flexBasis='30px' />
         <Button>
-          {' '}
           <i className='fa fa-heart' />
         </Button>
       </Box>
