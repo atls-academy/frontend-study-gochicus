@@ -23,5 +23,3 @@ export const SwitcherPostStatus = () => {
     </StyledSwitcher>
   )
 }
-
-export default SwitcherPostStatus
