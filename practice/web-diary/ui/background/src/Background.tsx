@@ -1,11 +1,10 @@
-import styled                                       from '@emotion/styled'
-import { border, color, layout, space, typography } from 'styled-system'
+import styled                   from '@emotion/styled'
+import { color, layout, space } from 'styled-system'
 
-export const Background = styled<any>('div')(border, color, layout, space, typography)
+export const Background = styled<any>('div')(color, layout, space)
 
 Background.defaultProps = {
   margin: '50px 0 0 0',
   padding: '0',
   backgroundColor: '#eaf5fc',
-  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
 }

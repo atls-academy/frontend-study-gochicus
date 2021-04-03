@@ -12,4 +12,5 @@ Input.defaultProps = {
   background: '#fff',
   border: '1px solid #ced4da',
   borderRadius: 4,
+  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
 }

@@ -10,6 +10,7 @@ StyledList.defaultProps = {
   marginTop: '10px',
   padding: '20px 35px 10px 35px',
   minWidth: '300px',
+  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
 }
 
 export const List: any = ({ data }: any) => {

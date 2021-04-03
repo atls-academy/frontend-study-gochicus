@@ -1,9 +1,9 @@
-import styled                             from '@emotion/styled'
-import { border, color, layout, padding } from 'styled-system'
+import styled                                         from '@emotion/styled'
+import { border, color, layout, padding, typography } from 'styled-system'
 
-import { ButtonProps }                    from './types'
+import { ButtonProps }                                from './types'
 
-export const Button = styled<any>('button')<ButtonProps>(border, color, layout, padding)
+export const Button = styled<any>('button')<ButtonProps>(border, color, layout, padding, typography)
 
 Button.defaultProps = {
   border: '1px solid #6c757d',
@@ -16,4 +16,5 @@ Button.defaultProps = {
   borderRadius: '4px',
   cursor: 'pointer',
   margin: '0 20px 0 0',
+  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
 }
