@@ -20,4 +20,4 @@ const List: any = ({ data }: any) => {
   return elements
 }
 
-export default List
+export { List }

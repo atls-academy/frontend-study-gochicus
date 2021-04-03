@@ -1,3 +1,1 @@
-import FormPostAdd from './FormPostAdd'
-
-export { FormPostAdd }
+export * from './FormPostAdd'

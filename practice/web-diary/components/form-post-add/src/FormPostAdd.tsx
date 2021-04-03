@@ -30,4 +30,4 @@ const FormPostAdd = () => {
   )
 }
 
-export default FormPostAdd
+export { FormPostAdd }
