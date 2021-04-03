@@ -1,12 +1,12 @@
-import React              from 'react'
+import React                        from 'react'
 
-import { AppHeader }      from '@components/app-header'
-import { Form }           from '@components/form'
-import { SwitcherButton } from '@components/switcher-button-status'
-import { Background }     from '@ui/background'
-import { Input }          from '@ui/input'
-import { Box, Layout }    from '@ui/layout'
-import { List }           from '@ui/list'
+import { AppHeader }                from '@components/app-header'
+import { Form }                     from '@components/form'
+import { SwitcherButtonPostStatus } from '@components/switcher-button-post-status'
+import { Background }               from '@ui/background'
+import { Input }                    from '@ui/input'
+import { Box, Layout }              from '@ui/layout'
+import { List }                     from '@ui/list'
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <Layout margin='1 rem 0' justifyContent='space-between' alignItems='center'>
           <Input placeholder='Поиск' />
           <Box flexBasis='40px' />
-          <SwitcherButton />
+          <SwitcherButtonPostStatus />
         </Layout>
         <List
           data={[
