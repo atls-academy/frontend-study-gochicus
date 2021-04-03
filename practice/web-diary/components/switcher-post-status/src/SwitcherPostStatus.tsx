@@ -12,7 +12,7 @@ const StyledSwitcher = styled('div')(() => ({
   minWidth: '180px',
 }))
 
-export const SwitcherButtonPostStatus = () => {
+export const SwitcherPostStatus = () => {
   const intl = useIntl()
   return (
     <StyledSwitcher>
@@ -24,4 +24,4 @@ export const SwitcherButtonPostStatus = () => {
   )
 }
 
-export default SwitcherButtonPostStatus
+export default SwitcherPostStatus
