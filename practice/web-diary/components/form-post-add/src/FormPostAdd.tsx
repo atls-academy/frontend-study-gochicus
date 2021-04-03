@@ -13,7 +13,7 @@ const StyledForm = styled('div')(() => ({
   minWidth: '300px',
 }))
 
-const Form = () => {
+const FormPostAdd = () => {
   const intl = useIntl()
   return (
     <StyledForm>
@@ -30,4 +30,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default FormPostAdd

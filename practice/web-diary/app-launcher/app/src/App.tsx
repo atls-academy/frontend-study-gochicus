@@ -1,7 +1,7 @@
 import React                  from 'react'
 
 import { AppHeader }          from '@components/app-header'
-import { Form }               from '@components/form'
+import { FormPostAdd }        from '@components/form-post-add'
 import { SwitcherPostStatus } from '@components/switcher-post-status'
 import { Background }         from '@ui/background'
 import { Input }              from '@ui/input'
@@ -25,7 +25,7 @@ const App = () => {
             { post: 'tomorrow', id: 3 },
           ]}
         />
-        <Form />
+        <FormPostAdd />
       </Layout>
     </Background>
   )
