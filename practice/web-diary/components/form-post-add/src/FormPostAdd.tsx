@@ -1,17 +1,20 @@
-import React           from 'react'
-import styled          from '@emotion/styled'
-import { useIntl }     from 'react-intl'
+import React                                        from 'react'
+import styled                                       from '@emotion/styled'
+import { useIntl }                                  from 'react-intl'
+import { border, color, layout, space, typography } from 'styled-system'
 
-import { Button }      from '@ui/button'
-import { Input }       from '@ui/input'
-import { Box, Layout } from '@ui/layout'
+import { Button }                                   from '@ui/button'
+import { Input }                                    from '@ui/input'
+import { Box, Layout }                              from '@ui/layout'
 
-import messages        from '../messages/messages'
+import messages                                     from '../messages/messages'
 
-const StyledForm = styled('div')(() => ({
+const StyledForm = styled<any>('div')(border, color, layout, space, typography)
+
+StyledForm.defaultProps = {
   margin: '1rem 0',
   minWidth: '300px',
-}))
+}
 
 export const FormPostAdd = () => {
   const intl = useIntl()

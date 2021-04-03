@@ -9,6 +9,7 @@
     "@ui/input": "0.0.0",
     "@emotion/styled": "^11.1.5",
     "@ui/layout": "0.0.0",
-    "react-intl": "^5.13.5"
+    "react-intl": "^5.13.5",
+    "styled-system": "^5.1.5"
   }
 }

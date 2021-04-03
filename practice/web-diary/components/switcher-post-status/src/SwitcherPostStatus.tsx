@@ -1,16 +1,19 @@
-import React       from 'react'
-import styled      from '@emotion/styled'
-import { useIntl } from 'react-intl'
+import React                                        from 'react'
+import styled                                       from '@emotion/styled'
+import { useIntl }                                  from 'react-intl'
+import { border, color, layout, space, typography } from 'styled-system'
 
-import { Button }  from '@ui/button'
-import { Box }     from '@ui/layout'
+import { Button }                                   from '@ui/button'
+import { Box }                                      from '@ui/layout'
 
-import messages    from '../messages/messages'
+import messages                                     from '../messages/messages'
 
-const StyledSwitcher = styled('div')(() => ({
+const StyledSwitcher = styled<any>('div')(border, color, layout, space, typography)
+
+StyledSwitcher.defaultProps = {
   margin: ' 1rem 0',
   minWidth: '180px',
-}))
+}
 
 export const SwitcherPostStatus = () => {
   const intl = useIntl()
