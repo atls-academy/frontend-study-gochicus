@@ -25,7 +25,7 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
-    "@app-launcher/app": "0.0.0",
+    "@web-diary/app": "0.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-intl": "^5.13.5",
