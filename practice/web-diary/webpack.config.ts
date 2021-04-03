@@ -2,7 +2,7 @@ import * as path from 'path'
 
 export const target = 'node'
 export const mode = 'development'
-export const entry = './app-launcher/index.tsx'
+export const entry = './app/index.tsx'
 export const output = {
   path: path.resolve(__dirname, 'dist'),
 }
