@@ -6,7 +6,7 @@ import { Text }    from '@ui/text'
 
 import messages    from '../messages/messages'
 
-const AppHeader = () => {
+export const AppHeader = () => {
   const intl = useIntl()
   return (
     <Box justifyContent='space-between' alignItems='flex-end' display='flex'>
@@ -14,5 +14,3 @@ const AppHeader = () => {
     </Box>
   )
 }
-
-export { AppHeader }

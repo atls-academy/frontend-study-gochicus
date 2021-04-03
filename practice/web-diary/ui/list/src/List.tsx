@@ -9,7 +9,7 @@ const StyledList = styled('div')(() => ({
   minWidth: '300px',
 }))
 
-const List: any = ({ data }: any) => {
+export const List: any = ({ data }: any) => {
   const elements = data.map((item: any) => {
     return (
       <StyledList key={item.id}>
@@ -19,5 +19,3 @@ const List: any = ({ data }: any) => {
   })
   return elements
 }
-
-export { List }
