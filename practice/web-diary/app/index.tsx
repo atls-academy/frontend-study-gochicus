@@ -2,7 +2,7 @@ import React            from 'react'
 import ReactDOM         from 'react-dom'
 import { IntlProvider } from 'react-intl'
 
-import App              from './src/App'
+import { App }          from './src'
 
 const locale = 'ru'
 ReactDOM.render(
