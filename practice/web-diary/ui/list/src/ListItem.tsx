@@ -19,7 +19,10 @@ export const ListItem: any = ({ content }: any) => {
           <i className='fa fa-trash-o' />
         </Button>
         <Box flexBasis='30px' />
-        <i className='fa fa-heart' />
+        <Button>
+          {' '}
+          <i className='fa fa-heart' />
+        </Button>
       </Box>
     </Layout>
   )

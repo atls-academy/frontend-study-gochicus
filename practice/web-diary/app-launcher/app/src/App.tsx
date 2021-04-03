@@ -2,7 +2,7 @@ import React              from 'react'
 
 import { AppHeader }      from '@components/app-header'
 import { Form }           from '@components/form'
-import { SwitcherButton } from '@components/switcher-button'
+import { SwitcherButton } from '@components/switcher-button-status'
 import { Background }     from '@ui/background'
 import { Input }          from '@ui/input'
 import { Box, Layout }    from '@ui/layout'
