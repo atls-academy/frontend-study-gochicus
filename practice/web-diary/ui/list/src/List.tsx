@@ -14,11 +14,9 @@ StyledList.defaultProps = {
 }
 
 export const List: any = ({ data }: any) => {
-  data.map((item: any) => {
-    return (
-      <StyledList key={item.id}>
-        <ListItem content={item.post} />
-      </StyledList>
-    )
-  })
+  return data.map(item => (
+    <StyledList key={item.id}>
+      <ListItem content={item.post} />
+    </StyledList>
+  ))
 }
