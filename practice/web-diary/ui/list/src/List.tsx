@@ -14,12 +14,11 @@ StyledList.defaultProps = {
 }
 
 export const List: any = ({ data }: any) => {
-  const elements = data.map((item: any) => {
+  data.map((item: any) => {
     return (
       <StyledList key={item.id}>
         <ListItem content={item.post} />
       </StyledList>
     )
   })
-  return elements
 }
