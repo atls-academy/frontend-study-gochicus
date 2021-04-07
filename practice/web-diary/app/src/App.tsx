@@ -1,12 +1,12 @@
-import React from 'react'
+import React                  from 'react'
 
-import { Header } from '@components/header'
-import { FormPostAdd } from '@components/form-post-add'
+import { FormPostAdd }        from '@components/form-post-add'
+import { Header }             from '@components/header'
 import { SwitcherPostStatus } from '@components/switcher-post-status'
-import { Background } from '@ui/background'
-import { Input } from '@ui/input'
-import { Layout } from '@ui/layout'
-import { List } from '@ui/list'
+import { Background }         from '@ui/background'
+import { Input }              from '@ui/input'
+import { Layout }             from '@ui/layout'
+import { List }               from '@ui/list'
 
 const App = () => {
   return (

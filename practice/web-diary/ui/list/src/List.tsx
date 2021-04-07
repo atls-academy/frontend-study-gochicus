@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React             from 'react'
+import styled            from '@emotion/styled'
 import { layout, space } from 'styled-system'
 
-import { ListItem } from './ListItem'
+import { ListItem }      from './ListItem'
 
 const StyledList = styled('div')(layout, space)
 
