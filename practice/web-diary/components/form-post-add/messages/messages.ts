@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl'
 
-import { name }           from '../package.json'
+import { name } from '../package.json'
 
 export default defineMessages({
   info: {
@@ -18,5 +18,5 @@ export default defineMessages({
   placeholder: {
     id: `${name}.header`,
     defaultMessage: 'Ваша запись',
-  }
+  },
 })

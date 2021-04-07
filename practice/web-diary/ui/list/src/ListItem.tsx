@@ -1,8 +1,7 @@
-import React           from 'react'
-import { Button }      from '@ui/button'
+import React from 'react'
+import { Button } from '@ui/button'
 import { Box, Layout } from '@ui/layout'
-import { Text }        from '@ui/text'
-
+import { Text } from '@ui/text'
 
 export const ListItem = ({ content }) => {
   return (

@@ -1,16 +1,20 @@
-import React       from 'react'
+import React from 'react'
 import { useIntl } from 'react-intl'
 
-import { Box }     from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Box } from '@ui/layout'
+import { Text } from '@ui/text'
 
-import messages    from '../messages/messages'
+import messages from '../messages/messages'
 
-export const Header = ({post,like}) => {
+export const Header = ({ post, like }) => {
   const intl = useIntl()
   return (
     <Box justifyContent='space-between' alignItems='flex-end' display='flex'>
-      <Text fontSize='25px'  >{post}{intl.formatMessage(messages.header)}{like}</Text>
+      <Text fontSize='25px'>
+        {post}
+        {intl.formatMessage(messages.header)}
+        {like}
+      </Text>
     </Box>
   )
 }

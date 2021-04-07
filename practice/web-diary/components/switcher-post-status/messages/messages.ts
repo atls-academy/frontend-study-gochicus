@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl'
 
-import { name }           from '../package.json'
+import { name } from '../package.json'
 
 export default defineMessages({
   info: {
