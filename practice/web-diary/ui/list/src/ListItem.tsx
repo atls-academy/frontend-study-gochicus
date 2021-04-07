@@ -1,10 +1,10 @@
 import React           from 'react'
-
 import { Button }      from '@ui/button'
 import { Box, Layout } from '@ui/layout'
 import { Text }        from '@ui/text'
 
-export const ListItem: any = ({ content }: any) => {
+
+export const ListItem = ({ content }) => {
   return (
     <Layout justifyContent='space-around'>
       <Box minWidth='100px'>

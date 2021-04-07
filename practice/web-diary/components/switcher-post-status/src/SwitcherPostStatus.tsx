@@ -8,7 +8,7 @@ import { Box }     from '@ui/layout'
 import messages    from '../messages/messages'
 
 const StyledSwitcher = styled('div')(() => ({
-  margin: ' 1rem 0',
+  margin: '15px 0',
   minWidth: '180px',
 }))
 

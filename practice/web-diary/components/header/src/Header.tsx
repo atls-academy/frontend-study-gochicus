@@ -6,11 +6,11 @@ import { Text }    from '@ui/text'
 
 import messages    from '../messages/messages'
 
-export const AppHeader = () => {
+export const Header = ({post,like}) => {
   const intl = useIntl()
   return (
     <Box justifyContent='space-between' alignItems='flex-end' display='flex'>
-      <Text fontSize='25px'>{intl.formatMessage(messages.header)}</Text>
+      <Text fontSize='25px'  >{post}{intl.formatMessage(messages.header)}{like}</Text>
     </Box>
   )
 }

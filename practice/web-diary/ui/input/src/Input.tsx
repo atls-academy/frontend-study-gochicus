@@ -1,7 +1,7 @@
 import styled                                                from '@emotion/styled'
 import { border, color, display, layout, space, typography } from 'styled-system'
 
-export const Input = styled<any>('input')(border, layout, color, typography, space, display)
+export const Input = styled('input')(border, layout, color, typography, space, display)
 
 Input.defaultProps = {
   display: 'block',
@@ -12,5 +12,4 @@ Input.defaultProps = {
   background: '#fff',
   border: '1px solid #ced4da',
   borderRadius: 4,
-  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
 }

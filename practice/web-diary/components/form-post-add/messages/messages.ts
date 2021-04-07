@@ -15,4 +15,8 @@ export default defineMessages({
     id: `${name}.header`,
     defaultMessage: 'Добавить',
   },
+  placeholder: {
+    id: `${name}.header`,
+    defaultMessage: 'Ваша запись',
+  }
 })

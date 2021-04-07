@@ -1,7 +1,7 @@
 import styled                                from '@emotion/styled'
 import { border, color, layout, typography } from 'styled-system'
 
-export const Button = styled<any>('button')(border, color, layout, typography)
+export const Button = styled('button')(border, color, layout, typography)
 
 Button.defaultProps = {
   border: '1px solid #6c757d',
@@ -14,5 +14,4 @@ Button.defaultProps = {
   borderRadius: '4px',
   cursor: 'pointer',
   margin: '0 20px 0 0',
-  fontFamily: ' -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"',
 }

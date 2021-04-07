@@ -9,7 +9,7 @@ import { Box, Layout } from '@ui/layout'
 import messages        from '../messages/messages'
 
 const StyledForm = styled('div')(() => ({
-  margin: '1rem 0',
+  margin: '14px 0',
   minWidth: '300px',
 }))
 
@@ -19,7 +19,7 @@ export const FormPostAdd = () => {
     <StyledForm>
       <Layout display='flex'>
         <Box>
-          <Input placeholder='Ваша запись' />
+          <Input placeholder={intl.formatMessage(messages.placeholder)} />
         </Box>
         <Box flexBasis='40px' />
         <Box>

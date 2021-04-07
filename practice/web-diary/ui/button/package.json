@@ -8,6 +8,7 @@
     "react-intl": "^5.13.5",
     "@emotion/styled": "^11.1.5",
     "styled-system": "^5.1.5",
-    "@emotion/react": "^11.1.5"
+    "@emotion/react": "^11.1.5",
+    "@types/styled-system": "^5.1.11"
   }
 }
