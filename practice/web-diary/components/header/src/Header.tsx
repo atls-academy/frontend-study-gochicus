@@ -12,7 +12,8 @@ export const Header = ({ post, like }) => {
     <Box justifyContent='space-between' alignItems='flex-end' display='flex'>
       <Text fontSize='25px'>
         {post}
-        {intl.formatMessage(messages.header)}
+        {intl.formatMessage(messages.headerPostCount)}
+        {intl.formatMessage(messages.headerLikeCount)}
         {like}
       </Text>
     </Box>

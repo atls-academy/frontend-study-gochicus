@@ -4,7 +4,7 @@ import { Button }      from '@ui/button'
 import { Box, Layout } from '@ui/layout'
 import { Text }        from '@ui/text'
 
-export const ListItem = ({ content }) => {
+export const Item = ({ content }) => {
   return (
     <Layout justifyContent='space-around'>
       <Box minWidth='100px'>

@@ -15,7 +15,7 @@ export default defineMessages({
     id: `${name}.header`,
     defaultMessage: 'Добавить',
   },
-  placeholder: {
+  placeholderFormPostAdd: {
     id: `${name}.header`,
     defaultMessage: 'Ваша запись',
   },
