@@ -1,4 +1,5 @@
 import React                  from 'react'
+import { useIntl }            from 'react-intl'
 
 import { FormPostAdd }        from '@components/form-post-add'
 import { Header }             from '@components/header'
@@ -8,13 +9,16 @@ import { Input }              from '@ui/input'
 import { Layout }             from '@ui/layout'
 import { List }               from '@ui/list'
 
+import messages               from '../messages/messages'
+
 const App = () => {
+  const intl = useIntl()
   return (
     <Background>
       <Layout flexDirection='column' alignItems='center' margin='0' maxWidth='800'>
-        <Header post={5} like={0} />
+        <Header />
         <Layout margin='10px 0' justifyContent='space-between' alignItems='center'>
-          <Input placeholder='Поиск' />
+          <Input placeholder={intl.formatMessage(messages.search)} />
           <Layout flexBasis='40px' />
           <SwitcherPostStatus />
         </Layout>

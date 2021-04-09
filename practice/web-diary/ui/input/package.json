@@ -6,7 +6,9 @@
   "dependencies": {
     "react": "^17.0.1",
     "@emotion/styled": "^11.1.5",
-    "@types/styled-system": "^5.1.11",
     "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@types/styled-system": "^5.1.11"
   }
 }

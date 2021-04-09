@@ -11,7 +11,7 @@ import {
   space,
 } from 'styled-system'
 
-export const Box = styled.div<any>(
+export const Box = styled.div(
   layout,
   space,
   color,

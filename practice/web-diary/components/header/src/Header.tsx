@@ -6,7 +6,10 @@ import { Text }    from '@ui/text'
 
 import messages    from '../messages/messages'
 
-export const Header = ({ post, like }) => {
+const like = 0
+const post = 5
+
+export const Header = () => {
   const intl = useIntl()
   return (
     <Box justifyContent='space-between' alignItems='flex-end'>
