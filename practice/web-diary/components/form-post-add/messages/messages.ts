@@ -4,19 +4,19 @@ import { name }           from '../package.json'
 
 export default defineMessages({
   info: {
-    id: `${name}.form-post-add`,
+    id: `${name}.info`,
     defaultMessage: 'всё',
   },
   like: {
-    id: `${name}.form-post-add`,
+    id: `${name}.like`,
     defaultMessage: 'Понравилось',
   },
   add: {
-    id: `${name}.form-post-add`,
+    id: `${name}.add`,
     defaultMessage: 'Добавить',
   },
   yourPost: {
-    id: `${name}.form-post-add`,
+    id: `${name}.yourPost`,
     defaultMessage: 'Ваша запись',
   },
 })

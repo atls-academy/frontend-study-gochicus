@@ -4,11 +4,11 @@ import { name }           from '../package.json'
 
 export default defineMessages({
   headerPostCount: {
-    id: `${name}.header`,
+    id: `${name}.headerPostCount`,
     defaultMessage: ' записей, ',
   },
   headerLikeCount: {
-    id: `${name}.header`,
+    id: `${name}.headerLikeCount`,
     defaultMessage: 'из них понравилось ',
   },
 })
