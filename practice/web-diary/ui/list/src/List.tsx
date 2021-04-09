@@ -1,21 +1,13 @@
 import React                from 'react'
-import styled               from '@emotion/styled'
-import { layout, space }    from 'styled-system'
+
+import { Box }              from '@ui/layout'
 
 import { Item as ListItem } from './Item'
 
-const StyledList = styled('div')(layout, space)
-
-StyledList.defaultProps = {
-  marginTop: '10px',
-  padding: '20px 35px 10px 35px',
-  minWidth: '300px',
-}
-
-export const List: any = ({ data }: any) => {
+export const List = ({ data }: any) => {
   return data.map(item => (
-    <StyledList key={item.id}>
+    <Box marginTop='10px' padding='20px 35px 10px 35px' minWidth='300px' key={item.id}>
       <ListItem content={item.post} />
-    </StyledList>
+    </Box>
   ))
 }

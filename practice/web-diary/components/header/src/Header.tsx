@@ -9,11 +9,11 @@ import messages    from '../messages/messages'
 export const Header = ({ post, like }) => {
   const intl = useIntl()
   return (
-    <Box justifyContent='space-between' alignItems='flex-end' display='flex'>
+    <Box justifyContent='space-between' alignItems='flex-end'>
       <Text fontSize='25px'>
         {post}
-        {intl.formatMessage(messages.headerPostCount)}
-        {intl.formatMessage(messages.headerLikeCount)}
+        {intl.formatMessage(messages.postCount)}
+        {intl.formatMessage(messages.likeCount)}
         {like}
       </Text>
     </Box>

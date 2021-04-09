@@ -3,12 +3,12 @@ import { defineMessages } from 'react-intl'
 import { name }           from '../package.json'
 
 export default defineMessages({
-  headerPostCount: {
-    id: `${name}.headerPostCount`,
+  postCount: {
+    id: `${name}.post_count`,
     defaultMessage: ' записей, ',
   },
-  headerLikeCount: {
-    id: `${name}.headerLikeCount`,
+  likeCount: {
+    id: `${name}.like_count`,
     defaultMessage: 'из них понравилось ',
   },
 })

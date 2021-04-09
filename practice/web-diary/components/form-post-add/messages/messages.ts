@@ -16,7 +16,7 @@ export default defineMessages({
     defaultMessage: 'Добавить',
   },
   yourPost: {
-    id: `${name}.yourPost`,
+    id: `${name}.your_post`,
     defaultMessage: 'Ваша запись',
   },
 })

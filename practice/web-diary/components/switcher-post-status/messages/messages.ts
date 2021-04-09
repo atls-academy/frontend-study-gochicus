@@ -4,15 +4,15 @@ import { name }           from '../package.json'
 
 export default defineMessages({
   info: {
-    id: `${name}.switcher`,
+    id: `${name}.info`,
     defaultMessage: 'всё',
   },
   like: {
-    id: `${name}.switcher`,
+    id: `${name}.like`,
     defaultMessage: 'Понравилось',
   },
   add: {
-    id: `${name}.switcher`,
+    id: `${name}.add`,
     defaultMessage: 'Добавить',
   },
 })
