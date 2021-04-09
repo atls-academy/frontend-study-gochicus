@@ -19,7 +19,7 @@ export const FormPostAdd = () => {
     <StyledForm>
       <Layout display='flex'>
         <Box>
-          <Input placeholder={intl.formatMessage(messages.placeholderFormPostAdd)} />
+          <Input placeholder={intl.formatMessage(messages.placeholderYourPost)} />
         </Box>
         <Box flexBasis='40px' />
         <Box>
