@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "license": "BSD 3-Clause",
   "main": "src/index.tsx",
+  "scripts": {
+    "layout:master": "yarn workspace @ui/layout master",
+    "button:master": "yarn workspace @ui/button master"
+  },
   "dependencies": {
     "react": "^17.0.1",
-    "@ui/button": "0.0.0",
-    "@ui/layout": "0.0.0",
     "react-intl": "^5.13.5"
   }
 }
