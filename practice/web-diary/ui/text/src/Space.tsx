@@ -1,13 +1,6 @@
-import React    from 'react'
-
-import { Text } from './Text'
+import React from 'react'
 
 export const Space = ({ count = 1 }) => {
-  let space = ''
-  let rundownCounter = count
-  while (rundownCounter >= 1) {
-    space += space
-    rundownCounter -= 1
-  }
-  return <Text>{space} </Text>
+  const space = ' '.repeat(count)
+  return <span>{space}</span>
 }

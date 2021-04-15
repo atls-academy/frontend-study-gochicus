@@ -8,7 +8,7 @@ export const Item = ({ content }) => {
   return (
     <Row justifyContent='space-around'>
       <Box minWidth='100px'>
-        <Text>{content} </Text>
+        <Text>{content}</Text>
       </Box>
       <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
         <Button color='red'>
