@@ -6,7 +6,7 @@ import { Item as ListItem }    from './Item'
 
 export const List = ({ data }: any) =>
   data.map(item => (
-    <Column flexDirection='column'>
+    <Column>
       <Box minWidth='300px' key={item.id}>
         <ListItem content={item.post} />
       </Box>

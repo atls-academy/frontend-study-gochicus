@@ -15,7 +15,7 @@ const App = () => {
   const intl = useIntl()
   return (
     <Background>
-      <Column flexDirection='column' alignItems='center'>
+      <Column alignItems='center'>
         <Header />
         <Layout flexBasis='20px' />
         <Box justifyContent='space-between' alignItems='center' minWidth='400px'>
