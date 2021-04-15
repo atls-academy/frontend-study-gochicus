@@ -15,13 +15,14 @@ const App = () => {
   const intl = useIntl()
   return (
     <Background>
-      <Layout flexDirection='column' alignItems='center' margin='0' maxWidth='800'>
+      <Layout flexDirection='column' alignItems='center'>
         <Header />
-        <Layout margin='10px 0' justifyContent='space-between' alignItems='center'>
+        <Layout flexBasis='20px' />
+        <Layout justifyContent='space-between' alignItems='center' minWidth='400px'>
           <Input placeholder={intl.formatMessage(messages.search)} />
-          <Layout flexBasis='40px' />
           <SwitcherPostStatus />
         </Layout>
+        <Layout flexBasis='15px' />
         <List
           data={[
             { post: 'yesterday', id: 1 },
@@ -29,6 +30,7 @@ const App = () => {
             { post: 'tomorrow', id: 3 },
           ]}
         />
+        <Layout flexBasis='20px' />
         <FormPostAdd />
       </Layout>
     </Background>

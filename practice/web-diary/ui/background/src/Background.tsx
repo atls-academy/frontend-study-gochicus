@@ -4,7 +4,6 @@ import { color, layout, space } from 'styled-system'
 export const Background = styled('div')(color, layout, space)
 
 Background.defaultProps = {
-  margin: '50px 0 0 0',
   padding: '0',
   backgroundColor: '#eaf5fc',
 }

@@ -9,7 +9,7 @@ import messages    from '../messages/messages'
 export const SwitcherPostStatus = () => {
   const intl = useIntl()
   return (
-    <Box margin='15px 0' minWidth='180px' justifyContent='space-between'>
+    <Box minWidth='180px' justifyContent='space-between'>
       <Button color='black'> {intl.formatMessage(messages.all)}</Button>
       <Button color='black'> {intl.formatMessage(messages.like)}</Button>
     </Box>

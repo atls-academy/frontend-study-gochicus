@@ -10,16 +10,14 @@ import messages        from '../messages/messages'
 export const FormPostAdd = () => {
   const intl = useIntl()
   return (
-    <Box margin='14px 0' minWidth='300px'>
-      <Layout>
-        <Box>
-          <Input placeholder={intl.formatMessage(messages.yourPost)} />
-        </Box>
-        <Box flexBasis='40px' />
-        <Box>
-          <Button color='black'>{intl.formatMessage(messages.add)}</Button>
-        </Box>
-      </Layout>
-    </Box>
+    <Layout justifyContent='space-between' minWidth='400px'>
+      <Box>
+        <Input placeholder={intl.formatMessage(messages.yourPost)} />
+      </Box>
+      <Box>
+        <Button color='black'>{intl.formatMessage(messages.add)}</Button>
+      </Box>
+      <Layout flexBasis='70px' />
+    </Layout>
   )
 }

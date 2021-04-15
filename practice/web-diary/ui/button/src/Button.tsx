@@ -13,5 +13,4 @@ Button.defaultProps = {
   padding: '6px 12px',
   borderRadius: '4px',
   cursor: 'pointer',
-  margin: '0 20px 0 0',
 }
