@@ -15,11 +15,7 @@ export const Header = () => {
     <Row justifyContent='space-between' alignItems='flex-end'>
       <Text fontSize='25px'>{post}</Text>
       <Space />
-      <Text fontSize='25px'>
-        {intl.formatMessage(messages.postCount)}
-        <Space />
-        {intl.formatMessage(messages.likeCount)}
-      </Text>
+      <Text fontSize='25px'>{intl.formatMessage(messages.postCount)}</Text>
       <Space />
       <Text fontSize='25px'>{like}</Text>
     </Row>
