@@ -1,12 +1,12 @@
-import React           from 'react'
+import React                from 'react'
 
-import { Button }      from '@ui/button'
-import { Box, Layout } from '@ui/layout'
-import { Text }        from '@ui/text'
+import { Button }           from '@ui/button'
+import { Box, Layout, Row } from '@ui/layout'
+import { Text }             from '@ui/text'
 
 export const Item = ({ content }) => {
   return (
-    <Layout justifyContent='space-around'>
+    <Row justifyContent='space-around'>
       <Box minWidth='100px'>
         <Text>{content} </Text>
       </Box>
@@ -14,15 +14,15 @@ export const Item = ({ content }) => {
         <Button color='red'>
           <i className='fa fa-star' />
         </Button>
-        <Box flexBasis='30px' />
+        <Layout flexBasis='30px' />
         <Button color='yellow'>
           <i className='fa fa-trash-o' />
         </Button>
-        <Box flexBasis='30px' />
+        <Layout flexBasis='30px' />
         <Button>
           <i className='fa fa-heart' />
         </Button>
       </Box>
-    </Layout>
+    </Row>
   )
 }

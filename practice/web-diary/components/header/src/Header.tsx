@@ -1,10 +1,10 @@
-import React       from 'react'
-import { useIntl } from 'react-intl'
+import React           from 'react'
+import { useIntl }     from 'react-intl'
 
-import { Box }     from '@ui/layout'
-import { Text }    from '@ui/text'
+import { Row }         from '@ui/layout'
+import { Space, Text } from '@ui/text'
 
-import messages    from '../messages/messages'
+import messages        from '../messages/messages'
 
 const like = 0
 const post = 5
@@ -12,13 +12,16 @@ const post = 5
 export const Header = () => {
   const intl = useIntl()
   return (
-    <Box justifyContent='space-between' alignItems='flex-end'>
+    <Row justifyContent='space-between' alignItems='flex-end'>
       <Text fontSize='25px'>
         {post}
+        <Space count={1} />
         {intl.formatMessage(messages.postCount)}
+        <Space count={1} />
         {intl.formatMessage(messages.likeCount)}
+        <Space count={1} />
         {like}
       </Text>
-    </Box>
+    </Row>
   )
 }
