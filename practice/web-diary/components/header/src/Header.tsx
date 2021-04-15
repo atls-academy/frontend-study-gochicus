@@ -13,15 +13,15 @@ export const Header = () => {
   const intl = useIntl()
   return (
     <Row justifyContent='space-between' alignItems='flex-end'>
+      <Text fontSize='25px'>{post}</Text>
+      <Space />
       <Text fontSize='25px'>
-        {post}
-        <Space />
         {intl.formatMessage(messages.postCount)}
         <Space />
         {intl.formatMessage(messages.likeCount)}
-        <Space />
-        {like}
       </Text>
+      <Space />
+      <Text fontSize='25px'>{like}</Text>
     </Row>
   )
 }
