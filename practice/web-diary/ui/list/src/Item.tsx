@@ -1,12 +1,11 @@
 import React                from 'react'
 
 import { Button }           from '@ui/button'
+import { HeartIcon }        from '@ui/icons'
+import { StarIcon }         from '@ui/icons'
+import { TrashIcon }        from '@ui/icons'
 import { Box, Layout, Row } from '@ui/layout'
 import { Text }             from '@ui/text'
-
-import { HeartIcon }        from '../../icons'
-import { StarIcon }         from '../../icons/src/StarIcon'
-import { TrashIcon }        from '../../icons/src/TrashIcon'
 
 export const Item = ({ content }) => {
   return (
