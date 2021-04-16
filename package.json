@@ -5,7 +5,9 @@
     "lint": "actl lint",
     "commit": "actl commit",
     "typecheck": "actl typecheck",
-    "format": "actl format"
+    "format": "actl format",
+    "precommit": "actl precommit",
+    "diary": "yarn workspace @practice/web-diary run start"
   },
   "devDependencies": {
     "@atlantis-lab/actl": "^0.4.32",

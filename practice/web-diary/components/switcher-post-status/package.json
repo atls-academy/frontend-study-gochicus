@@ -1,0 +1,12 @@
+{
+  "name": "@components/switcher-post-status",
+  "version": "0.0.0",
+  "license": "BSD 3-Clause",
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@ui/button": "0.0.0",
+    "@ui/layout": "0.0.0",
+    "react": "^17.0.1",
+    "react-intl": "^5.13.5"
+  }
+}
