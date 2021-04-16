@@ -16,6 +16,17 @@ export const module = {
         presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react'],
       },
     },
+    {
+      test: /\.(png|jp(e*)g|svg|gif)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'images/[hash]-[name].[ext]',
+          },
+        },
+      ],
+    },
   ],
 }
 export const resolve = {

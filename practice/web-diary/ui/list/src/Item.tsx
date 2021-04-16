@@ -4,6 +4,10 @@ import { Button }           from '@ui/button'
 import { Box, Layout, Row } from '@ui/layout'
 import { Text }             from '@ui/text'
 
+import { HeartIcon }        from '../../icons'
+import { StarIcon }         from '../../icons/src/StarIcon'
+import { TrashIcon }        from '../../icons/src/TrashIcon'
+
 export const Item = ({ content }) => {
   return (
     <Row justifyContent='space-around'>
@@ -12,15 +16,15 @@ export const Item = ({ content }) => {
       </Box>
       <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
         <Button color='red'>
-          <i className='fa fa-star' />
+          <StarIcon />
         </Button>
         <Layout flexBasis='30px' />
         <Button color='yellow'>
-          <i className='fa fa-trash-o' />
+          <TrashIcon />
         </Button>
         <Layout flexBasis='30px' />
         <Button>
-          <i className='fa fa-heart' />
+          <HeartIcon />
         </Button>
       </Box>
     </Row>
