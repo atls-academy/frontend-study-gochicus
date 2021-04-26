@@ -7,6 +7,7 @@
     "@components/form-post-add": "0.0.0",
     "@components/header": "0.0.0",
     "@components/switcher-post-status": "0.0.0",
+    "@context/data-context": "0.0.0",
     "@emotion/styled": "^11.1.5",
     "@ui/background": "0.0.0",
     "@ui/icons": "0.0.0",

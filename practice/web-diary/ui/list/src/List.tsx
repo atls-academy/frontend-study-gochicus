@@ -4,7 +4,7 @@ import { Box, Column, Layout } from '@ui/layout'
 
 import { Item as ListItem }    from './Item'
 
-export const List = ({ data }: any) =>
+export const List = ({ data }) =>
   data.map(item => (
     <Column>
       <Box minWidth='300px' key={item.id}>
