@@ -15,9 +15,9 @@ import messages                from '../messages/messages'
 const App = () => {
   const intl = useIntl()
   const [postData, setPostData] = useState([
-    { post: 'yesterday', id: 1 },
-    { post: 'today', id: 2 },
-    { post: 'tomorrow', id: 3 },
+    { post: 'yesterday', important: false, like: false, id: 1 },
+    { post: 'today', important: false, like: false, id: 2 },
+    { post: 'tomorrow', important: false, like: false, id: 3 },
   ])
   return (
     <PostDataProvider value={[postData, setPostData]}>

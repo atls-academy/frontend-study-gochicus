@@ -10,7 +10,7 @@ export const List = () => {
   return postData.map(item => (
     <Column>
       <Box minWidth='300px' key={item.id}>
-        <ListItem content={item.post} />
+        <ListItem content={item.post} id={item.id} />
       </Box>
       <Layout flexBasis='10px' />
     </Column>
