@@ -4,7 +4,7 @@ export const target = 'node'
 export const mode = 'development'
 export const entry = './app/index.tsx'
 export const output = {
-  path: path.resolve(__dirname, 'dist'),
+  path: path.resolve(__dirname, 'public/dist'),
 }
 export const module = {
   rules: [
@@ -31,4 +31,9 @@ export const module = {
 }
 export const resolve = {
   extensions: ['.ts', '.json', '.tsx', '.js'],
+}
+export const devServer = {
+  contentBase: path.join(__dirname, 'public'),
+  compress: true,
+  port: 9000,
 }
