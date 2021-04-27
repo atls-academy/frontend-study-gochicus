@@ -1,4 +1,4 @@
-export const likePost = (postData, id, value) => {
+export const likeItem = (postData, id, value) => {
   const index = postData.findIndex(customElements => customElements.id === id)
   const currentPost = postData[index]
   let newPost

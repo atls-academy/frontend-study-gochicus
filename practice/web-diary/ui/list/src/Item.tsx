@@ -8,13 +8,10 @@ import { Box, Layout, Row } from '@ui/layout'
 import { Text }             from '@ui/text'
 import { usePostData }      from '@store/post-data'
 
-import { importantPost }    from '../actions'
-import { importantColor }   from '../actions'
-import { deleteItem }       from '../actions'
-
-export const Item = ({ content, id }) => {
+export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
   const [postData, setPostData] = usePostData()
-  const [color, setColor] = useState('red')
+  const [important, setImportant] = useState(false)
+  const [like, setLike] = useState(false)
   return (
     <Row justifyContent='space-around'>
       <Box minWidth='100px'>
@@ -22,10 +19,9 @@ export const Item = ({ content, id }) => {
       </Box>
       <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
         <Button
-          backgroundColor={color}
+          backgroundColor='red'
           onClick={() => {
-            setPostData(importantPost(postData, postData.id, true))
-            setColor(importantColor(postData))
+            setPostData(importantItem(postData, postData.id, setImportant(!important)))
           }}
         >
           <StarIcon />
@@ -37,7 +33,7 @@ export const Item = ({ content, id }) => {
         <Layout flexBasis='30px' />
         <Button
           onClick={() => {
-            setPostData(importantPost(postData, postData.id, true))
+            setPostData(likeItem(postData, postData.id, setLike(!like)))
           }}
         >
           <HeartIcon />
