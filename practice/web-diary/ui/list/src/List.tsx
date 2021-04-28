@@ -3,11 +3,13 @@ import React                from 'react'
 import { Column }           from '@ui/layout'
 import { usePostData }      from '@store/post-data'
 
+
 import { Item as ListItem } from './Item'
 
 export const List = ({ deleteItem, importantItem, likeItem }) => {
   const [postData] = usePostData()
   return (
+
     <Column>
       {postData.map(item => (
         <ListItem
