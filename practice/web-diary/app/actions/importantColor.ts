@@ -1,3 +1,6 @@
-export const importantColor = postData => {
-  return postData.important === true ? 'green' : 'red'
+export const importantColor = (important, importantButtonColor) => {
+  if (important) {
+    importantButtonColor = 'green'
+  }
+  return importantButtonColor
 }

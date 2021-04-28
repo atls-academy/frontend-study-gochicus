@@ -1,4 +1,7 @@
 export * from './deleteItem'
 export * from './importantItem'
 export * from './importantColor'
+export * from './likeColor'
 export * from './likeItem'
+export * from './postCounter'
+export * from './favouredCounter'
