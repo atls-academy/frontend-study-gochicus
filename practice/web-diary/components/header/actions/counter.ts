@@ -1,4 +1,3 @@
-export const counter = (postData) => {
-  const result = postData.length
-  return result
+export const counter = postData => {
+  return postData.length
 }

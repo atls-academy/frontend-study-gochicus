@@ -6,25 +6,14 @@ import { StarIcon }         from '@ui/icons'
 import { TrashIcon }        from '@ui/icons'
 import { Box, Layout, Row } from '@ui/layout'
 import { Text }             from '@ui/text'
-import { useFavouredCount } from '@store/favoured-count'
 import { usePostData }      from '@store/post-data'
 
-export const Item = ({
-  content,
-  id,
-  deleteItem,
-  importantItem,
-  likeItem,
-  importantColor,
-  likeColor,
-  favouredCounter,
-}) => {
+export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
   const [postData, setPostData] = usePostData()
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
   const [importantButtonColor, setImportantButtonColor] = useState('white')
   const [likeButtonColor, setLikeButtonColor] = useState('white')
-  const [favoured, setFavoured] = useFavouredCount()
   return (
     <>
       <Box minWidth='300px'>
@@ -38,7 +27,7 @@ export const Item = ({
               onClick={() => {
                 setImportant(!important)
                 setPostData(importantItem(postData, id, important))
-                setImportantButtonColor(importantColor(important, importantButtonColor))
+                setImportantButtonColor(() => 'black')
               }}
             >
               <StarIcon />
@@ -53,8 +42,7 @@ export const Item = ({
               onClick={() => {
                 setLike(!like)
                 setPostData(likeItem(postData, id, like))
-                setLikeButtonColor(likeColor(like, likeButtonColor))
-                setFavoured(favouredCounter(favoured, like))
+                setLikeButtonColor(() => 'blue')
               }}
             >
               <HeartIcon />

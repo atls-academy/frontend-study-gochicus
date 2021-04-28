@@ -5,28 +5,18 @@ import { usePostData }      from '@store/post-data'
 
 import { Item as ListItem } from './Item'
 
-export const List = ({
-  deleteItem,
-  importantItem,
-  likeItem,
-  importantColor,
-  likeColor,
-  favouredCounter,
-}) => {
+export const List = ({ deleteItem, importantItem, likeItem }) => {
   const [postData] = usePostData()
   return (
     <Column>
-      {postData.map((item) => (
+      {postData.map(item => (
         <ListItem
           key={item.id}
           deleteItem={deleteItem}
           importantItem={importantItem}
-          importantColor={importantColor}
-          likeColor={likeColor}
           likeItem={likeItem}
           content={item.post}
           id={item.id}
-          favouredCounter={favouredCounter}
         />
       ))}
     </Column>
