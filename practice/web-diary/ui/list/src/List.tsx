@@ -1,18 +1,24 @@
-import React                   from 'react'
+import React                from 'react'
 
-import { Box, Column, Layout } from '@ui/layout'
-import { usePostData }         from '@store/post-data'
+import { Column }           from '@ui/layout'
+import { usePostData }      from '@store/post-data'
 
-import { Item as ListItem }    from './Item'
+import { Item as ListItem } from './Item'
 
-export const List = () => {
+export const List = ({ deleteItem, importantItem, likeItem }) => {
   const [postData] = usePostData()
-  return postData.map(item => (
+  return (
     <Column>
-      <Box minWidth='300px' key={item.id}>
-        <ListItem content={item.post} />
-      </Box>
-      <Layout flexBasis='10px' />
+      {postData.map(item => (
+        <ListItem
+          key={item.id}
+          deleteItem={deleteItem}
+          importantItem={importantItem}
+          likeItem={likeItem}
+          content={item.post}
+          id={item.id}
+        />
+      ))}
     </Column>
-  ))
+  )
 }

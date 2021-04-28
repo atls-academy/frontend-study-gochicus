@@ -4,9 +4,8 @@ import { IntlProvider } from 'react-intl'
 
 import { App }          from './src'
 
-const locale = 'ru'
 ReactDOM.render(
-  <IntlProvider locale={locale}>
+  <IntlProvider locale='en'>
     <App />
   </IntlProvider>,
   document.getElementById('root'),
