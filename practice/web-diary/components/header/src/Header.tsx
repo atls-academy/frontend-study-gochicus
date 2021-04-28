@@ -6,7 +6,6 @@ import { Space, Text }     from '@ui/text'
 import { usePostData }     from '@store/post-data'
 
 import messages            from '../messages/messages'
-import { counter }         from '../actions'
 import { favouredCounter } from '../actions'
 
 export const Header = () => {
@@ -14,7 +13,7 @@ export const Header = () => {
   const [postData] = usePostData()
   return (
     <Row justifyContent='space-between' alignItems='flex-end'>
-      <Text fontSize='25px'>{counter(postData)}</Text>
+      <Text fontSize='25px'>{postData.length}</Text>
       <Space />
       <Text fontSize='25px'>{intl.formatMessage(messages.postCount)}</Text>
       <Space />

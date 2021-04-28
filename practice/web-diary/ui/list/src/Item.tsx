@@ -12,8 +12,6 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
   const [postData, setPostData] = usePostData()
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
-  const [importantButtonColor, setImportantButtonColor] = useState('white')
-  const [likeButtonColor, setLikeButtonColor] = useState('white')
   return (
     <>
       <Box minWidth='300px'>
@@ -23,11 +21,10 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
           </Box>
           <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
             <Button
-              backgroundColor={importantButtonColor}
+              backgroundColor={important ? 'black' : 'white'}
               onClick={() => {
                 setImportant(!important)
                 setPostData(importantItem(postData, id, important))
-                setImportantButtonColor(() => 'black')
               }}
             >
               <StarIcon />
@@ -38,11 +35,10 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
             </Button>
             <Layout flexBasis='30px' />
             <Button
-              backgroundColor={likeButtonColor}
+              backgroundColor={like ? 'blue' : 'white'}
               onClick={() => {
+                setPostData(likeItem(postData, id, !like))
                 setLike(!like)
-                setPostData(likeItem(postData, id, like))
-                setLikeButtonColor(() => 'blue')
               }}
             >
               <HeartIcon />

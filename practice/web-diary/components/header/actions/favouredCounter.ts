@@ -1,9 +1,2 @@
-export const favouredCounter = postData => {
-  let result = 0
-  postData.forEach(item => {
-    if (item.like) {
-      result += 1
-    }
-  })
-  return result
-}
+export const favouredCounter = postData =>
+  postData.reduce((count, item) => (item.like === true ? count + 1 : count), 0)
