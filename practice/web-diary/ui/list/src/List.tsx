@@ -13,8 +13,6 @@ export const List = ({ items, deleteItem, importantItem, likeItem }) => {
           deleteItem={deleteItem}
           importantItem={importantItem}
           likeItem={likeItem}
-          content={item.post}
-          id={item.id}
           postObject={item}
         />
       ))}
