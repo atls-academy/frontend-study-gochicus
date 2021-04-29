@@ -8,7 +8,7 @@ import { Box, Layout, Row } from '@ui/layout'
 import { Text }             from '@ui/text'
 import { usePostData }      from '@store/post-data'
 
-export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
+export const Item = ({ content, id, deleteItem, importantItem, likeItem, postObject }) => {
   const [postData, setPostData] = usePostData()
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
@@ -21,7 +21,7 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
           </Box>
           <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
             <Button
-              backgroundColor={important ? 'black' : 'white'}
+              backgroundColor={postObject.id === id && important ? 'black' : 'white'}
               onClick={() => {
                 setPostData(importantItem(postData, id, !important))
                 setImportant(!important)
@@ -35,7 +35,7 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
             </Button>
             <Layout flexBasis='30px' />
             <Button
-              backgroundColor={like ? 'yellow' : 'white'}
+              backgroundColor={postObject.id === id && like ? 'yellow' : 'white'}
               onClick={() => {
                 setPostData(likeItem(postData, id, !like))
                 setLike(!like)

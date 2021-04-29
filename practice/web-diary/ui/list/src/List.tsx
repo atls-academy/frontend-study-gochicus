@@ -15,6 +15,7 @@ export const List = ({ items, deleteItem, importantItem, likeItem }) => {
           likeItem={likeItem}
           content={item.post}
           id={item.id}
+          postObject={item}
         />
       ))}
     </Column>
