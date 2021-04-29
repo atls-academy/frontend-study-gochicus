@@ -11,4 +11,12 @@ export default defineMessages({
     id: `${name}.like`,
     defaultMessage: 'Понравилось',
   },
+  search: {
+    id: `${name}.search`,
+    defaultMessage: 'Поиск',
+  },
+  important: {
+    id: `${name}.important`,
+    defaultMessage: ' Важное',
+  },
 })
