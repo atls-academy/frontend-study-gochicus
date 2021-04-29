@@ -21,7 +21,7 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem, postObj
           </Box>
           <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
             <Button
-              backgroundColor={postObject.id === id && important ? 'black' : 'white'}
+              backgroundColor={postObject.important === important ? 'black' : 'white'}
               onClick={() => {
                 setPostData(importantItem(postData, id, !important))
                 setImportant(!important)
@@ -35,7 +35,7 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem, postObj
             </Button>
             <Layout flexBasis='30px' />
             <Button
-              backgroundColor={postObject.id === id && like ? 'yellow' : 'white'}
+              backgroundColor={postObject.like === like ? 'yellow' : 'white'}
               onClick={() => {
                 setPostData(likeItem(postData, id, !like))
                 setLike(!like)
