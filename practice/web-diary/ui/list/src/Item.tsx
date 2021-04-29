@@ -23,8 +23,8 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
             <Button
               backgroundColor={important ? 'black' : 'white'}
               onClick={() => {
+                setPostData(importantItem(postData, id, !important))
                 setImportant(!important)
-                setPostData(importantItem(postData, id, important))
               }}
             >
               <StarIcon />
@@ -35,7 +35,7 @@ export const Item = ({ content, id, deleteItem, importantItem, likeItem }) => {
             </Button>
             <Layout flexBasis='30px' />
             <Button
-              backgroundColor={like ? 'blue' : 'white'}
+              backgroundColor={like ? 'yellow' : 'white'}
               onClick={() => {
                 setPostData(likeItem(postData, id, !like))
                 setLike(!like)

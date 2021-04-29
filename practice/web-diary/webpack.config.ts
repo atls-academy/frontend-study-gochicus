@@ -1,4 +1,5 @@
 import * as path from 'path'
+import webpack   from 'webpack'
 
 export const target = 'node'
 export const mode = 'development'
@@ -6,6 +7,7 @@ export const entry = './app/index.tsx'
 export const output = {
   path: path.resolve(__dirname, 'public/dist'),
 }
+export const plugins = [new webpack.HotModuleReplacementPlugin({})]
 export const module = {
   rules: [
     {
@@ -36,4 +38,5 @@ export const devServer = {
   contentBase: path.join(__dirname, 'public'),
   compress: true,
   port: 9000,
+  hot: true,
 }
