@@ -1,7 +1,8 @@
 import HTMLWebpackPlugin from 'html-webpack-plugin'
+import template          from 'html-webpack-template'
 import path              from 'path'
 
-const requireTemplate = require('html-webpack-template')
+const requireTemplate = template
 
 export const target = 'node'
 export const mode = 'development'
