@@ -15,7 +15,7 @@ export const SwitcherPostStatus = () => {
   const [, setSearchValue] = useSearchValue()
 
   return (
-    <Box justifyContent='space-between' alignItems='center' minWidth='500px'>
+    <Box justifyContent='space-between' alignItems='center' maxWidth='500px'>
       <Row minWidth='450px' justifyContent='space-between'>
         <Input
           placeholder={intl.formatMessage(messages.search)}
@@ -24,7 +24,7 @@ export const SwitcherPostStatus = () => {
             setSearchValue(event.target.value)
           }}
         />
-        <Layout flexBasis='15px' />
+        <Layout flexBasis='30px' />
         <Button color='black' onClick={() => setStatus('all')}>
           {intl.formatMessage(messages.all)}
         </Button>

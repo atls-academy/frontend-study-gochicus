@@ -29,7 +29,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
             >
               <StarIcon />
             </Button>
-            <Layout flexBasis='30px' />
+            <Layout flexBasis='500px' />
             <Button color='yellow' onClick={() => setPostData(deleteItem(postData, postObject.id))}>
               <TrashIcon />
             </Button>

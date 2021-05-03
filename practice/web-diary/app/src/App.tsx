@@ -1,5 +1,7 @@
 import React, { useState }      from 'react'
+import { ThemeProvider }        from '@emotion/react'
 
+import * as theme               from '@ui/theme'
 import { FormPostAdd }          from '@components/form-post-add'
 import { Header }               from '@components/header'
 import { PostList }             from '@components/post-list'
@@ -19,23 +21,25 @@ const App = () => {
   const [status, setStatus] = useState('all')
   const [searchValue, setSearchValue] = useState('')
   return (
-    <PostDataProvider value={[postData, setPostData]}>
-      <ButtonStatusProvider value={[status, setStatus]}>
-        <SearchValueProvider value={[searchValue, setSearchValue]}>
-          <Background>
-            <Column alignItems='center'>
-              <Header />
-              <Layout flexBasis='20px' />
-              <SwitcherPostStatus />
-              <Layout flexBasis='15px' />
-              <PostList />
-              <Layout flexBasis='20px' />
-              <FormPostAdd />
-            </Column>
-          </Background>
-        </SearchValueProvider>
-      </ButtonStatusProvider>
-    </PostDataProvider>
+    <ThemeProvider theme={theme}>
+      <PostDataProvider value={[postData, setPostData]}>
+        <ButtonStatusProvider value={[status, setStatus]}>
+          <SearchValueProvider value={[searchValue, setSearchValue]}>
+            <Background height='100%' width='100%'>
+              <Column alignItems='center'>
+                <Header />
+                <Layout flexBasis='25px' />
+                <SwitcherPostStatus />
+                <Layout flexBasis='25px' />
+                <PostList />
+                <Layout flexBasis='25px' />
+                <FormPostAdd />
+              </Column>
+            </Background>
+          </SearchValueProvider>
+        </ButtonStatusProvider>
+      </PostDataProvider>
+    </ThemeProvider>
   )
 }
 

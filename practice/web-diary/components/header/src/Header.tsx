@@ -13,11 +13,11 @@ export const Header = () => {
   const [postData] = usePostData()
   return (
     <Row justifyContent='space-between' alignItems='flex-end'>
-      <Text fontSize='25px'>{postData.length}</Text>
+      <Text fontSize='basic'>{postData.length}</Text>
       <Space />
-      <Text fontSize='25px'>{intl.formatMessage(messages.postCount)}</Text>
+      <Text fontSize='basic'>{intl.formatMessage(messages.postCount)}</Text>
       <Space />
-      <Text fontSize='25px'>{favouredCounter(postData)}</Text>
+      <Text fontSize='basic'>{favouredCounter(postData)}</Text>
     </Row>
   )
 }
