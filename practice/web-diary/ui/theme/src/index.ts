@@ -1,2 +1,2 @@
-export * from './color'
-export * from './fontSize'
+export * from './colors'
+export * from './fontSizes'
