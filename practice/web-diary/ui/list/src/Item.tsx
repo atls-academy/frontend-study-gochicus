@@ -7,20 +7,19 @@ import { TrashIcon }        from '@ui/icons'
 import { Box, Layout, Row } from '@ui/layout'
 import { Text }             from '@ui/text'
 import { usePostData }      from '@store/post-data'
-import { theme }            from '@ui/theme'
 
-export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
+export const Item = ({ deleteItem, importantItem, likeItem, postObject, theme }) => {
   const [postData, setPostData] = usePostData()
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
   return (
     <>
-      <Box minWidth={theme.width.normal}>
+      <Box minWidth={theme.minWidth.normal}>
         <Row justifyContent='space-around'>
-          <Box minWidth={theme.width.small}>
+          <Box minWidth={theme.minWidth.small}>
             <Text>{postObject.post}</Text>
           </Box>
-          <Box justifyContent='space-around' alignItems='center' minWidth={theme.width.small}>
+          <Box justifyContent='space-around' alignItems='center' minWidth={theme.minWidth.small}>
             <Button
               backgroundColor={
                 postObject.important === true ? theme.color.black : theme.color.white

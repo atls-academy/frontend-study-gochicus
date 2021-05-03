@@ -5,17 +5,16 @@ import { Button }           from '@ui/button'
 import { Input }            from '@ui/input'
 import { Box, Layout, Row } from '@ui/layout'
 import { usePostData }      from '@store/post-data'
-import { theme }            from '@ui/theme'
 
 import messages             from '../messages/messages'
 import { addItem }          from '../actions'
 
-export const FormPostAdd = () => {
+export const FormPostAdd = ({ theme }) => {
   const intl = useIntl()
   const [postData, setPostData] = usePostData()
   const [value, setValue] = useState('')
   return (
-    <Row justifyContent='space-between' minWidth={theme.width.normalPlus}>
+    <Row justifyContent='space-between' minWidth={theme.minWidth.normalPlus}>
       <Box>
         <Input
           placeholder={intl.formatMessage(messages.yourPost)}

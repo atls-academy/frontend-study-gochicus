@@ -9,14 +9,14 @@ import { useSearchValue }   from '@store/search-status'
 
 import messages             from '../messages/messages'
 
-export const SwitcherPostStatus = () => {
+export const SwitcherPostStatus = ({ theme }) => {
   const intl = useIntl()
   const [, setStatus] = useButtonStatus()
   const [, setSearchValue] = useSearchValue()
 
   return (
-    <Box justifyContent='space-between' alignItems='center' minWidth='500px'>
-      <Row minWidth='450px' justifyContent='space-between'>
+    <Box justifyContent='space-between' alignItems='center' minWidth={theme.minWidth.big}>
+      <Row minWidth={theme.minWidth.normalPlus} justifyContent='space-between'>
         <Input
           placeholder={intl.formatMessage(messages.search)}
           onChange={event => {
@@ -24,16 +24,16 @@ export const SwitcherPostStatus = () => {
             setSearchValue(event.target.value)
           }}
         />
-        <Layout flexBasis='15px' />
-        <Button color='black' onClick={() => setStatus('all')}>
+        <Layout flexBasis={theme.indent.small} />
+        <Button color={theme.color.black} onClick={() => setStatus('all')}>
           {intl.formatMessage(messages.all)}
         </Button>
-        <Layout flexBasis='15px' />
-        <Button color='black' onClick={() => setStatus('like')}>
+        <Layout flexBasis={theme.indent.small} />
+        <Button color={theme.color.black} onClick={() => setStatus('like')}>
           {intl.formatMessage(messages.like)}
         </Button>
-        <Layout flexBasis='15px' />
-        <Button color='black' onClick={() => setStatus('important')}>
+        <Layout flexBasis={theme.indent.small} />
+        <Button color={theme.color.black} onClick={() => setStatus('important')}>
           {intl.formatMessage(messages.important)}
         </Button>
       </Row>

@@ -1,16 +1,16 @@
-import React, { useState }      from 'react'
-import { ThemeProvider }        from '@emotion/react'
+import React, { useState }         from 'react'
+import { ThemeProvider }           from '@emotion/react'
 
-import { FormPostAdd }          from '@components/form-post-add'
-import { Header }               from '@components/header'
-import { PostList }             from '@components/post-list'
-import { SwitcherPostStatus }   from '@components/switcher-post-status'
-import { ButtonStatusProvider } from '@store/button-status'
-import { PostDataProvider }     from '@store/post-data'
-import { SearchValueProvider }  from '@store/search-status'
-import { Background }           from '@ui/background'
-import { Column, Layout }       from '@ui/layout'
-import { theme }                from '@ui/theme'
+import { FormPostAdd }             from '@components/form-post-add'
+import { Header }                  from '@components/header'
+import { PostList }                from '@components/post-list'
+import { SwitcherPostStatus }      from '@components/switcher-post-status'
+import { ButtonStatusProvider }    from '@store/button-status'
+import { PostDataProvider }        from '@store/post-data'
+import { SearchValueProvider }     from '@store/search-status'
+import { Background }              from '@ui/background'
+import { Column, Layout }          from '@ui/layout'
+import { color, indent, minWidth } from '@ui/theme'
 
 const App = () => {
   const [postData, setPostData] = useState([
@@ -20,6 +20,11 @@ const App = () => {
   ])
   const [status, setStatus] = useState('all')
   const [searchValue, setSearchValue] = useState('')
+  const theme = {
+    color,
+    indent,
+    minWidth,
+  }
   return (
     <ThemeProvider theme={theme}>
       <PostDataProvider value={[postData, setPostData]}>
@@ -28,12 +33,12 @@ const App = () => {
             <Background>
               <Column alignItems='center'>
                 <Header />
-                <Layout flexBasis={theme.indent.normal} />
-                <SwitcherPostStatus />
-                <Layout flexBasis={theme.indent.small} />
-                <PostList />
-                <Layout flexBasis={theme.indent.normal} />
-                <FormPostAdd />
+                <Layout flexBasis={indent.normal} />
+                <SwitcherPostStatus theme={theme} />
+                <Layout flexBasis={indent.small} />
+                <PostList theme={theme} />
+                <Layout flexBasis={indent.normal} />
+                <FormPostAdd theme={theme} />
               </Column>
             </Background>
           </SearchValueProvider>

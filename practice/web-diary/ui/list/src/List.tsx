@@ -4,7 +4,7 @@ import { Column }           from '@ui/layout'
 
 import { Item as ListItem } from './Item'
 
-export const List = ({ items, deleteItem, importantItem, likeItem }) => {
+export const List = ({ items, deleteItem, importantItem, likeItem, theme }) => {
   return (
     <Column>
       {items.map(item => (
@@ -14,6 +14,7 @@ export const List = ({ items, deleteItem, importantItem, likeItem }) => {
           importantItem={importantItem}
           likeItem={likeItem}
           postObject={item}
+          theme={theme}
         />
       ))}
     </Column>
