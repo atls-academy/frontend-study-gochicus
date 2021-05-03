@@ -7,7 +7,7 @@ import { useSearchValue }                                  from '@store/search-s
 
 import { deleteItem, filterData, importantItem, likeItem } from '../actions'
 
-export const PostList = ({ theme }) => {
+export const PostList = () => {
   const [postData] = usePostData()
   const [status] = useButtonStatus()
   const [searchResult] = useSearchValue()
@@ -17,7 +17,6 @@ export const PostList = ({ theme }) => {
       likeItem={likeItem}
       importantItem={importantItem}
       items={filterData(postData, status, searchResult)}
-      theme={theme}
     />
   )
 }
