@@ -1,13 +1,25 @@
-import * as path from 'path'
-import webpack   from 'webpack'
+import HTMLWebpackPlugin from 'html-webpack-plugin'
+import path              from 'path'
+
+const requireTemplate = require('html-webpack-template')
 
 export const target = 'node'
 export const mode = 'development'
 export const entry = './app/index.tsx'
 export const output = {
-  path: path.resolve(__dirname, 'public/dist'),
+  path: `${__dirname}/dist`,
 }
-export const plugins = [new webpack.HotModuleReplacementPlugin({})]
+export const plugins = [
+  new HTMLWebpackPlugin({
+    inject: false,
+    template: requireTemplate,
+    appMountId: 'root',
+    devServer: 'http://localhost:9000',
+    title: 'My diary',
+    scripts: ['main.js'],
+  }),
+]
+
 export const module = {
   rules: [
     {
@@ -35,8 +47,8 @@ export const resolve = {
   extensions: ['.ts', '.json', '.tsx', '.js'],
 }
 export const devServer = {
-  contentBase: path.join(__dirname, 'public'),
+  contentBase: path.join(__dirname, 'dist'),
   compress: true,
   port: 9000,
-  hot: true,
+  open: true,
 }
