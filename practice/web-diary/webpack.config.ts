@@ -2,8 +2,6 @@ import HTMLWebpackPlugin from 'html-webpack-plugin'
 import template          from 'html-webpack-template'
 import path              from 'path'
 
-const requireTemplate = template
-
 export const target = 'node'
 export const mode = 'development'
 export const entry = './app/index.tsx'
@@ -13,7 +11,7 @@ export const output = {
 export const plugins = [
   new HTMLWebpackPlugin({
     inject: false,
-    template: requireTemplate,
+    template,
     appMountId: 'root',
     devServer: 'http://localhost:9000',
     title: 'My diary',
