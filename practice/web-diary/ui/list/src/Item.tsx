@@ -7,6 +7,7 @@ import { TrashIcon }        from '@ui/icons'
 import { Box, Layout, Row } from '@ui/layout'
 import { Text }             from '@ui/text'
 import { usePostData }      from '@store/post-data'
+import { theme }            from '@ui/theme'
 
 export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [postData, setPostData] = usePostData()
@@ -14,14 +15,16 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [like, setLike] = useState(false)
   return (
     <>
-      <Box minWidth='300px'>
+      <Box minWidth={theme.width.normal}>
         <Row justifyContent='space-around'>
-          <Box minWidth='100px'>
+          <Box minWidth={theme.width.small}>
             <Text>{postObject.post}</Text>
           </Box>
-          <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
+          <Box justifyContent='space-around' alignItems='center' minWidth={theme.width.small}>
             <Button
-              backgroundColor={postObject.important === true ? 'black' : 'white'}
+              backgroundColor={
+                postObject.important === true ? theme.color.black : theme.color.white
+              }
               onClick={() => {
                 setPostData(importantItem(postData, postObject.id, !important))
                 setImportant(!important)
@@ -29,13 +32,13 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
             >
               <StarIcon />
             </Button>
-            <Layout flexBasis='30px' />
+            <Layout flexBasis={theme.indent.big} />
             <Button color='yellow' onClick={() => setPostData(deleteItem(postData, postObject.id))}>
               <TrashIcon />
             </Button>
-            <Layout flexBasis='30px' />
+            <Layout flexBasis={theme.indent.big} />
             <Button
-              backgroundColor={postObject.like === true ? 'yellow' : 'white'}
+              backgroundColor={postObject.like === true ? theme.color.yellow : theme.color.white}
               onClick={() => {
                 setPostData(likeItem(postData, postObject.id, !like))
                 setLike(!like)
@@ -46,7 +49,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
           </Box>
         </Row>
       </Box>
-      <Layout flexBasis='10px' />
+      <Layout flexBasis={theme.indent.small} />
     </>
   )
 }
