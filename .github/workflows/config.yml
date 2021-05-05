@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: build app
-        run: yarn workspase @practice/web-diary build
+        run: yarn workspace @practice/web-diary build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
