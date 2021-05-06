@@ -1,4 +1,4 @@
-name: Setup project
+name: Deploy project
 on:
   push:
     branches:
@@ -19,3 +19,12 @@ jobs:
         run: yarn install
       - name: build app
         run: yarn workspace @practice/web-diary build
+      - name: Lint
+        run: yarn lint
+      - name: TypeCheck
+        run: yarn typecheck
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: practice/web-diary/dist
