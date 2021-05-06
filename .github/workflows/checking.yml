@@ -1,9 +1,9 @@
-name: lintcheck
+name: checking
 
 on: pull_request
 
 jobs:
-  lintcheck:
+  checking:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,3 +22,5 @@ jobs:
         run: yarn lint
       - name: TypeCheck
         run: yarn typecheck
+      - name: build app
+        run: yarn workspace @practice/web-diary build
