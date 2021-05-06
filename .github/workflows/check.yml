@@ -1,0 +1,14 @@
+name: Check project
+on:
+  push:
+    branches:
+      - master
+jobs:
+  web-diary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lint
+        run: yarn lint
+      - name: TypeCheck
+        run: yarn typecheck
