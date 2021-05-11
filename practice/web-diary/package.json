@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": "https://github.com/atls-academy/frontend-study-gochicus.github.io",
   "scripts": {
     "start": "webpack serve",
     "build": "webpack --mode production"
@@ -12,7 +13,6 @@
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@emotion/react": "^11.1.5",
     "@types/react": "^17.0.3",
     "@types/react-intl": "^3.0.0",
     "babel-loader": "^8.2.2",

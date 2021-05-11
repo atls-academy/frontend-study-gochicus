@@ -1,9 +1,17 @@
-import styled                   from '@emotion/styled'
-import { color, layout, space } from 'styled-system'
+import styled                               from '@emotion/styled'
+import { background, color, layout, space } from 'styled-system'
 
-export const Background = styled('div')(color, layout, space)
+export const Background = styled('div')(
+  ({ theme, gradient }: any) => ({
+    background: gradient ? theme.backgrounds[gradient] : 'none',
+  }),
+  color,
+  layout,
+  space,
+  background,
+)
 
 Background.defaultProps = {
   padding: '0',
-  backgroundColor: '#eaf5fc',
+  overflowY: 'auto',
 }

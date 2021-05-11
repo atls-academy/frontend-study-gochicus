@@ -4,9 +4,9 @@ import { Column }           from '@ui/layout'
 
 import { Item as ListItem } from './Item'
 
-export const List = ({ items, deleteItem, importantItem, likeItem }) => {
+export const List = ({ items, deleteItem, importantItem, likeItem, setPostData }) => {
   return (
-    <Column>
+    <Column width='100%'>
       {items.map(item => (
         <ListItem
           key={item.id}
@@ -14,6 +14,8 @@ export const List = ({ items, deleteItem, importantItem, likeItem }) => {
           importantItem={importantItem}
           likeItem={likeItem}
           postObject={item}
+          setPostData={setPostData}
+          postData={items}
         />
       ))}
     </Column>
