@@ -3,8 +3,8 @@ import { defineMessages } from 'react-intl'
 import { name }           from '../package.json'
 
 export default defineMessages({
-  postList: {
-    id: `${name}.post_list`,
-    defaultMessage: 'Список записей',
+  messageCount: {
+    id: `${name}.message_count`,
+    defaultMessage: 'Записей:',
   },
 })

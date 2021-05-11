@@ -1,23 +1,18 @@
-import React               from 'react'
-import { useIntl }         from 'react-intl'
+import React       from 'react'
+import { useIntl } from 'react-intl'
 
-import { Row }             from '@ui/layout'
-import { Space, Text }     from '@ui/text'
-import { usePostData }     from '@store/post-data'
+import { Row }     from '@ui/layout'
+import { Text }    from '@ui/text'
 
-import messages            from '../messages/messages'
-import { favouredCounter } from '../actions'
+import messages    from '../messages/messages'
 
 export const Header = () => {
   const intl = useIntl()
-  const [postData] = usePostData()
   return (
-    <Row justifyContent='space-between' alignItems='flex-end'>
-      <Text fontSize='basic'>{postData.length}</Text>
-      <Space />
-      <Text fontSize='basic'>{intl.formatMessage(messages.postCount)}</Text>
-      <Space />
-      <Text fontSize='basic'>{favouredCounter(postData)}</Text>
+    <Row minWidth='320px'>
+      <Text fontSize='large' fontWeight='bold'>
+        {intl.formatMessage(messages.postList)}
+      </Text>
     </Row>
   )
 }

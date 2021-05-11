@@ -4,6 +4,8 @@
   "license": "BSD 3-Clause",
   "main": "src/index.tsx",
   "dependencies": {
+    "@components/clear-post": "0.0.0",
+    "@components/count-post": "0.0.0",
     "@components/form-post-add": "0.0.0",
     "@components/header": "0.0.0",
     "@components/post-list": "0.0.0",

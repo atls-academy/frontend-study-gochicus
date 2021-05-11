@@ -6,7 +6,7 @@ import { Item as ListItem } from './Item'
 
 export const List = ({ items, deleteItem, importantItem, likeItem }) => {
   return (
-    <Column>
+    <Column alignItems='center'>
       {items.map(item => (
         <ListItem
           key={item.id}

@@ -5,11 +5,11 @@ import { name }           from '../package.json'
 export default defineMessages({
   all: {
     id: `${name}.all`,
-    defaultMessage: 'всё',
+    defaultMessage: 'all',
   },
   like: {
     id: `${name}.like`,
-    defaultMessage: 'Понравилось',
+    defaultMessage: 'liked',
   },
   search: {
     id: `${name}.search`,
@@ -17,6 +17,6 @@ export default defineMessages({
   },
   important: {
     id: `${name}.important`,
-    defaultMessage: ' Важное',
+    defaultMessage: '!',
   },
 })

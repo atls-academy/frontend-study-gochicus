@@ -5,7 +5,7 @@ import { name }           from '../package.json'
 export default defineMessages({
   add: {
     id: `${name}.add`,
-    defaultMessage: 'Добавить',
+    defaultMessage: '+',
   },
   yourPost: {
     id: `${name}.your_post`,

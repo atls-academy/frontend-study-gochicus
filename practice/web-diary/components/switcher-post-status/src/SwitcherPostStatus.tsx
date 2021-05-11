@@ -15,25 +15,38 @@ export const SwitcherPostStatus = () => {
   const [, setSearchValue] = useSearchValue()
 
   return (
-    <Box justifyContent='space-between' alignItems='center' maxWidth='500px'>
-      <Row minWidth='450px' justifyContent='space-between'>
+    <Box justifyContent='center'>
+      <Row maxWidth='450px'>
         <Input
+          minWidth='100px'
           placeholder={intl.formatMessage(messages.search)}
           onChange={event => {
             setStatus('search')
             setSearchValue(event.target.value)
           }}
         />
-        <Layout flexBasis='30px' />
-        <Button color='black' onClick={() => setStatus('all')}>
+        <Layout flexBasis='10px' />
+        <Button
+          color='white'
+          backgroundColor='backgroundControlsButton'
+          onClick={() => setStatus('all')}
+        >
           {intl.formatMessage(messages.all)}
         </Button>
         <Layout flexBasis='15px' />
-        <Button color='black' onClick={() => setStatus('like')}>
+        <Button
+          color='white'
+          backgroundColor='backgroundControlsButton'
+          onClick={() => setStatus('like')}
+        >
           {intl.formatMessage(messages.like)}
         </Button>
         <Layout flexBasis='15px' />
-        <Button color='black' onClick={() => setStatus('important')}>
+        <Button
+          color='white'
+          backgroundColor='backgroundControlsButton'
+          onClick={() => setStatus('important')}
+        >
           {intl.formatMessage(messages.important)}
         </Button>
       </Row>

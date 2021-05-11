@@ -1,45 +1,41 @@
-import React, { useState }      from 'react'
-import { ThemeProvider }        from '@emotion/react'
+import React                   from 'react'
 
-import * as theme               from '@ui/theme'
-import { FormPostAdd }          from '@components/form-post-add'
-import { Header }               from '@components/header'
-import { PostList }             from '@components/post-list'
-import { SwitcherPostStatus }   from '@components/switcher-post-status'
-import { ButtonStatusProvider } from '@store/button-status'
-import { PostDataProvider }     from '@store/post-data'
-import { SearchValueProvider }  from '@store/search-status'
-import { Background }           from '@ui/background'
-import { Column, Layout }       from '@ui/layout'
+import { ClearPost }           from '@components/clear-post'
+import { CountPost }           from '@components/count-post'
+import { FormPostAdd }         from '@components/form-post-add'
+import { Header }              from '@components/header'
+import { PostList }            from '@components/post-list'
+import { SwitcherPostStatus }  from '@components/switcher-post-status'
+import { Background }          from '@ui/background'
+import { Column, Layout, Row } from '@ui/layout'
 
 const App = () => {
-  const [postData, setPostData] = useState([
-    { post: 'yesterday', id: 1 },
-    { post: 'today', id: 2 },
-    { post: 'tomorrow', id: 3 },
-  ])
-  const [status, setStatus] = useState('all')
-  const [searchValue, setSearchValue] = useState('')
   return (
-    <ThemeProvider theme={theme}>
-      <PostDataProvider value={[postData, setPostData]}>
-        <ButtonStatusProvider value={[status, setStatus]}>
-          <SearchValueProvider value={[searchValue, setSearchValue]}>
-            <Background height='100%' width='100%'>
-              <Column alignItems='center'>
-                <Header />
-                <Layout flexBasis='25px' />
-                <SwitcherPostStatus />
-                <Layout flexBasis='25px' />
-                <PostList />
-                <Layout flexBasis='25px' />
-                <FormPostAdd />
-              </Column>
-            </Background>
-          </SearchValueProvider>
-        </ButtonStatusProvider>
-      </PostDataProvider>
-    </ThemeProvider>
+    <Background backgroundGradient='backgroundGradient' height='100vh' width='100vw'>
+      <Column alignItems='center'>
+        <Layout flexBasis='300px' />
+        <Column alignItems='center'>
+          <Background backgroundColor='white' maxWidth='500px'>
+            <Column alignItems='center'>
+              <Layout flexBasis='25px' />
+              <Header />
+              <Layout flexBasis='25px' />
+              <FormPostAdd />
+              <Layout flexBasis='15px' />
+              <PostList />
+              <Layout flexBasis='25px' />
+              <SwitcherPostStatus />
+              <Layout flexBasis='25px' />
+              <Row justifyContent='space-between' minWidth='300px'>
+                <CountPost />
+                <ClearPost />
+              </Row>
+              <Layout flexBasis='25px' />
+            </Column>
+          </Background>
+        </Column>
+      </Column>
+    </Background>
   )
 }
 

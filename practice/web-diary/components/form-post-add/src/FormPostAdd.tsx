@@ -14,17 +14,24 @@ export const FormPostAdd = () => {
   const [postData, setPostData] = usePostData()
   const [value, setValue] = useState('')
   return (
-    <Row justifyContent='space-between' minWidth='400px'>
+    <Row justifyContent='flex-start' minWidth='380px'>
+      <Layout flexBasis='25px' />
       <Box>
         <Input
+          minWidth='252px'
+          maxWidth='252px'
           placeholder={intl.formatMessage(messages.yourPost)}
           onChange={event => setValue(event.target.value)}
           value={value}
         />
       </Box>
+      <Layout flexBasis='5px' />
       <Box>
         <Button
-          color='black'
+          backgroundColor='backgroundAddButton'
+          fontSize='large'
+          fontWeight='bold'
+          color='white'
           onClick={() => {
             setPostData(addItem(postData, value))
             setValue('')
