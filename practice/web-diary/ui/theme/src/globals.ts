@@ -10,4 +10,7 @@ export const injectGlobalStyles = () =>
     button: {
       cursor: 'pointer',
     },
+    '.postBackground': {
+      cursor: 'pointer',
+    },
   })

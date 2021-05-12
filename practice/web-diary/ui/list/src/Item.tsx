@@ -18,8 +18,10 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
     <>
       <Background backgroundColor='backgroundWhite' minWidth='250px'>
         <Row
+          className='postBackground'
           justifyContent='space-between'
           minWidth='328px'
+          maxWidth='328px'
           onMouseOver={() => setVisible('visible')}
           onMouseLeave={() => setVisible('invisible')}
         >
