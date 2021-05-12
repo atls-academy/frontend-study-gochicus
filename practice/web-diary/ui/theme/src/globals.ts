@@ -7,10 +7,4 @@ export const injectGlobalStyles = () =>
       margin: 0,
       overflow: 'hidden',
     },
-    button: {
-      cursor: 'pointer',
-    },
-    '.postBackground': {
-      cursor: 'pointer',
-    },
   })

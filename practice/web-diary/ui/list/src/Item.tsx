@@ -17,8 +17,8 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   return (
     <>
       <Background backgroundColor='backgroundWhite' minWidth='250px'>
-        <Row
-          className='postBackground'
+        <Button
+          border='none'
           justifyContent='space-between'
           minWidth='328px'
           maxWidth='328px'
@@ -79,7 +79,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
               </Button>
             </Box>
           </Row>
-        </Row>
+        </Button>
       </Background>
       <Layout flexBasis='10px' />
     </>

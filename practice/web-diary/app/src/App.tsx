@@ -39,6 +39,7 @@ const App = () => {
             </Column>
           </Background>
         </Column>
+        <Layout flexBasis='45px' />
       </Column>
     </Background>
   )
