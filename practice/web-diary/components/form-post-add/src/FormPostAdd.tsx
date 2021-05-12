@@ -29,6 +29,7 @@ export const FormPostAdd = () => {
       <Box>
         <Button
           backgroundColor='backgroundAddButton'
+          minWidth='50px'
           fontSize='large'
           fontWeight='bold'
           color='white'

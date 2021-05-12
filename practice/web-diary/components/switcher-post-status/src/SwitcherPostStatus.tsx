@@ -27,6 +27,8 @@ export const SwitcherPostStatus = () => {
         />
         <Layout flexBasis='10px' />
         <Button
+          minWidth='50px'
+          minHeight='40px'
           color='white'
           backgroundColor='backgroundControlsButton'
           onClick={() => setStatus('all')}
@@ -35,6 +37,8 @@ export const SwitcherPostStatus = () => {
         </Button>
         <Layout flexBasis='15px' />
         <Button
+          minWidth='50px'
+          minHeight='40px'
           color='white'
           backgroundColor='backgroundControlsButton'
           onClick={() => setStatus('like')}
@@ -43,6 +47,8 @@ export const SwitcherPostStatus = () => {
         </Button>
         <Layout flexBasis='15px' />
         <Button
+          minWidth='50px'
+          minHeight='40px'
           color='white'
           backgroundColor='backgroundControlsButton'
           onClick={() => setStatus('important')}
