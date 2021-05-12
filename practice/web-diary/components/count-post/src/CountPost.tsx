@@ -12,7 +12,7 @@ export const CountPost = () => {
   const intl = useIntl()
   return (
     <Box alignItems='center'>
-      <Text>{intl.formatMessage(messages.messageCount)} </Text>
+      <Text>{intl.formatMessage(messages.messageCount)}</Text>
       <Space />
       <Text fontSize='small'>{postData.length}</Text>
     </Box>
