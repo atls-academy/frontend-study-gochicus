@@ -17,7 +17,7 @@ export const ClearPost = () => {
         color='white'
         minWidth='120px'
         minHeight='40px'
-        backgroundColor='backgroundControlsButton'
+        backgroundColor='defaultPurple'
         onClick={() => {
           setPostData(clearPost(postData))
         }}

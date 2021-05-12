@@ -40,7 +40,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 maxHeight='30px'
                 minHeight='30px'
                 display={visible === 'visible' ? 'border-box' : 'none'}
-                backgroundColor={postObject.important === true ? 'activeColor' : 'defaultColor'}
+                backgroundColor={postObject.important === true ? 'white' : 'defaultPurple'}
                 onClick={() => {
                   setPostData(importantItem(postData, postObject.id, !important))
                   setImportant(!important)
@@ -55,7 +55,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 maxHeight='30px'
                 minHeight='30px'
                 display={visible === 'visible' ? 'border-box' : 'none'}
-                backgroundColor={postObject.like === true ? 'activeColor' : 'defaultColor'}
+                backgroundColor={postObject.like === true ? 'white' : 'defaultPurple'}
                 onClick={() => {
                   setPostData(likeItem(postData, postObject.id, !like))
                   setLike(!like)
@@ -69,7 +69,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 minWidth='30px'
                 maxHeight='30px'
                 minHeight='30px'
-                backgroundColor='backgroundTrashButton'
+                backgroundColor='lightRed'
                 display={visible === 'visible' ? 'border-box' : 'none'}
                 onClick={() => setPostData(deleteItem(postData, postObject.id))}
               >
