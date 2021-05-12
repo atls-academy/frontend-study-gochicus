@@ -26,7 +26,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
           onMouseLeave={() => setVisible('invisible')}
         >
           <Row jstifyContent='center'>
-            <Box minWidth='230px' minHeight='40px' justifyContent='flex-start'>
+            <Box minWidth='215px' minHeight='40px' justifyContent='flex-start'>
               <Layout flexBasis='10px' />
               <Column justifyContent='center'>
                 <Row>
@@ -78,6 +78,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 <TrashIcon color='white' />
               </Button>
             </Box>
+            <Layout flexBasis='10px' />
           </Row>
         </Button>
       </Background>
