@@ -16,7 +16,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [visible, setVisible] = useState('invisible')
   return (
     <>
-      <Background backgroundColor='backgroundPost' minWidth='250px'>
+      <Background backgroundColor='backgroundWhite' minWidth='250px'>
         <Row
           justifyContent='space-between'
           minWidth='328px'
