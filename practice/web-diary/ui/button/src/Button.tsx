@@ -13,8 +13,8 @@ export const Button = styled('button')(
 )
 
 Button.defaultProps = {
-  border: '1px solid #6c757d',
-  borderColor: '#6c757d',
+  border: '1px solid',
+  borderColor: 'backgroundWhite',
   textAlign: 'center',
   padding: '6px 12px',
   fontSize: 'small',

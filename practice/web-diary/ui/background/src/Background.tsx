@@ -11,5 +11,5 @@ export const Background = styled('div')(
 
 Background.defaultProps = {
   padding: '0',
-  backgroundColor: '#59b2da',
+  backgroundColor: 'backgroundGradient',
 }

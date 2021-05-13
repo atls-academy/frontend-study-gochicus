@@ -18,6 +18,7 @@ export const ClearPost = () => {
         minWidth='120px'
         minHeight='40px'
         backgroundColor='defaultPurple'
+        fontFamily='primary'
         onClick={() => {
           setPostData(clearPost(postData))
         }}

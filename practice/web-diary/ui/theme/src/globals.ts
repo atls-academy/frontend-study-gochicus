@@ -7,4 +7,10 @@ export const injectGlobalStyles = () =>
       margin: 0,
       overflow: 'hidden',
     },
+    button: {
+      padding: 0,
+      outline: 'none',
+      color: 'inherit',
+      backgroundColor: 'transparent',
+    },
   })

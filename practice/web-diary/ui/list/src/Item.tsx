@@ -1,6 +1,5 @@
 import React, { useState }          from 'react'
 
-import { Background }               from '@ui/background'
 import { Button }                   from '@ui/button'
 import { HeartIcon }                from '@ui/icons'
 import { StarIcon }                 from '@ui/icons'
@@ -16,12 +15,13 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [visible, setVisible] = useState('invisible')
   return (
     <>
-      <Background backgroundColor='backgroundWhite' minWidth='250px'>
-        <Button
+      <Box backgroundColor='backgroundWhite' minWidth='250px'>
+        <Box
           border='none'
           justifyContent='space-between'
           minWidth='328px'
           maxWidth='328px'
+          cursor='pointer'
           onMouseOver={() => setVisible('visible')}
           onMouseLeave={() => setVisible('invisible')}
         >
@@ -80,8 +80,8 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
             </Box>
             <Layout flexBasis='10px' />
           </Row>
-        </Button>
-      </Background>
+        </Box>
+      </Box>
       <Layout flexBasis='10px' />
     </>
   )

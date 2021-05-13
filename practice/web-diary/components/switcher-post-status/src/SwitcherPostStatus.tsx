@@ -30,6 +30,7 @@ export const SwitcherPostStatus = () => {
           minWidth='50px'
           minHeight='40px'
           color='white'
+          fontFamily='primary'
           backgroundColor='defaultPurple'
           onClick={() => setStatus('all')}
         >
@@ -40,6 +41,7 @@ export const SwitcherPostStatus = () => {
           minWidth='50px'
           minHeight='40px'
           color='white'
+          fontFamily='primary'
           backgroundColor='defaultPurple'
           onClick={() => setStatus('like')}
         >
@@ -50,6 +52,7 @@ export const SwitcherPostStatus = () => {
           minWidth='50px'
           minHeight='40px'
           color='white'
+          fontFamily='primary'
           backgroundColor='defaultPurple'
           onClick={() => setStatus('important')}
         >
