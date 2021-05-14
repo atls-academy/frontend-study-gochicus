@@ -12,7 +12,7 @@ import { Column, Layout, Row } from '@ui/layout'
 const App = () => {
   return (
     <Background
-      backgroundGradient='backgroundGradient'
+      blueAndGreenGradient='blueAndGreenGradient'
       height='100vh'
       width='100vw'
       overflowY='auto'

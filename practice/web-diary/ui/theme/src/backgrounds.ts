@@ -1,3 +1,3 @@
 export const backgrounds = {
-  backgroundGradient: 'linear-gradient(to bottom, #65e0ce, #4b86e4)',
+  blueAndGreenGradient: 'linear-gradient(to bottom, #65e0ce, #4b86e4)',
 }
