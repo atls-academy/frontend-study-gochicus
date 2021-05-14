@@ -30,7 +30,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
               <Layout flexBasis='10px' />
               <Column justifyContent='center'>
                 <Row>
-                  <Text fontFamily='secondary'>{postObject.post}</Text>
+                  <Text fontFamily='primary'>{postObject.post}</Text>
                 </Row>
               </Column>
             </Box>
