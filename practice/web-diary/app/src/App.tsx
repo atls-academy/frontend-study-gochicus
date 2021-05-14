@@ -11,12 +11,7 @@ import { Column, Layout, Row } from '@ui/layout'
 
 const App = () => {
   return (
-    <Background
-      blueAndGreenGradient='blueAndGreenGradient'
-      height='100vh'
-      width='100vw'
-      overflowY='auto'
-    >
+    <Background Gradient='blueAndGreenGradient' height='100vh' width='100vw' overflowY='auto'>
       <Column alignItems='center'>
         <Layout flexBasis='300px' />
         <Column alignItems='center'>

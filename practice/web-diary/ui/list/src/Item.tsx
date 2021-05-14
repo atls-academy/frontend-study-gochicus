@@ -37,9 +37,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
             <Layout flexBasis='10px' />
             <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
               <Button
-                width='30px'
                 minWidth='30px'
-                height='30px'
                 minHeight='30px'
                 display={visible === true ? 'border-box' : 'none'}
                 backgroundColor={postObject.important === true ? 'white' : 'purple'}
@@ -52,9 +50,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
               </Button>
               <Layout flexBasis='10px' />
               <Button
-                width='30px'
                 minWidth='30px'
-                height='30px'
                 minHeight='30px'
                 display={visible === true ? 'border-box' : 'none'}
                 backgroundColor={postObject.like === true ? 'white' : 'purple'}
@@ -67,9 +63,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
               </Button>
               <Layout flexBasis='10px' />
               <Button
-                width='30px'
                 minWidth='30px'
-                height='30px'
                 minHeight='30px'
                 backgroundColor='lightRed'
                 display={visible === true ? 'border-box' : 'none'}

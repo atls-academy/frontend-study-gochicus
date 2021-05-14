@@ -2,8 +2,8 @@ import styled                               from '@emotion/styled'
 import { background, color, layout, space } from 'styled-system'
 
 export const Background = styled('div')(
-  ({ theme, blueAndGreenGradient }: any) => ({
-    background: blueAndGreenGradient ? theme.backgrounds[blueAndGreenGradient] : 'none',
+  ({ theme, Gradient }: any) => ({
+    background: Gradient ? theme.backgrounds[Gradient] : 'none',
   }),
   color,
   layout,
