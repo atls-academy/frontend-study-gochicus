@@ -28,7 +28,7 @@ export const FormPostAdd = () => {
       <Layout flexBasis='5px' />
       <Box>
         <Button
-          backgroundColor='defaultPurple'
+          backgroundColor='purple'
           minWidth='50px'
           fontSize='large'
           fontWeight='bold'

@@ -15,7 +15,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [visible, setVisible] = useState('invisible')
   return (
     <>
-      <Box backgroundColor='backgroundWhite' minWidth='250px'>
+      <Box backgroundColor='lightGrey' minWidth='250px'>
         <Box
           border='none'
           justifyContent='space-between'
@@ -42,7 +42,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 maxHeight='30px'
                 minHeight='30px'
                 display={visible === 'visible' ? 'border-box' : 'none'}
-                backgroundColor={postObject.important === true ? 'white' : 'defaultPurple'}
+                backgroundColor={postObject.important === true ? 'white' : 'purple'}
                 onClick={() => {
                   setPostData(importantItem(postData, postObject.id, !important))
                   setImportant(!important)
@@ -57,7 +57,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 maxHeight='30px'
                 minHeight='30px'
                 display={visible === 'visible' ? 'border-box' : 'none'}
-                backgroundColor={postObject.like === true ? 'white' : 'defaultPurple'}
+                backgroundColor={postObject.like === true ? 'white' : 'purple'}
                 onClick={() => {
                   setPostData(likeItem(postData, postObject.id, !like))
                   setLike(!like)

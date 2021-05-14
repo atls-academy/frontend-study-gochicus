@@ -31,7 +31,7 @@ export const SwitcherPostStatus = () => {
           minHeight='40px'
           color='white'
           fontFamily='primary'
-          backgroundColor='defaultPurple'
+          backgroundColor='purple'
           onClick={() => setStatus('all')}
         >
           {intl.formatMessage(messages.all)}
@@ -42,7 +42,7 @@ export const SwitcherPostStatus = () => {
           minHeight='40px'
           color='white'
           fontFamily='primary'
-          backgroundColor='defaultPurple'
+          backgroundColor='purple'
           onClick={() => setStatus('like')}
         >
           {intl.formatMessage(messages.like)}
@@ -53,7 +53,7 @@ export const SwitcherPostStatus = () => {
           minHeight='40px'
           color='white'
           fontFamily='primary'
-          backgroundColor='defaultPurple'
+          backgroundColor='purple'
           onClick={() => setStatus('important')}
         >
           {intl.formatMessage(messages.important)}

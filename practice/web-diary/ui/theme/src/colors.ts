@@ -1,6 +1,6 @@
 export const colors = {
   white: '#FFFFFF',
   lightRed: '#e74d3d',
-  defaultPurple: '#8f49e7',
-  backgroundWhite: '#f2f2f2',
+  purple: '#8f49e7',
+  lightGrey: '#f2f2f2',
 }
