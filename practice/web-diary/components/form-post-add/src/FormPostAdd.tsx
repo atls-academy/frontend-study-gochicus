@@ -4,6 +4,7 @@ import { useIntl }          from 'react-intl'
 import { Button }           from '@ui/button'
 import { Input }            from '@ui/input'
 import { Box, Layout, Row } from '@ui/layout'
+import { useButtonStatus }  from '@store/button-status'
 import { usePostData }      from '@store/post-data'
 
 import messages             from '../messages/messages'
@@ -11,6 +12,7 @@ import { addItem }          from '../actions'
 
 export const FormPostAdd = () => {
   const intl = useIntl()
+  const [, setStatus] = useButtonStatus()
   const [postData, setPostData] = usePostData()
   const [value, setValue] = useState('')
   return (
@@ -36,6 +38,7 @@ export const FormPostAdd = () => {
           onClick={() => {
             setPostData(addItem(postData, value))
             setValue('')
+            setStatus('all')
           }}
         >
           {intl.formatMessage(messages.add)}
