@@ -51,6 +51,7 @@ export const SwitcherPostStatus = () => {
         <Button
           minWidth='50px'
           minHeight='40px'
+          padding='5px'
           color={status === 'important' ? 'purple' : 'white'}
           fontFamily='primary'
           backgroundColor={status === 'important' ? 'white' : 'purple'}

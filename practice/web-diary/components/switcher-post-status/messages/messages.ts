@@ -13,7 +13,7 @@ export default defineMessages({
   },
   search: {
     id: `${name}.search`,
-    defaultMessage: 'Поиск',
+    defaultMessage: 'Search',
   },
   important: {
     id: `${name}.important`,

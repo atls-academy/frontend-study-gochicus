@@ -5,6 +5,6 @@ import { name }           from '../package.json'
 export default defineMessages({
   postList: {
     id: `${name}.post_list`,
-    defaultMessage: 'Список записей',
+    defaultMessage: 'Post List',
   },
 })
