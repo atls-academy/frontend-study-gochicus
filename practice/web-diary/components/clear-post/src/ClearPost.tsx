@@ -1,16 +1,18 @@
-import React           from 'react'
-import { useIntl }     from 'react-intl'
+import React               from 'react'
+import { useIntl }         from 'react-intl'
 
-import { Button }      from '@ui/button'
-import { Row }         from '@ui/layout'
-import { usePostData } from '@store/post-data'
+import { Button }          from '@ui/button'
+import { Row }             from '@ui/layout'
+import { useButtonStatus } from '@store/button-status'
+import { usePostData }     from '@store/post-data'
 
-import messages        from '../messages/messages'
-import { clearPost }   from '../actions'
+import messages            from '../messages/messages'
+import { clearPost }       from '../actions'
 
 export const ClearPost = () => {
   const intl = useIntl()
   const [postData, setPostData] = usePostData()
+  const [, setStatus] = useButtonStatus()
   return (
     <Row justifyContent='center'>
       <Button
@@ -21,6 +23,7 @@ export const ClearPost = () => {
         fontFamily='primary'
         onClick={() => {
           setPostData(clearPost(postData))
+          setStatus('')
         }}
       >
         {intl.formatMessage(messages.clear)}

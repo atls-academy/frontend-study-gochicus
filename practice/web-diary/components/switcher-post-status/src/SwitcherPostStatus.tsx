@@ -11,7 +11,7 @@ import messages             from '../messages/messages'
 
 export const SwitcherPostStatus = () => {
   const intl = useIntl()
-  const [, setStatus] = useButtonStatus()
+  const [status, setStatus] = useButtonStatus()
   const [, setSearchValue] = useSearchValue()
 
   return (
@@ -29,9 +29,9 @@ export const SwitcherPostStatus = () => {
         <Button
           minWidth='50px'
           minHeight='40px'
-          color='white'
+          color={status === 'all' ? 'purple' : 'white'}
           fontFamily='primary'
-          backgroundColor='purple'
+          backgroundColor={status === 'all' ? 'white' : 'purple'}
           onClick={() => setStatus('all')}
         >
           {intl.formatMessage(messages.all)}
@@ -40,9 +40,9 @@ export const SwitcherPostStatus = () => {
         <Button
           minWidth='50px'
           minHeight='40px'
-          color='white'
+          color={status === 'like' ? 'purple' : 'white'}
           fontFamily='primary'
-          backgroundColor='purple'
+          backgroundColor={status === 'like' ? 'white' : 'purple'}
           onClick={() => setStatus('like')}
         >
           {intl.formatMessage(messages.like)}
@@ -51,9 +51,9 @@ export const SwitcherPostStatus = () => {
         <Button
           minWidth='50px'
           minHeight='40px'
-          color='white'
+          color={status === 'important' ? 'purple' : 'white'}
           fontFamily='primary'
-          backgroundColor='purple'
+          backgroundColor={status === 'important' ? 'white' : 'purple'}
           onClick={() => setStatus('important')}
         >
           {intl.formatMessage(messages.important)}

@@ -12,7 +12,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [postData, setPostData] = usePostData()
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
-  const [visible, setVisible] = useState('invisible')
+  const [visible, setVisible] = useState(false)
   return (
     <>
       <Box backgroundColor='lightGrey' minWidth='250px'>
@@ -22,8 +22,8 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
           minWidth='328px'
           maxWidth='328px'
           cursor='pointer'
-          onMouseOver={() => setVisible('visible')}
-          onMouseLeave={() => setVisible('invisible')}
+          onMouseOver={() => setVisible(true)}
+          onMouseLeave={() => setVisible(false)}
         >
           <Row jstifyContent='center'>
             <Box minWidth='215px' minHeight='40px' justifyContent='flex-start'>
@@ -41,7 +41,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 minWidth='30px'
                 maxHeight='30px'
                 minHeight='30px'
-                display={visible === 'visible' ? 'border-box' : 'none'}
+                display={visible === true ? 'border-box' : 'none'}
                 backgroundColor={postObject.important === true ? 'white' : 'purple'}
                 onClick={() => {
                   setPostData(importantItem(postData, postObject.id, !important))
@@ -56,7 +56,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 minWidth='30px'
                 maxHeight='30px'
                 minHeight='30px'
-                display={visible === 'visible' ? 'border-box' : 'none'}
+                display={visible === true ? 'border-box' : 'none'}
                 backgroundColor={postObject.like === true ? 'white' : 'purple'}
                 onClick={() => {
                   setPostData(likeItem(postData, postObject.id, !like))
@@ -72,7 +72,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
                 maxHeight='30px'
                 minHeight='30px'
                 backgroundColor='lightRed'
-                display={visible === 'visible' ? 'border-box' : 'none'}
+                display={visible === true ? 'border-box' : 'none'}
                 onClick={() => setPostData(deleteItem(postData, postObject.id))}
               >
                 <TrashIcon color='white' />
