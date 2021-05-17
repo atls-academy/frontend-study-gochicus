@@ -7,8 +7,8 @@ import { Box, Layout, Row } from '@ui/layout'
 import { useButtonStatus }  from '@store/button-status'
 import { usePostData }      from '@store/post-data'
 
-import messages             from '../messages/messages'
-import { addItem }          from '../actions'
+import messages             from './messages'
+import { addItem }          from './actions'
 
 export const FormPostAdd = () => {
   const intl = useIntl()

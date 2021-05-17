@@ -5,7 +5,7 @@ import { useButtonStatus }                                 from '@store/button-s
 import { usePostData }                                     from '@store/post-data'
 import { useSearchValue }                                  from '@store/search-status'
 
-import { deleteItem, filterData, importantItem, likeItem } from '../actions'
+import { deleteItem, filterData, importantItem, likeItem } from './actions'
 
 export const PostList = () => {
   const [postData] = usePostData()

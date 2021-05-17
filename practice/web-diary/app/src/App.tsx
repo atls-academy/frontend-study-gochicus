@@ -1,13 +1,11 @@
-import React                   from 'react'
+import React              from 'react'
 
-import { ClearPost }           from '@components/clear-post'
-import { CountPost }           from '@components/count-post'
-import { FormPostAdd }         from '@components/form-post-add'
-import { Header }              from '@components/header'
-import { PostList }            from '@components/post-list'
-import { SwitcherPostStatus }  from '@components/switcher-post-status'
-import { Background }          from '@ui/background'
-import { Column, Layout, Row } from '@ui/layout'
+import { Controls }       from '@fragments/controls'
+import { FormPostAdd }    from '@fragments/form-post-add'
+import { Header }         from '@fragments/header'
+import { PostList }       from '@fragments/post-list'
+import { Background }     from '@ui/background'
+import { Column, Layout } from '@ui/layout'
 
 const App = () => {
   return (
@@ -24,12 +22,7 @@ const App = () => {
               <Layout flexBasis='15px' />
               <PostList />
               <Layout flexBasis='25px' />
-              <SwitcherPostStatus />
-              <Layout flexBasis='25px' />
-              <Row justifyContent='space-between' minWidth='300px'>
-                <CountPost />
-                <ClearPost />
-              </Row>
+              <Controls />
               <Layout flexBasis='25px' />
             </Column>
           </Background>

@@ -1,5 +1,5 @@
 {
-  "name": "@components/clear-post",
+  "name": "@fragments/form-post-add",
   "version": "0.0.0",
   "license": "BSD 3-Clause",
   "main": "src/index.tsx",
@@ -7,7 +7,9 @@
     "@store/button-status": "0.0.0",
     "@store/post-data": "0.0.0",
     "@ui/button": "0.0.0",
+    "@ui/input": "0.0.0",
     "@ui/layout": "0.0.0",
+    "@ui/theme": "0.0.0",
     "react": "^17.0.1",
     "react-intl": "^5.13.5"
   }

@@ -19,4 +19,12 @@ export default defineMessages({
     id: `${name}.important`,
     defaultMessage: '!',
   },
+  clear: {
+    id: `${name}.clear`,
+    defaultMessage: 'Clear all',
+  },
+  messageCount: {
+    id: `${name}.message_count`,
+    defaultMessage: 'Posts:',
+  },
 })
