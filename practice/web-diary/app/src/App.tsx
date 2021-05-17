@@ -1,8 +1,8 @@
 import React              from 'react'
 
-import { Controls }       from '@fragments/controls'
 import { FormPostAdd }    from '@fragments/form-post-add'
 import { Header }         from '@fragments/header'
+import { PostControls }   from '@fragments/post-controls'
 import { PostList }       from '@fragments/post-list'
 import { Background }     from '@ui/background'
 import { Column, Layout } from '@ui/layout'
@@ -22,7 +22,7 @@ const App = () => {
               <Layout flexBasis='15px' />
               <PostList />
               <Layout flexBasis='25px' />
-              <Controls />
+              <PostControls />
               <Layout flexBasis='25px' />
             </Column>
           </Background>

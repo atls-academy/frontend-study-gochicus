@@ -12,7 +12,7 @@ import { useSearchValue }           from '@store/search-status'
 import messages                     from './messages'
 import { clearPost }                from './actions'
 
-export const Controls = () => {
+export const PostControls = () => {
   const intl = useIntl()
   const [status, setStatus] = useButtonStatus()
   const [, setSearchValue] = useSearchValue()
@@ -82,7 +82,7 @@ export const Controls = () => {
             backgroundColor='purple'
             fontFamily='primary'
             onClick={() => {
-              setPostData(clearPost(postData))
+              setPostData(clearPost())
               setStatus('')
             }}
           >

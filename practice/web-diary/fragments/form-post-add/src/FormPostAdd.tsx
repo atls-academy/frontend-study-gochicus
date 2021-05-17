@@ -21,7 +21,6 @@ export const FormPostAdd = () => {
       <Box>
         <Input
           minWidth='252px'
-          maxWidth='252px'
           placeholder={intl.formatMessage(messages.yourPost)}
           onChange={event => setValue(event.target.value)}
           value={value}
