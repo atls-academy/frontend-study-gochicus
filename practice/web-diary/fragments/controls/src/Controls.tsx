@@ -68,7 +68,7 @@ export const Controls = () => {
       </Box>
       <Layout flexBasis='25px' />
       <Row justifyContent='space-between'>
-        <Box alignItems='center'>
+        <Box alignItems='center' minWidth='80px'>
           <Layout flexBasis='5px' />
           <Text>{intl.formatMessage(messages.messageCount)}</Text>
           <Space />
