@@ -10,7 +10,6 @@ import { usePostData }              from '@store/post-data'
 import { useSearchValue }           from '@store/search-status'
 
 import messages                     from './messages'
-import { clearPost }                from './actions'
 
 export const PostControls = () => {
   const intl = useIntl()
@@ -82,7 +81,7 @@ export const PostControls = () => {
             backgroundColor='purple'
             fontFamily='primary'
             onClick={() => {
-              setPostData(clearPost())
+              setPostData([])
               setStatus('')
             }}
           >
