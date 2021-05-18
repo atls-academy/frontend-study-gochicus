@@ -13,7 +13,6 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
   const [visible, setVisible] = useState(false)
-  console.log(postObject.id)
   return (
     <>
       <Box backgroundColor='lightGrey' minWidth='250px'>
