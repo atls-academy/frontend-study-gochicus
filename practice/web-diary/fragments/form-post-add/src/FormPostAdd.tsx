@@ -10,7 +10,6 @@ import { usePostData }                from '@store/post-data'
 import messages                       from './messages'
 import { addItem }                    from './actions'
 import { fetchInitialData }           from './actions'
-import { mocks }                      from './actions'
 
 export const FormPostAdd = () => {
   const intl = useIntl()
@@ -18,7 +17,7 @@ export const FormPostAdd = () => {
   const [postData, setPostData] = usePostData()
   const [value, setValue] = useState('')
   useEffect(() => {
-    setPostData(fetchInitialData(mocks, postData))
+    setPostData(fetchInitialData())
   }, [])
   return (
     <Row justifyContent='flex-start' minWidth='380px'>
