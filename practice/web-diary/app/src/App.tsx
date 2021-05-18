@@ -1,11 +1,11 @@
-import React              from 'react'
+import React                   from 'react'
 
-import { FormPostAdd }    from '@fragments/form-post-add'
-import { Header }         from '@fragments/header'
-import { PostControls }   from '@fragments/post-controls'
-import { PostList }       from '@fragments/post-list'
-import { Background }     from '@ui/background'
-import { Column, Layout } from '@ui/layout'
+import { FormPostAdd }         from '@fragments/form-post-add'
+import { Header }              from '@fragments/header'
+import { PostControls }        from '@fragments/post-controls'
+import { PostList }            from '@fragments/post-list'
+import { Background }          from '@ui/background'
+import { Box, Column, Layout } from '@ui/layout'
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
       <Column alignItems='center'>
         <Layout flexBasis='300px' />
         <Column alignItems='center'>
-          <Background backgroundColor='white' maxWidth='500px'>
+          <Box backgroundColor='white' maxWidth='500px'>
             <Column alignItems='center'>
               <Layout flexBasis='25px' />
               <Header />
@@ -25,7 +25,7 @@ const App = () => {
               <PostControls />
               <Layout flexBasis='25px' />
             </Column>
-          </Background>
+          </Box>
         </Column>
         <Layout flexBasis='45px' />
       </Column>

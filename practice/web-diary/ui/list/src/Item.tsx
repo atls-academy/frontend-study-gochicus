@@ -20,7 +20,6 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
           border='none'
           justifyContent='space-between'
           minWidth='328px'
-          maxWidth='328px'
           cursor='pointer'
           onMouseOver={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
