@@ -1,20 +1,25 @@
-import React, { useState }  from 'react'
-import { useIntl }          from 'react-intl'
+import React, { useEffect, useState } from 'react'
+import { useIntl }                    from 'react-intl'
 
-import { Button }           from '@ui/button'
-import { Input }            from '@ui/input'
-import { Box, Layout, Row } from '@ui/layout'
-import { useButtonStatus }  from '@store/button-status'
-import { usePostData }      from '@store/post-data'
+import { Button }                     from '@ui/button'
+import { Input }                      from '@ui/input'
+import { Box, Layout, Row }           from '@ui/layout'
+import { useButtonStatus }            from '@store/button-status'
+import { usePostData }                from '@store/post-data'
 
-import messages             from './messages'
-import { addItem }          from './actions'
+import messages                       from './messages'
+import { addItem }                    from './actions'
+import { fetchInitialData }           from './actions'
+import { mocks }                      from './actions'
 
 export const FormPostAdd = () => {
   const intl = useIntl()
   const [, setStatus] = useButtonStatus()
   const [postData, setPostData] = usePostData()
   const [value, setValue] = useState('')
+  useEffect(() => {
+    setPostData(fetchInitialData(mocks, postData))
+  }, [])
   return (
     <Row justifyContent='flex-start' minWidth='380px'>
       <Layout flexBasis='25px' />

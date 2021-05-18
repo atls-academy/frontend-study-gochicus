@@ -13,11 +13,7 @@ import { App }                  from './src'
 
 const Render = () => {
   injectGlobalStyles()
-  const [postData, setPostData] = useState([
-    { post: 'yesterday', id: 1 },
-    { post: 'today', id: 2 },
-    { post: 'tomorrow', id: 3 },
-  ])
+  const [postData, setPostData] = useState([])
   const [status, setStatus] = useState('all')
   const [searchValue, setSearchValue] = useState('')
   return (
