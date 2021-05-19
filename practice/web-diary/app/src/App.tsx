@@ -1,35 +1,31 @@
-import React                   from 'react'
+import React, { useState }      from 'react'
+import { IntlProvider }         from 'react-intl'
 
-import { FormPostAdd }         from '@fragments/form-post-add'
-import { Header }              from '@fragments/header'
-import { PostControls }        from '@fragments/post-controls'
-import { PostList }            from '@fragments/post-list'
-import { Background }          from '@ui/background'
-import { Box, Column, Layout } from '@ui/layout'
+import * as theme               from '@ui/theme'
+import { ThemeProvider }        from '@emotion/react'
+import { Diary }                from '@fragments/diary'
+import { ButtonStatusProvider } from '@store/button-status'
+import { PostDataProvider }     from '@store/post-data'
+import { SearchValueProvider }  from '@store/search-status'
+import { injectGlobalStyles }   from '@ui/theme'
 
 const App = () => {
+  injectGlobalStyles()
+  const [postData, setPostData] = useState([])
+  const [status, setStatus] = useState('all')
+  const [searchValue, setSearchValue] = useState('')
   return (
-    <Background gradient='blueAndGreenGradient' height='100vh' width='100vw' overflowY='auto'>
-      <Column alignItems='center'>
-        <Layout flexBasis='300px' />
-        <Column alignItems='center'>
-          <Box backgroundColor='white' maxWidth='500px'>
-            <Column alignItems='center'>
-              <Layout flexBasis='25px' />
-              <Header />
-              <Layout flexBasis='25px' />
-              <FormPostAdd />
-              <Layout flexBasis='15px' />
-              <PostList />
-              <Layout flexBasis='25px' />
-              <PostControls />
-              <Layout flexBasis='25px' />
-            </Column>
-          </Box>
-        </Column>
-        <Layout flexBasis='45px' />
-      </Column>
-    </Background>
+    <IntlProvider locale='en'>
+      <ThemeProvider theme={theme}>
+        <PostDataProvider value={[postData, setPostData]}>
+          <ButtonStatusProvider value={[status, setStatus]}>
+            <SearchValueProvider value={[searchValue, setSearchValue]}>
+              <Diary />
+            </SearchValueProvider>
+          </ButtonStatusProvider>
+        </PostDataProvider>
+      </ThemeProvider>
+    </IntlProvider>
   )
 }
 
