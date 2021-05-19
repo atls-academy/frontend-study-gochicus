@@ -2,7 +2,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin'
 import template          from 'html-webpack-template'
 import path              from 'path'
 
-export const target = 'node'
+export const target = 'web'
 export const mode = 'development'
 export const entry = './app/index.tsx'
 export const output = {
