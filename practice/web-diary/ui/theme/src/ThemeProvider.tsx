@@ -1,6 +1,7 @@
-import React                                   from 'react'
+import React                                     from 'react'
 
-import * as theme                               from '@ui/theme'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
-export const ThemeProvider = (props) => <EmotionThemeProvider {...props} theme={theme} />
+import * as theme                                from './theme'
+
+export const ThemeProvider = props => <EmotionThemeProvider {...props} theme={theme} />

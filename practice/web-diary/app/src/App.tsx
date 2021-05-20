@@ -1,10 +1,10 @@
-import React, { useState }                 from 'react'
-import { IntlProvider }                    from 'react-intl'
+import React, { useState }                   from 'react'
+import { IntlProvider }                      from 'react-intl'
 
-import { Diary }                           from '@fragments/diary'
-import { ButtonStatusProvider }            from '@store/button-status'
-import { PostDataProvider }                from '@store/post-data'
-import { SearchValueProvider }             from '@store/search-status'
+import { Diary }                             from '@fragments/diary'
+import { ButtonStatusProvider }              from '@store/button-status'
+import { PostDataProvider }                  from '@store/post-data'
+import { SearchValueProvider }               from '@store/search-status'
 import { ThemeProvider, injectGlobalStyles } from '@ui/theme'
 
 const App = () => {
