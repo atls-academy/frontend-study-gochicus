@@ -1,12 +1,12 @@
-import React, { useState }          from 'react'
+import React, { useState }  from 'react'
 
-import { Button }                   from '@ui/button'
-import { HeartIcon }                from '@ui/icons'
-import { StarIcon }                 from '@ui/icons'
-import { TrashIcon }                from '@ui/icons'
-import { Box, Column, Layout, Row } from '@ui/layout'
-import { Text }                     from '@ui/text'
-import { usePostData }              from '@store/post-data'
+import { Button }           from '@ui/button'
+import { HeartIcon }        from '@ui/icons'
+import { StarIcon }         from '@ui/icons'
+import { TrashIcon }        from '@ui/icons'
+import { Box, Layout, Row } from '@ui/layout'
+import { Text }             from '@ui/text'
+import { usePostData }      from '@store/post-data'
 
 export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
   const [postData, setPostData] = usePostData()
@@ -24,55 +24,52 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
           onMouseOver={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
         >
-          <Row jstifyContent='center'>
-            <Box minWidth='215px' minHeight='40px' justifyContent='flex-start'>
-              <Layout flexBasis='10px' />
-              <Column justifyContent='center'>
-                <Row>
-                  <Text fontFamily='primary'>{postObject.post}</Text>
-                </Row>
-              </Column>
-            </Box>
+          <Layout flexBasis='15px' />
+
+          <Button minWidth='215px' minHeight='40px' justifyContent='flex-start' alignItems='center'>
+            <Row>
+              <Text fontFamily='primary'>{postObject.post}</Text>
+            </Row>
+          </Button>
+          <Layout flexBasis='10px' />
+          <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
+            <Button
+              minWidth='30px'
+              minHeight='30px'
+              display={visible === true ? 'border-box' : 'none'}
+              backgroundColor={postObject.important === true ? 'white' : 'purple'}
+              onClick={() => {
+                setPostData(importantItem(postData, postObject.id, !important))
+                setImportant(!important)
+              }}
+            >
+              <StarIcon color={postObject.important === true ? '#8f49e7' : 'white'} />
+            </Button>
             <Layout flexBasis='10px' />
-            <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
-              <Button
-                minWidth='30px'
-                minHeight='30px'
-                display={visible === true ? 'border-box' : 'none'}
-                backgroundColor={postObject.important === true ? 'white' : 'purple'}
-                onClick={() => {
-                  setPostData(importantItem(postData, postObject.id, !important))
-                  setImportant(!important)
-                }}
-              >
-                <StarIcon color={postObject.important === true ? '#8f49e7' : 'white'} />
-              </Button>
-              <Layout flexBasis='10px' />
-              <Button
-                minWidth='30px'
-                minHeight='30px'
-                display={visible === true ? 'border-box' : 'none'}
-                backgroundColor={postObject.like === true ? 'white' : 'purple'}
-                onClick={() => {
-                  setPostData(likeItem(postData, postObject.id, !like))
-                  setLike(!like)
-                }}
-              >
-                <HeartIcon color={postObject.like === true ? '#8f49e7' : 'white'} />
-              </Button>
-              <Layout flexBasis='10px' />
-              <Button
-                minWidth='30px'
-                minHeight='30px'
-                backgroundColor='lightRed'
-                display={visible === true ? 'border-box' : 'none'}
-                onClick={() => setPostData(deleteItem(postData, postObject.id))}
-              >
-                <TrashIcon color='white' />
-              </Button>
-            </Box>
+            <Button
+              minWidth='30px'
+              minHeight='30px'
+              display={visible === true ? 'border-box' : 'none'}
+              backgroundColor={postObject.like === true ? 'white' : 'purple'}
+              onClick={() => {
+                setPostData(likeItem(postData, postObject.id, !like))
+                setLike(!like)
+              }}
+            >
+              <HeartIcon color={postObject.like === true ? '#8f49e7' : 'white'} />
+            </Button>
             <Layout flexBasis='10px' />
-          </Row>
+            <Button
+              minWidth='30px'
+              minHeight='30px'
+              backgroundColor='lightRed'
+              display={visible === true ? 'border-box' : 'none'}
+              onClick={() => setPostData(deleteItem(postData, postObject.id))}
+            >
+              <TrashIcon color='white' />
+            </Button>
+          </Box>
+          <Layout flexBasis='10px' />
         </Box>
       </Box>
       <Layout flexBasis='10px' />

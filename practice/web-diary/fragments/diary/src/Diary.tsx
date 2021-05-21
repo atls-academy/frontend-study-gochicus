@@ -12,21 +12,19 @@ export const Diary = () => {
     <Background gradient='blueAndGreenGradient' height='100vh' width='100vw' overflowY='auto'>
       <Column alignItems='center'>
         <Layout flexBasis='300px' />
-        <Column alignItems='center'>
-          <Box backgroundColor='white' maxWidth='500px'>
-            <Column alignItems='center'>
-              <Layout flexBasis='25px' />
-              <Header />
-              <Layout flexBasis='25px' />
-              <FormPostAdd />
-              <Layout flexBasis='15px' />
-              <PostList />
-              <Layout flexBasis='25px' />
-              <PostControls />
-              <Layout flexBasis='25px' />
-            </Column>
-          </Box>
-        </Column>
+        <Box backgroundColor='white' maxWidth='500px'>
+          <Column alignItems='center'>
+            <Layout flexBasis='25px' />
+            <Header />
+            <Layout flexBasis='25px' />
+            <FormPostAdd />
+            <Layout flexBasis='15px' />
+            <PostList />
+            <Layout flexBasis='25px' />
+            <PostControls />
+            <Layout flexBasis='25px' />
+          </Column>
+        </Box>
         <Layout flexBasis='45px' />
       </Column>
     </Background>

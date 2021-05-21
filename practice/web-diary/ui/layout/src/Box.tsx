@@ -1,5 +1,4 @@
-import styled     from '@emotion/styled'
-import { system } from 'styled-system'
+import styled from '@emotion/styled'
 import {
   border,
   color,
@@ -22,9 +21,6 @@ export const Box = styled.div(
   border,
   display,
   size,
-  system({
-    cursor: true,
-  }),
 )
 
 Box.defaultProps = {
