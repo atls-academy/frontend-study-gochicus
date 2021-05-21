@@ -25,7 +25,6 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject }) => {
           onMouseLeave={() => setVisible(false)}
         >
           <Layout flexBasis='15px' />
-
           <Button minWidth='215px' minHeight='40px' justifyContent='flex-start' alignItems='center'>
             <Row>
               <Text fontFamily='primary'>{postObject.post}</Text>
