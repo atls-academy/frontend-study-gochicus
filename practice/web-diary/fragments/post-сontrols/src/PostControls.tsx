@@ -1,15 +1,15 @@
-import React from 'react'
-import {useIntl} from 'react-intl'
+import React                        from 'react'
+import { useIntl }                  from 'react-intl'
 
-import {Button} from '@ui/button'
-import {Input} from '@ui/input'
-import {Box, Column, Layout, Row} from '@ui/layout'
-import {Space, Text} from '@ui/text'
-import {useButtonStatus} from '@store/button-status'
-import {usePostData} from '@store/post-data'
-import {useSearchValue} from '@store/search-status'
+import { Button }                   from '@ui/button'
+import { Input }                    from '@ui/input'
+import { Box, Column, Layout, Row } from '@ui/layout'
+import { Space, Text }              from '@ui/text'
+import { useButtonStatus }          from '@store/button-status'
+import { usePostData }              from '@store/post-data'
+import { useSearchValue }           from '@store/search-status'
 
-import messages from './messages'
+import messages                     from './messages'
 
 export const PostControls = () => {
   const intl = useIntl()
@@ -28,7 +28,7 @@ export const PostControls = () => {
             setSearchValue(event.target.value)
           }}
         />
-        <Layout flexBasis='10px'/>
+        <Layout flexBasis='10px' />
         <Button
           minWidth='50px'
           minHeight='40px'
@@ -39,7 +39,7 @@ export const PostControls = () => {
         >
           {intl.formatMessage(messages.all)}
         </Button>
-        <Layout flexBasis='15px'/>
+        <Layout flexBasis='15px' />
         <Button
           minWidth='50px'
           minHeight='40px'
@@ -50,7 +50,7 @@ export const PostControls = () => {
         >
           {intl.formatMessage(messages.like)}
         </Button>
-        <Layout flexBasis='15px'/>
+        <Layout flexBasis='15px' />
         <Button
           minWidth='50px'
           minHeight='40px'
@@ -63,12 +63,12 @@ export const PostControls = () => {
           {intl.formatMessage(messages.important)}
         </Button>
       </Row>
-      <Layout flexBasis='25px'/>
+      <Layout flexBasis='25px' />
       <Row justifyContent='space-between'>
         <Box alignItems='center' minWidth='80px'>
-          <Layout flexBasis='5px'/>
+          <Layout flexBasis='5px' />
           <Text>{intl.formatMessage(messages.messageCount)}</Text>
-          <Space/>
+          <Space />
           <Text fontSize='small'>{postData.length}</Text>
         </Box>
         <Button
