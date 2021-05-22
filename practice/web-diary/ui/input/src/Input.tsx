@@ -14,11 +14,12 @@ export const Input = styled('input')(
 )
 
 Input.defaultProps = {
-  display: 'block',
+  display: 'flex',
   fontSize: '14px',
   minWidth: '200px',
   padding: '6px 10px',
-  background: '#fff',
-  border: '1px solid #ced4da',
+  background: 'white',
+  border: '1px solid',
+  borderColor: 'grey',
   borderRadius: 4,
 }
