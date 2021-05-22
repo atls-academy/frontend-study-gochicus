@@ -16,9 +16,8 @@ export const Input = styled('input')(
 Input.defaultProps = {
   display: 'flex',
   fontSize: '14px',
-  minWidth: '200px',
   padding: '6px 10px',
-  background: 'white',
+  backgroundColor: 'white',
   border: '1px solid',
   borderColor: 'grey',
   borderRadius: 4,
