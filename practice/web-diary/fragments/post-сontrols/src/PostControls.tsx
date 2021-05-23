@@ -19,8 +19,10 @@ export const PostControls = () => {
 
   return (
     <Column>
-      <Row justifyContent='center' maxWidth='450px'>
+      <Row justifyContent='center' maxWidth='328px'>
         <Input
+          fontSize='14px'
+          padding='6px 10px'
           minWidth='100px'
           placeholder={intl.formatMessage(messages.search)}
           onChange={event => {
@@ -28,61 +30,56 @@ export const PostControls = () => {
             setSearchValue(event.target.value)
           }}
         />
-        <Layout flexBasis='10px' />
+        <Layout flexBasis='5px' />
         <Button
-          minWidth='50px'
-          minHeight='40px'
           color={status === 'all' ? 'purple' : 'white'}
-          fontFamily='primary'
           backgroundColor={status === 'all' ? 'white' : 'purple'}
           onClick={() => setStatus('all')}
         >
-          {intl.formatMessage(messages.all)}
+          <Text marginLeft='2px'>{intl.formatMessage(messages.all)}</Text>
         </Button>
-        <Layout flexBasis='15px' />
+        <Layout flexBasis='5px' />
         <Button
-          minWidth='50px'
-          minHeight='40px'
           color={status === 'like' ? 'purple' : 'white'}
-          fontFamily='primary'
           backgroundColor={status === 'like' ? 'white' : 'purple'}
           onClick={() => setStatus('like')}
         >
-          {intl.formatMessage(messages.like)}
+          <Text paddingLeft='10px'>{intl.formatMessage(messages.like)}</Text>
         </Button>
-        <Layout flexBasis='15px' />
+        <Layout flexBasis='5px' />
         <Button
-          minWidth='50px'
-          minHeight='40px'
-          padding='5px'
           color={status === 'important' ? 'purple' : 'white'}
-          fontFamily='primary'
           backgroundColor={status === 'important' ? 'white' : 'purple'}
           onClick={() => setStatus('important')}
         >
-          {intl.formatMessage(messages.important)}
+          <Text> {intl.formatMessage(messages.important)}</Text>
         </Button>
       </Row>
       <Layout flexBasis='25px' />
       <Row justifyContent='space-between'>
         <Box alignItems='center' minWidth='80px'>
           <Layout flexBasis='5px' />
-          <Text>{intl.formatMessage(messages.messageCount)}</Text>
+          <Text padding='0px' fontSize='basic'>
+            {intl.formatMessage(messages.messageCount)}
+          </Text>
           <Space />
-          <Text fontSize='small'>{postData.length}</Text>
+          <Text padding='0px' fontSize='basic'>
+            {postData.length}
+          </Text>
         </Box>
         <Button
           color='white'
           minWidth='120px'
           minHeight='40px'
           backgroundColor='purple'
-          fontFamily='primary'
           onClick={() => {
             setPostData([])
             setStatus('')
           }}
         >
-          {intl.formatMessage(messages.clear)}
+          <Text margin='5px 20px' fontSize='basic' padding='0px'>
+            {intl.formatMessage(messages.clear)}
+          </Text>
         </Button>
       </Row>
     </Column>

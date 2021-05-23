@@ -4,6 +4,7 @@ import { useIntl }                    from 'react-intl'
 import { Button }                     from '@ui/button'
 import { Input }                      from '@ui/input'
 import { Layout, Row }                from '@ui/layout'
+import { Text }                       from '@ui/text'
 import { useButtonStatus }            from '@store/button-status'
 import { usePostData }                from '@store/post-data'
 
@@ -23,16 +24,17 @@ export const FormPostAdd = () => {
       <Layout flexBasis='25px' />
       <Input
         minWidth='252px'
+        padding='6px 10px'
+        fontSize='14px'
         placeholder={intl.formatMessage(messages.yourPost)}
         onChange={event => setValue(event.target.value)}
         value={value}
       />
       <Layout flexBasis='5px' />
       <Button
+        maxHeight='40px'
+        maxWidth='50px'
         backgroundColor='purple'
-        minWidth='50px'
-        fontSize='large'
-        fontWeight='bold'
         color='white'
         onClick={() => {
           setPostData(addItem(postData, value))
@@ -40,7 +42,9 @@ export const FormPostAdd = () => {
           setStatus('all')
         }}
       >
-        {intl.formatMessage(messages.add)}
+        <Text fontWeight='bold' fontSize='large'>
+          {intl.formatMessage(messages.add)}
+        </Text>
       </Button>
       <Layout flexBasis='15px' />
     </Row>
