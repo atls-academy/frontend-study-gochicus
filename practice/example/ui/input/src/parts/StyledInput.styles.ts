@@ -1,6 +1,6 @@
 import { prop, switchProp }                          from 'styled-tools'
 
-import { createAppearanceStyles, createColorStyles } from '../appearance'
+import { createAppearanceStyles }                    from '../appearance'
 import { createBaseStyles }                          from '../base'
 import { createBaseShape, createBorderBottomStyles } from '../shape'
 

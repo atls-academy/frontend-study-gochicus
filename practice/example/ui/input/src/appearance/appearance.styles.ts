@@ -1,6 +1,6 @@
-import { styleFn }               from 'styled-system'
+import { TypographyProps, styleFn } from 'styled-system'
 
-import { InputAppearanceStyles } from './appearance.interfaces'
+import { InputAppearanceStyles }    from './appearance.interfaces'
 
 export const createColorStyles = (
   backgroundColor: string,
@@ -20,6 +20,10 @@ export const createBorderFocusStyles = (color): styleFn => () => ({
 
 export const createTransition = (seconds): styleFn => () => ({
   transition: seconds,
+})
+
+export const createPlaceholderStyles = (styles: TypographyProps): styleFn => () => ({
+  '&:placeholder': styles,
 })
 
 export const createAppearanceStyles = ({

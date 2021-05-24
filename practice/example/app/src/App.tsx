@@ -15,7 +15,7 @@ const App = () => {
       clear={value !== ''}
       value={value}
       onClear={onClear}
-      onChange={(event) => setValue(event.target.value)}
+      onChange={event => setValue(event.target.value)}
     />
   )
 }
