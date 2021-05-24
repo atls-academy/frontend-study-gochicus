@@ -1,12 +1,23 @@
 import React        from 'react'
 import { useState } from 'react'
 
+import { Input }    from '@ex-ui/input'
+
 const App = () => {
-  const [time, setTime] = useState<number>(0)
+  const [value, setValue] = useState<string>('')
 
-  setInterval(() => setTime(time + 1), 1000)
+  const onClear = () => {
+    setValue('')
+  }
 
-  return <h1>{time}</h1>
+  return (
+    <Input
+      clear={value !== ''}
+      value={value}
+      onClear={onClear}
+      onChange={(event) => setValue(event.target.value)}
+    />
+  )
 }
 
 export default App

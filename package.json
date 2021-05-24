@@ -6,7 +6,6 @@
     "commit": "actl commit",
     "typecheck": "actl typecheck",
     "format": "actl format",
-    "precommit": "actl precommit",
     "diary": "yarn workspace @practice/web-diary run start"
   },
   "devDependencies": {
