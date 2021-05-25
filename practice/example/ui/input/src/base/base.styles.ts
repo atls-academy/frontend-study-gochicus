@@ -6,7 +6,7 @@ export const createBaseStyles = (): styleFn => () => ({
   padding: 0,
   margin: 0,
   width: '100%',
-  '&:first-child': {
+  '&:first-of-type': {
     paddingBottom: '10px',
   },
 })

@@ -1,9 +1,9 @@
-import styled from "@emotion/styled";
-import {flexbox, layout, position} from "styled-system";
+import styled                        from '@emotion/styled'
+import { flexbox, layout, position } from 'styled-system'
 
-export  const  Row = styled.div(layout,flexbox,position)
+export const Row = styled.div(layout, flexbox, position)
 
 Row.defaultProps = {
-  display:'flex',
-  flexDirection:'row'
+  display: 'flex',
+  flexDirection: 'row',
 }

@@ -1,7 +1,7 @@
 import React                from 'react'
 import styled               from '@emotion/styled'
 
-import { Text }             from '@ui/text'
+import { Text }             from '@ex-ui/text'
 
 import { ClearButtonProps } from './ClearButton.interface'
 import { createBaseStyles } from './ClearButton.styles'

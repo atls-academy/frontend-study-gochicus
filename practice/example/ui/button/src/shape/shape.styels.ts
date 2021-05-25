@@ -1,16 +1,26 @@
-import { styleFn }                                          from 'styled-system'
-import {ShapeInterface} from "./shape.interface";
+import { styleFn }        from 'styled-system'
 
-export  const  createBaseShape = (size:number|string):styleFn=> () => ({
-  height:size
+import { ShapeInterface } from './shape.interface'
+
+export const createBaseShape = (size: number | string): styleFn => () => ({
+  height: size,
 })
 
-export const  createBorderStyles =(borderStyle:string,borderRadius:string|number,borderWeight:string|number):styleFn => () => ({
+export const createBorderStyles = (
+  borderStyle: string,
+  borderRadius: string | number,
+  borderWeight: string | number,
+): styleFn => () => ({
   borderStyle,
   borderRadius,
-  borderWeight
+  borderWeight,
 })
-export const  creatShapeStyles = ({size,borderStyle,borderRadius,borderWeight}:ShapeInterface):styleFn => ()=> ({
+export const creatShapeStyles = ({
+  size,
+  borderStyle,
+  borderRadius,
+  borderWeight,
+}: ShapeInterface): styleFn => () => ({
   ...createBaseShape(size)(),
-  ...createBorderStyles(borderStyle,borderRadius,borderWeight)()
+  ...createBorderStyles(borderStyle, borderRadius, borderWeight)(),
 })

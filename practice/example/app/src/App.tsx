@@ -1,22 +1,13 @@
-import React        from 'react'
-import { useState } from 'react'
+import React             from 'react'
 
-import { Input }    from '@ex-ui/input'
+import { ThemeProvider } from '@ex-ui/theme'
+import { Controls }      from '@fragments/controls'
 
 const App = () => {
-  const [value, setValue] = useState<string>('')
-
-  const onClear = () => {
-    setValue('')
-  }
-
   return (
-    <Input
-      clear={value !== ''}
-      value={value}
-      onClear={onClear}
-      onChange={event => setValue(event.target.value)}
-    />
+    <ThemeProvider>
+      <Controls />
+    </ThemeProvider>
   )
 }
 

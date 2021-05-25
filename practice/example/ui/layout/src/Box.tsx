@@ -1,10 +1,9 @@
-import React from "react";
-import styled from "@emotion/styled";
-import {layout, flexbox, position} from "styled-system";
+import styled                        from '@emotion/styled'
+import { flexbox, layout, position } from 'styled-system'
 
-export  const  Box = styled.div(layout,flexbox,position)
+export const Box = styled.div(layout, flexbox, position)
 
 Box.defaultProps = {
-  display:'flex',
+  display: 'flex',
   boxSizing: 'border-box',
 }

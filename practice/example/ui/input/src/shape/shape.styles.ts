@@ -16,7 +16,4 @@ export const createBaseShape = ({
   height: size,
   fontFamily,
   fontSize,
-  '&:placeholder': {
-    color: 'gray',
-  },
 })

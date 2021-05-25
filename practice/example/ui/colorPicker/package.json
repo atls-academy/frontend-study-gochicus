@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/styled": "^11.1.5",
+    "@ex-ui/button": "0.0.0",
     "react": "^17.0.1",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
