@@ -10,17 +10,20 @@ export const createBorderStyles = (
   borderStyle: string,
   borderRadius: string | number,
   borderWeight: string | number,
+  borderWidth: string | number,
 ): styleFn => () => ({
   borderStyle,
   borderRadius,
   borderWeight,
+  borderWidth,
 })
 export const creatShapeStyles = ({
   size,
   borderStyle,
   borderRadius,
   borderWeight,
+  borderWidth,
 }: ShapeInterface): styleFn => () => ({
   ...createBaseShape(size)(),
-  ...createBorderStyles(borderStyle, borderRadius, borderWeight)(),
+  ...createBorderStyles(borderStyle, borderRadius, borderWeight, borderWidth)(),
 })

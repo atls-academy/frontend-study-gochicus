@@ -3,4 +3,5 @@ export interface ShapeInterface {
   borderStyle?: string
   borderRadius?: string | number
   borderWeight?: string | number
+  borderWidth?: string | number
 }

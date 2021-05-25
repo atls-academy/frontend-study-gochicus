@@ -3,7 +3,7 @@ import { openModal }    from './modalWindow'
 import { closeModal }   from './modalWindow'
 
 const serverMessage = {
-  loading: '../src/assets/img/spinner.svg',
+  loading: '../color-data/assets/img/spinner.svg',
   success: 'Спасибо! Скоро мы с вами свяжемся',
   error: 'Что-то пошло не так...',
 }
@@ -34,7 +34,7 @@ function showThanksModal(thanksMessage: string) {
 function formDataExtraction(formSelector: string) {
   const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll(formSelector)
   function postData(form: HTMLFormElement) {
-    form.addEventListener('submit', event => {
+    form.addEventListener('submit', (event) => {
       event.preventDefault()
 
       const statusMessage: HTMLImageElement = document.createElement('img')

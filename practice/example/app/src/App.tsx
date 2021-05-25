@@ -1,12 +1,12 @@
 import React             from 'react'
 
 import { ThemeProvider } from '@ex-ui/theme'
-import { Controls }      from '@fragments/controls'
+import { ExampleBuild }   from '@fragments/example-build'
 
 const App = () => {
   return (
     <ThemeProvider>
-      <Controls />
+      <ExampleBuild />
     </ThemeProvider>
   )
 }
