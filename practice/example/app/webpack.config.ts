@@ -3,7 +3,7 @@ import template          from 'html-webpack-template'
 import { join }          from 'path'
 
 export const mode = 'development'
-export const entry = ['./color-data/index']
+export const entry = ['./src/index']
 export const output = {
   publicPath: '/',
   path: `${__dirname}/dist`,

@@ -1,13 +1,26 @@
-import React           from 'react'
+import React            from 'react'
 
-import { ClearButton } from './addons'
-import { InputProps }  from './Input.interface'
-import { StyledInput } from './parts'
-import { Wrapper }     from './parts'
+import { Layout }       from '@ex-ui/layout'
+import { useInputData } from '@store/input-data'
 
-export const Input = ({ clear, onClear, ...props }: InputProps) => (
-  <Wrapper>
-    <StyledInput {...props} />
-    {clear && <ClearButton onClick={onClear} />}
-  </Wrapper>
-)
+import { ClearButton }  from './addons'
+import { InputProps }   from './Input.interface'
+import { StyledInput }  from './parts'
+import { Wrapper }      from './parts'
+
+export const Input = ({ clear, value, ...props }: InputProps) => {
+  const [data, setData] = useInputData()
+  return (
+    <Wrapper>
+      <StyledInput {...props} value={data} clear={data !== ''} />
+      <Layout flexBasis='5px' />
+      {clear && (
+        <ClearButton
+          onClick={() => {
+            setData('')
+          }}
+        />
+      )}
+    </Wrapper>
+  )
+}

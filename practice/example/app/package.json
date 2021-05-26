@@ -11,6 +11,8 @@
   "dependencies": {
     "@ex-ui/theme": "0.0.0",
     "@fragments/example-build": "0.0.0",
+    "@store/color-data": "0.0.0",
+    "@store/input-data": "0.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

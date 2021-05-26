@@ -1,11 +1,10 @@
-import styled                        from '@emotion/styled'
-import { flexbox, layout, position } from 'styled-system'
+import styled                               from '@emotion/styled'
+import { color, flexbox, layout, position } from 'styled-system'
 
-import { Row }                       from './Row'
+export const Column = styled.div(layout, flexbox, position, color)
 
-export const Column = styled.div(layout, flexbox, position)
-
-Row.defaultProps = {
+Column.defaultProps = {
   display: 'flex',
   flexDirection: 'column',
+  height: '100%',
 }

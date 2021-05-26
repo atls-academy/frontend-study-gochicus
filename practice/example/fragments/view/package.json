@@ -9,6 +9,7 @@
     "@ex-ui/color-picker": "0.0.0",
     "@ex-ui/input": "0.0.0",
     "@ex-ui/layout": "0.0.0",
+    "@ex-ui/text": "0.0.0",
     "@store/color-data": "0.0.0",
     "@store/input-data": "0.0.0",
     "react": "^17.0.1",

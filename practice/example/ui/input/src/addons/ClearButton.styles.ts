@@ -1,6 +1,3 @@
-export const createBaseStyles = () => () => ({
-  cursor: 'pointer',
-  border: 'none',
-  outline: 'none',
-  background: 'none',
-})
+import { createBaseStyles } from './base'
+
+export const baseStyles = createBaseStyles()

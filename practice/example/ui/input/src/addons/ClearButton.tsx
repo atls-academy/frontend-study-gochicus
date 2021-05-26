@@ -1,16 +1,16 @@
 import React                from 'react'
 import styled               from '@emotion/styled'
 
+import { Button }           from '@ex-ui/button'
 import { Text }             from '@ex-ui/text'
 
 import { ClearButtonProps } from './ClearButton.interface'
-import { createBaseStyles } from './ClearButton.styles'
+import { createBaseStyles } from './base'
 
-// TODO rewrite with @ex-ui button
-const StyledButton = styled.button(createBaseStyles())
+const StyledButton = styled(Button)(createBaseStyles)
 
 export const ClearButton = ({ ...props }: ClearButtonProps) => (
   <StyledButton {...props}>
-    <Text>Clear</Text>
+    <Text color='black'>Clear</Text>
   </StyledButton>
 )

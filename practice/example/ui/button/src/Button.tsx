@@ -1,7 +1,7 @@
-import React                                                                         from 'react'
-import styled                                                                        from '@emotion/styled'
+import React           from 'react'
+import styled          from '@emotion/styled'
 
-import { ButtonProps }                                                               from './Button.interface'
+import { ButtonProps } from './Button.interface'
 import {
   baseStyles,
   borderWidthStyles,
