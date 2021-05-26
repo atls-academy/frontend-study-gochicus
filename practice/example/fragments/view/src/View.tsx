@@ -1,5 +1,6 @@
 import React            from 'react'
 
+import { Background }   from '@ex-ui/background'
 import { Box, Column }  from '@ex-ui/layout'
 import { Text }         from '@ex-ui/text'
 import { useColorData } from '@store/color-data'
@@ -9,7 +10,7 @@ export const View = () => {
   const [value] = useColorData()
   const [data] = useInputData()
   return (
-    <Box backgroundColor={value} justifyContent='center' width='100%'>
+    <Background backgroundColor={value} justifyContent='center' width='100%'>
       <Column justifyContent='center'>
         <Box>
           <Text color='black'> Value is {data}</Text>
@@ -18,6 +19,6 @@ export const View = () => {
           <Text color='black'> color is {value}</Text>
         </Box>
       </Column>
-    </Box>
+    </Background>
   )
 }

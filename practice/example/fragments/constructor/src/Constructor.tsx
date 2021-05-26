@@ -4,7 +4,7 @@ import { Row }      from '@ex-ui/layout'
 import { Controls } from '@fragments/controls'
 import { View }     from '@fragments/view'
 
-export const ExampleBuild = () => {
+export const Constructor = () => {
   return (
     <Row justifyContent='space-between' height='100%'>
       <Controls />

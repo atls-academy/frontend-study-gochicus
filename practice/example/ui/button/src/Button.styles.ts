@@ -5,18 +5,21 @@ import { createBaseStyles }       from './base'
 import { creatShapeStyles }       from './shape/shape.styels'
 
 export const baseStyles = createBaseStyles()
-export const redColorStyles = createAppearanceStyles({
-  backgroundColor: 'darkRed',
-  borderColor: 'red',
-})
-export const greenColorStyles = createAppearanceStyles({
-  backgroundColor: 'darkGreen',
-  borderColor: 'green',
-})
-export const blueColorStyles = createAppearanceStyles({
-  backgroundColor: 'darkBlue',
-  borderColor: 'blue',
-})
+export const redColorStyles = ({ theme }) =>
+  createAppearanceStyles({
+    backgroundColor: theme.colors.red,
+    borderColor: 'red',
+  })
+export const greenColorStyles = ({ theme }) =>
+  createAppearanceStyles({
+    backgroundColor: theme.colors.green,
+    borderColor: 'green',
+  })
+export const blueColorStyles = ({ theme }) =>
+  createAppearanceStyles({
+    backgroundColor: theme.colors.blue,
+    borderColor: 'blue',
+  })
 export const normalSizeStyles = creatShapeStyles({ size: '40px' })
 export const smallSizeStyles = creatShapeStyles({ size: '20px' })
 

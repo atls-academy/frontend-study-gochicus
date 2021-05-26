@@ -1,17 +1,10 @@
 {
-  "name": "@fragments/example-build",
+  "name": "@ex-ui/background",
   "version": "0.0.0",
   "license": "BSD 3-Clause",
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/styled": "^11.1.5",
-    "@ex-ui/button": "0.0.0",
-    "@ex-ui/color-picker": "0.0.0",
-    "@ex-ui/input": "0.0.0",
-    "@ex-ui/layout": "0.0.0",
-    "@fragments/controls": "0.0.0",
-    "@fragments/view": "0.0.0",
-    "react": "^17.0.1",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

@@ -3,10 +3,12 @@ import React                   from 'react'
 import { ColorPicker }         from '@ex-ui/color-picker'
 import { Input }               from '@ex-ui/input'
 import { Column, Layout, Row } from '@ex-ui/layout'
+import { useColorData }        from '@store/color-data'
 import { useInputData }        from '@store/input-data'
 
 export const Controls = () => {
   const [data, setData] = useInputData()
+  const [, setValue] = useColorData()
   return (
     <Row>
       <Layout flexBasis='100%' />
@@ -19,6 +21,7 @@ export const Controls = () => {
           }}
           onClear={() => {
             setData('')
+            setValue('silver')
           }}
         />
         <ColorPicker colors={['red', 'green', 'blue']} />
