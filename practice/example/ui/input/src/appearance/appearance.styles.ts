@@ -12,7 +12,7 @@ export const createColorStyles = (
   color,
 })
 
-export const createBorderFocusStyles = (color): styleFn => () => ({
+export const createBorderHoverStyles = (color): styleFn => () => ({
   '&:hover': {
     borderColor: color,
   },
@@ -34,6 +34,6 @@ export const createAppearanceStyles = ({
   transition,
 }: InputAppearanceStyles): styleFn => () => ({
   ...createColorStyles(fontColor, backgroundColor, borderColor)(),
-  ...createBorderFocusStyles(borderActiveColor)(),
+  ...createBorderHoverStyles(borderActiveColor)(),
   ...createTransition(transition)(),
 })

@@ -34,7 +34,7 @@ function showThanksModal(thanksMessage: string) {
 function formDataExtraction(formSelector: string) {
   const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll(formSelector)
   function postData(form: HTMLFormElement) {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', event => {
       event.preventDefault()
 
       const statusMessage: HTMLImageElement = document.createElement('img')

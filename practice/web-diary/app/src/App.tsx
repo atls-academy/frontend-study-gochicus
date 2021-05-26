@@ -1,11 +1,11 @@
 import React, { useState }      from 'react'
+import { ThemeProvider }        from '@emotion/react'
 
 import * as theme               from '@ui/theme'
 import { FormPostAdd }          from '@components/form-post-add'
 import { Header }               from '@components/header'
 import { PostList }             from '@components/post-list'
 import { SwitcherPostStatus }   from '@components/switcher-post-status'
-import { ThemeProvider }        from '@emotion/react'
 import { ButtonStatusProvider } from '@store/button-status'
 import { PostDataProvider }     from '@store/post-data'
 import { SearchValueProvider }  from '@store/search-status'
