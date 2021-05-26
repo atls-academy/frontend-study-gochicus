@@ -8,19 +8,13 @@ import { InputProps }   from './Input.interface'
 import { StyledInput }  from './parts'
 import { Wrapper }      from './parts'
 
-export const Input = ({ clear, value, ...props }: InputProps) => {
-  const [data, setData] = useInputData()
+export const Input = ({ clear, value, onClear, ...props }: InputProps) => {
+  const [data] = useInputData()
   return (
     <Wrapper>
-      <StyledInput {...props} value={data} clear={data !== ''} />
+      <StyledInput {...props} value={data} />
       <Layout flexBasis='5px' />
-      {clear && (
-        <ClearButton
-          onClick={() => {
-            setData('')
-          }}
-        />
-      )}
+      {clear && value !== '' && <ClearButton onClick={onClear} />}
     </Wrapper>
   )
 }

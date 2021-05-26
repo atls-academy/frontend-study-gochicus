@@ -12,10 +12,13 @@ export const Controls = () => {
       <Layout flexBasis='100%' />
       <Column justifyContent='center' width='100%'>
         <Input
-          clear={data !== ''}
+          clear
           value={data}
           onChange={event => {
             setData(event.target.value)
+          }}
+          onClear={() => {
+            setData('')
           }}
         />
         <ColorPicker colors={['red', 'green', 'blue']} />
