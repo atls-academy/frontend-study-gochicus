@@ -1,7 +1,7 @@
 import React, { useState }                   from 'react'
 
 import { ThemeProvider, injectGlobalStyles } from '@ex-ui/theme'
-import { Constructor }                       from '@fragments/constructor'
+import { ExampleApp }                        from '@fragments/example-app'
 import { ColorDataProvider }                 from '@store/color-data'
 import { InputDataProvider }                 from '@store/input-data'
 
@@ -13,7 +13,7 @@ const App = () => {
     <InputDataProvider value={[data, setData]}>
       <ColorDataProvider value={[value, setValue]}>
         <ThemeProvider>
-          <Constructor />
+          <ExampleApp />
         </ThemeProvider>
       </ColorDataProvider>
     </InputDataProvider>

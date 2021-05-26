@@ -10,7 +10,7 @@ export const View = () => {
   const [value] = useColorData()
   const [data] = useInputData()
   return (
-    <Background backgroundColor={value} justifyContent='center' width='100%'>
+    <Background backgroundColor={value} justifyContent='center'>
       <Column justifyContent='center'>
         <Box>
           <Text color='black'> Value is {data}</Text>

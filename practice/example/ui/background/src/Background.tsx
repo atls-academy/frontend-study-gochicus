@@ -6,5 +6,5 @@ export const Background = styled('div')(color, layout, space, flexbox)
 Background.defaultProps = {
   backgroundColor: 'silver',
   display: 'flex',
-  boxSizing: 'border-box',
+  width: '100%',
 }
