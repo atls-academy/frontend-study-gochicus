@@ -24,7 +24,11 @@ export const Controls = () => {
             setValue('silver')
           }}
         />
-        <ColorPicker updateState={setValue} colors={['red', 'green', 'blue']} />
+        <ColorPicker
+          updateState={setValue}
+          borderRadiusPosition
+          colors={['red', 'green', 'blue']}
+        />
       </Column>
       <Layout flexBasis='100%' />
     </Row>

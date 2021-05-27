@@ -12,10 +12,15 @@ export const ColorPicker = ({ colors, updateState }: ColorPickerInterface) => {
       <Layout flexBasis='100%' />
       <Column width='100%'>
         <Layout flexBasis='20px' />
-        {colors.map(item => (
+        {colors.map((item, id) => (
           <>
-            <Button size='normal' color={item} onClick={() => updateState(item)}>
-              <Text color='white'>{item}</Text>
+            <Button
+              size='normal'
+              borderRadiusPosition={id === 0 ? 'top' : id === colors.length - 1 && 'bottom'}
+              color={item}
+              onClick={() => updateState(item)}
+            >
+              <Text color='white'>{item} </Text>
             </Button>
             <Layout flexBasis='10px' />
           </>
