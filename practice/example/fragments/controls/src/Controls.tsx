@@ -9,9 +9,6 @@ import { useInputData }        from '@store/input-data'
 export const Controls = () => {
   const [data, setData] = useInputData()
   const [, setValue] = useColorData()
-  const updateState = props => {
-    setValue(props)
-  }
   return (
     <Row>
       <Layout flexBasis='100%' />
@@ -27,7 +24,7 @@ export const Controls = () => {
             setValue('silver')
           }}
         />
-        <ColorPicker updateState={updateState} colors={['red', 'green', 'blue']} />
+        <ColorPicker updateState={setValue} colors={['red', 'green', 'blue']} />
       </Column>
       <Layout flexBasis='100%' />
     </Row>
