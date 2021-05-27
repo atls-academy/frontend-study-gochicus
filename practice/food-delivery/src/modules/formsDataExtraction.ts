@@ -3,7 +3,7 @@ import { openModal }    from './modalWindow'
 import { closeModal }   from './modalWindow'
 
 const serverMessage = {
-  loading: '../src/assets/img/spinner.svg',
+  loading: '../color-data/assets/img/spinner.svg',
   success: 'Спасибо! Скоро мы с вами свяжемся',
   error: 'Что-то пошло не так...',
 }
