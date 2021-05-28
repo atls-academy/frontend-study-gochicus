@@ -10,7 +10,7 @@ import { Text }            from '@ui/text'
 export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateState, data }) => {
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
-  const [visible, setVisible] = useState(false)
+  const [, setVisible] = useState(false)
   return (
     <>
       <Box backgroundColor='lightGrey'>
@@ -33,10 +33,6 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
           <Layout flexBasis='10px' />
           <Box justifyContent='space-around' alignItems='center' minWidth='100px'>
             <Button
-              minWidth='30px'
-              minHeight='30px'
-              display={visible === true ? 'flex' : 'none'}
-              backgroundColor={postObject.important === true ? 'white' : 'purple'}
               onClick={() => {
                 updateState(importantItem(data, postObject.id, !important))
                 setImportant(!important)
@@ -46,10 +42,6 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
             </Button>
             <Layout flexBasis='10px' />
             <Button
-              minWidth='30px'
-              minHeight='30px'
-              display={visible === true ? 'flex' : 'none'}
-              backgroundColor={postObject.like === true ? 'white' : 'purple'}
               onClick={() => {
                 updateState(likeItem(data, postObject.id, !like))
                 setLike(!like)
@@ -58,13 +50,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
               <HeartIcon color={postObject.like === true ? '#8f49e7' : 'white'} />
             </Button>
             <Layout flexBasis='10px' />
-            <Button
-              minWidth='30px'
-              minHeight='30px'
-              backgroundColor='lightRed'
-              display={visible === true ? 'flex' : 'none'}
-              onClick={() => updateState(deleteItem(data, postObject.id))}
-            >
+            <Button onClick={() => updateState(deleteItem(data, postObject.id))}>
               <TrashIcon color='white' />
             </Button>
           </Box>

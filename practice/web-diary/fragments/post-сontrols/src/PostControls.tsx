@@ -30,7 +30,6 @@ export const PostControls = () => {
         <Layout flexBasis='8px' />
         <Button
           color={status === 'all' ? 'purple' : 'white'}
-          backgroundColor={status === 'all' ? 'white' : 'purple'}
           onClick={() => setStatus('all')}
         >
           <Text >{intl.formatMessage(messages.all)}</Text>
@@ -38,7 +37,6 @@ export const PostControls = () => {
         <Layout flexBasis='8px' />
         <Button
           color={status === 'like' ? 'purple' : 'white'}
-          backgroundColor={status === 'like' ? 'white' : 'purple'}
           onClick={() => setStatus('like')}
         >
           <Text paddingLeft='10px'>{intl.formatMessage(messages.like)}</Text>
@@ -46,7 +44,6 @@ export const PostControls = () => {
         <Layout flexBasis='8px' />
         <Button
           color={status === 'important' ? 'purple' : 'white'}
-          backgroundColor={status === 'important' ? 'white' : 'purple'}
           onClick={() => setStatus('important')}
         >
           <Text> {intl.formatMessage(messages.important)}</Text>
@@ -65,9 +62,6 @@ export const PostControls = () => {
           </Text>
         </Box>
         <Button
-          minWidth='120px'
-          minHeight='40px'
-          backgroundColor='purple'
           onClick={() => {
             setPostData([])
             setStatus('')

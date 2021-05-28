@@ -30,9 +30,6 @@ export const FormPostAdd = () => {
       />
       <Layout flexBasis='5px' />
       <Button
-        maxHeight='40px'
-        maxWidth='50px'
-        backgroundColor='purple'
         onClick={() => {
           setPostData(addItem(postData, value))
           setValue('')
