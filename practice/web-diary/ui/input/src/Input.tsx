@@ -1,24 +1,5 @@
-import styled                                                from '@emotion/styled'
-import { border, color, display, layout, space, typography } from 'styled-system'
+import styled                                       from '@emotion/styled'
 
-export const Input = styled('input')(
-  () => ({
-    outline: 'none',
-  }),
-  border,
-  layout,
-  color,
-  typography,
-  space,
-  display,
-)
+import { baseStyles, greyColorStyles, widthStyles } from './Input.styles'
 
-Input.defaultProps = {
-  display: 'flex',
-  fontSize: '14px',
-  padding: '6px 10px',
-  backgroundColor: 'white',
-  border: '1px solid',
-  borderColor: 'grey',
-  borderRadius: 4,
-}
+export const Input = styled.input(baseStyles, widthStyles, greyColorStyles)

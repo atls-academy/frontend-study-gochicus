@@ -4,7 +4,7 @@ import { Column }           from '@ui/layout'
 
 import { Item as ListItem } from './Item'
 
-export const List = ({ items, deleteItem, importantItem, likeItem }) => {
+export const List = ({ items, deleteItem, importantItem, likeItem, updateState }) => {
   return (
     <Column alignItems='center'>
       {items.map(item => (
@@ -14,6 +14,8 @@ export const List = ({ items, deleteItem, importantItem, likeItem }) => {
           importantItem={importantItem}
           likeItem={likeItem}
           postObject={item}
+          updateState={updateState}
+          data={items}
         />
       ))}
     </Column>

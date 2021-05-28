@@ -16,29 +16,26 @@ export const PostControls = () => {
   const [status, setStatus] = useButtonStatus()
   const [, setSearchValue] = useSearchValue()
   const [postData, setPostData] = usePostData()
-
   return (
-    <Column>
-      <Row justifyContent='center' maxWidth='328px'>
+    <Column width={'88%'}>
+      <Row justifyContent='center' >
         <Input
-          fontSize='14px'
-          padding='6px 10px'
-          minWidth='100px'
+          size={30}
           placeholder={intl.formatMessage(messages.search)}
           onChange={event => {
             setStatus('search')
             setSearchValue(event.target.value)
           }}
         />
-        <Layout flexBasis='5px' />
+        <Layout flexBasis='8px' />
         <Button
           color={status === 'all' ? 'purple' : 'white'}
           backgroundColor={status === 'all' ? 'white' : 'purple'}
           onClick={() => setStatus('all')}
         >
-          <Text marginLeft='2px'>{intl.formatMessage(messages.all)}</Text>
+          <Text >{intl.formatMessage(messages.all)}</Text>
         </Button>
-        <Layout flexBasis='5px' />
+        <Layout flexBasis='8px' />
         <Button
           color={status === 'like' ? 'purple' : 'white'}
           backgroundColor={status === 'like' ? 'white' : 'purple'}
@@ -46,7 +43,7 @@ export const PostControls = () => {
         >
           <Text paddingLeft='10px'>{intl.formatMessage(messages.like)}</Text>
         </Button>
-        <Layout flexBasis='5px' />
+        <Layout flexBasis='8px' />
         <Button
           color={status === 'important' ? 'purple' : 'white'}
           backgroundColor={status === 'important' ? 'white' : 'purple'}
@@ -59,16 +56,15 @@ export const PostControls = () => {
       <Row justifyContent='space-between'>
         <Box alignItems='center' minWidth='80px'>
           <Layout flexBasis='5px' />
-          <Text padding='0px' fontSize='basic'>
+          <Text padding='0px' fontSize='small'>
             {intl.formatMessage(messages.messageCount)}
           </Text>
           <Space />
-          <Text padding='0px' fontSize='basic'>
+          <Text padding='0px' fontSize='small'>
             {postData.length}
           </Text>
         </Box>
         <Button
-          color='white'
           minWidth='120px'
           minHeight='40px'
           backgroundColor='purple'
@@ -77,7 +73,7 @@ export const PostControls = () => {
             setStatus('')
           }}
         >
-          <Text margin='5px 20px' fontSize='basic' padding='0px'>
+          <Text color='white' fontSize='small' >
             {intl.formatMessage(messages.clear)}
           </Text>
         </Button>

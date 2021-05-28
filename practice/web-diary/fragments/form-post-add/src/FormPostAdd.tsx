@@ -20,12 +20,10 @@ export const FormPostAdd = () => {
     setPostData(fetchInitialData())
   }, [])
   return (
-    <Row justifyContent='flex-start' minWidth='380px'>
+    <Row justifyContent='flex-start' width='98%'>
       <Layout flexBasis='25px' />
       <Input
-        minWidth='252px'
-        padding='6px 10px'
-        fontSize='14px'
+        size={46}
         placeholder={intl.formatMessage(messages.yourPost)}
         onChange={event => setValue(event.target.value)}
         value={value}
@@ -35,14 +33,13 @@ export const FormPostAdd = () => {
         maxHeight='40px'
         maxWidth='50px'
         backgroundColor='purple'
-        color='white'
         onClick={() => {
           setPostData(addItem(postData, value))
           setValue('')
           setStatus('all')
         }}
       >
-        <Text fontWeight='bold' fontSize='large'>
+        <Text color='white' fontWeight='bold' fontSize='large'>
           {intl.formatMessage(messages.add)}
         </Text>
       </Button>
