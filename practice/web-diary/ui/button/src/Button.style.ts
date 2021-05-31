@@ -27,13 +27,6 @@ export const greyColorStyles = ({ theme }) =>
     borderColor: 'transparent',
   })
 
-export const displayShowStyles = createAppearanceStyles({
-  display: 'flex',
-})
-export const displayHideStyles = createAppearanceStyles({
-  display: 'none',
-})
-
 export const normalSizeStyles = createShapeStyles({ size: '40px' })
 export const smallSizeStyles = createShapeStyles({ size: '30px' })
 
@@ -47,9 +40,4 @@ export const colorStyles = switchProp(prop('color', 'purple'), () => ({
   white: whiteColorStyles,
   red: redColorStyles,
   grey: greyColorStyles,
-}))
-
-export const displayStyles = switchProp(prop('display', 'hide'), () => ({
-  show: displayShowStyles,
-  hide: displayHideStyles,
 }))

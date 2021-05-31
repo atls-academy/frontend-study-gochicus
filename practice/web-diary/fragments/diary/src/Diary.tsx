@@ -12,8 +12,8 @@ export const Diary = () => {
     <Background gradient='blueAndGreenGradient' height='100vh' width='100vw' overflowY='auto'>
       <Column alignItems='center'>
         <Layout flexBasis='300px' />
-        <Box backgroundColor='white' maxWidth='500px'>
-          <Column alignItems='center'>
+        <Box backgroundColor='white' width='20%' maxWidth='30%'>
+          <Column alignItems='center' width='100%'>
             <Layout flexBasis='25px' />
             <Header />
             <Layout flexBasis='25px' />

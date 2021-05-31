@@ -6,8 +6,8 @@ import { createBaseShape }        from './shape'
 
 export const baseStyles = createBaseStyles()
 
-export const createBigWidthStyles = createBaseShape({ size: 46 })
-export const createSmallWidthStyles = createBaseShape({ size: 164 })
+export const createBigWidthStyles = createBaseShape({ size: 20 })
+export const createSmallWidthStyles = createBaseShape({ size: 40 })
 
 export const widthStyles = switchProp(prop('size', 'small'), () => ({
   big: createBigWidthStyles,

@@ -17,11 +17,10 @@ export const PostControls = () => {
   const [, setSearchValue] = useSearchValue()
   const [postData, setPostData] = usePostData()
   return (
-    <Column width={'92%'}>
+    <Column width='92%'>
       <Row justifyContent='center' >
-        <Box width={'48%'}>
+        <Box width='48%'>
         <Input
-          size={1}
           placeholder={intl.formatMessage(messages.search)}
           onChange={event => {
             setStatus('search')
@@ -30,7 +29,7 @@ export const PostControls = () => {
         />
         </Box>
         <Layout flexBasis='8px' />
-        <Box width={'60%'}>
+        <Box width='60%'>
         <Button
           display={'show'}
           color={status === 'all' ? 'white' : 'purple'}
@@ -68,7 +67,7 @@ export const PostControls = () => {
             {postData.length}
           </Text>
         </Box>
-        <Box width={'35%'}>
+        <Box width='35%'>
         <Button
           display={'show'}
           onClick={() => {
