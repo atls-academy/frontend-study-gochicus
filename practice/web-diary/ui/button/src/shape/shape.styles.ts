@@ -2,8 +2,8 @@ import { styleFn }        from 'styled-system'
 
 import { ShapeInterface } from './shape.interface'
 
-export const createBaseShape = (height: number | string): styleFn => () => ({
-  height,
+export const createBaseShape = (size: number | string): styleFn => () => ({
+  height: size,
 })
 
 export const createBorderStyles = (
@@ -18,12 +18,12 @@ export const createBorderStyles = (
   borderWidth,
 })
 export const createShapeStyles = ({
-  height,
+  size,
   borderStyle,
   borderRadius,
   borderWeight,
   borderWidth,
 }: ShapeInterface): styleFn => () => ({
-  ...createBaseShape(height)(),
+  ...createBaseShape(size)(),
   ...createBorderStyles(borderStyle, borderRadius, borderWeight, borderWidth)(),
 })

@@ -1,4 +1,5 @@
 export interface AppearanceInterface {
-  backgroundColor: string
+  backgroundColor?: string
   borderColor?: string
+  display?: string
 }

@@ -7,9 +7,15 @@ export const createColorStyles = (backgroundColor, borderColor): styleFn => () =
   borderColor,
 })
 
+export const createDisplayStyles = (display): styleFn => () => ({
+  display,
+})
+
 export const createAppearanceStyles = ({
   backgroundColor,
   borderColor,
+  display,
 }: AppearanceInterface): styleFn => () => ({
   ...createColorStyles(backgroundColor, borderColor)(),
+  ...createDisplayStyles(display)(),
 })

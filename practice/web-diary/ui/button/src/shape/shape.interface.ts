@@ -1,6 +1,5 @@
 export interface ShapeInterface {
-  height?: string | number
-  width?: string | number
+  size?: string | number
   borderStyle?: string
   borderRadius?: string | number
   borderWeight?: string | number

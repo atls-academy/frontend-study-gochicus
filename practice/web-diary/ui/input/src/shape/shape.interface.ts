@@ -1,3 +1,4 @@
 export interface InputBaseShapeProps {
-  size: number | string
+  size?: number | string
+  font?: string
 }

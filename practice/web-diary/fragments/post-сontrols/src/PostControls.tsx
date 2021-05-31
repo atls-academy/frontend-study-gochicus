@@ -17,43 +17,50 @@ export const PostControls = () => {
   const [, setSearchValue] = useSearchValue()
   const [postData, setPostData] = usePostData()
   return (
-    <Column width={'88%'}>
+    <Column width={'92%'}>
       <Row justifyContent='center' >
+        <Box width={'48%'}>
         <Input
-          size={30}
+          size={1}
           placeholder={intl.formatMessage(messages.search)}
           onChange={event => {
             setStatus('search')
             setSearchValue(event.target.value)
           }}
         />
+        </Box>
         <Layout flexBasis='8px' />
+        <Box width={'60%'}>
         <Button
-          color={status === 'all' ? 'purple' : 'white'}
+          display={'show'}
+          color={status === 'all' ? 'white' : 'purple'}
           onClick={() => setStatus('all')}
         >
           <Text >{intl.formatMessage(messages.all)}</Text>
         </Button>
         <Layout flexBasis='8px' />
         <Button
-          color={status === 'like' ? 'purple' : 'white'}
+          display={'show'}
+          color={status === 'like' ? 'white' : 'purple'}
           onClick={() => setStatus('like')}
         >
           <Text paddingLeft='10px'>{intl.formatMessage(messages.like)}</Text>
         </Button>
         <Layout flexBasis='8px' />
         <Button
-          color={status === 'important' ? 'purple' : 'white'}
+          display={'show'}
+          color={status === 'important' ? 'white' : 'purple'}
           onClick={() => setStatus('important')}
         >
           <Text> {intl.formatMessage(messages.important)}</Text>
         </Button>
+        </Box>
       </Row>
       <Layout flexBasis='25px' />
       <Row justifyContent='space-between'>
-        <Box alignItems='center' minWidth='80px'>
+        <Box alignItems='center' width={'30%'}>
           <Layout flexBasis='5px' />
-          <Text padding='0px' fontSize='small'>
+          <Text  padding='0px' fontSize='small'>
             {intl.formatMessage(messages.messageCount)}
           </Text>
           <Space />
@@ -61,7 +68,9 @@ export const PostControls = () => {
             {postData.length}
           </Text>
         </Box>
+        <Box width={'35%'}>
         <Button
+          display={'show'}
           onClick={() => {
             setPostData([])
             setStatus('')
@@ -71,6 +80,7 @@ export const PostControls = () => {
             {intl.formatMessage(messages.clear)}
           </Text>
         </Button>
+        </Box>
       </Row>
     </Column>
   )

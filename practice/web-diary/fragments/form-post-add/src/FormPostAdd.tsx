@@ -3,7 +3,7 @@ import { useIntl }                    from 'react-intl'
 
 import { Button }                     from '@ui/button'
 import { Input }                      from '@ui/input'
-import { Layout, Row }                from '@ui/layout'
+import { Box, Layout }                from '@ui/layout'
 import { Text }                       from '@ui/text'
 import { useButtonStatus }            from '@store/button-status'
 import { usePostData }                from '@store/post-data'
@@ -20,27 +20,31 @@ export const FormPostAdd = () => {
     setPostData(fetchInitialData())
   }, [])
   return (
-    <Row justifyContent='flex-start' width='98%'>
-      <Layout flexBasis='25px' />
+    <Box justifyContent='flex-start' width='100%'>
+      <Layout flexBasis='17px' />
       <Input
-        size={46}
+        size={2}
         placeholder={intl.formatMessage(messages.yourPost)}
         onChange={event => setValue(event.target.value)}
         value={value}
       />
+
       <Layout flexBasis='5px' />
-      <Button
-        onClick={() => {
-          setPostData(addItem(postData, value))
-          setValue('')
-          setStatus('all')
-        }}
-      >
-        <Text color='white' fontWeight='bold' fontSize='large'>
-          {intl.formatMessage(messages.add)}
-        </Text>
-      </Button>
+      <Box width='20%'>
+        <Button
+          display='show'
+          onClick={() => {
+            setPostData(addItem(postData, value))
+            setValue('')
+            setStatus('all')
+          }}
+        >
+          <Text color='white' fontWeight='bold' padding={0} fontSize='large'>
+            {intl.formatMessage(messages.add)}
+          </Text>
+        </Button>
+      </Box>
       <Layout flexBasis='15px' />
-    </Row>
+    </Box>
   )
 }
