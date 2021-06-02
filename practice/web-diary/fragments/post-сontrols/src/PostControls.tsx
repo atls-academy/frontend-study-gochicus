@@ -31,17 +31,11 @@ export const PostControls = () => {
         </Box>
         <Layout flexBasis='8px' />
         <Box width='60%'>
-          <Button
-            color={status === 'all' ? 'white' : 'purple'}
-            onClick={() => setStatus('all')}
-          >
+          <Button color={status === 'all' ? 'white' : 'purple'} onClick={() => setStatus('all')}>
             <Text>{intl.formatMessage(messages.all)}</Text>
           </Button>
           <Layout flexBasis='8px' />
-          <Button
-            color={status === 'like' ? 'white' : 'purple'}
-            onClick={() => setStatus('like')}
-          >
+          <Button color={status === 'like' ? 'white' : 'purple'} onClick={() => setStatus('like')}>
             <Text padding='0px'>{intl.formatMessage(messages.like)}</Text>
           </Button>
           <Layout flexBasis='8px' />
