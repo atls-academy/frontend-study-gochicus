@@ -2,13 +2,14 @@ import { styleFn } from 'styled-system'
 
 export const createBaseStyles = (): styleFn => () => ({
   outline: 'none',
-  padding: 0,
   margin: 0,
   border: '1px solid',
   width: '100%',
+  padding: '0 6px',
+
   '&::placeholder ': {
     fontFamily: 'Gordita, sans-serif',
-    fontSize: '12px',
+    fontSize: '14px',
     padding: '6px 6px',
   },
 })

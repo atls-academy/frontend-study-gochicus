@@ -6,4 +6,5 @@ export const Row = styled.div(layout, space, flexbox, position, color, size)
 Row.defaultProps = {
   display: 'flex',
   flexDirection: 'row',
+  width: '100%',
 }

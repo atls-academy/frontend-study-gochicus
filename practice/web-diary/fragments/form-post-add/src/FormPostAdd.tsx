@@ -31,7 +31,6 @@ export const FormPostAdd = () => {
       <Layout flexBasis='5px' />
       <Box width='20%'>
         <Button
-          display='show'
           onClick={() => {
             setPostData(addItem(postData, value))
             setValue('')

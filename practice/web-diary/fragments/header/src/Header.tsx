@@ -9,7 +9,7 @@ import messages    from './messages'
 export const Header = () => {
   const intl = useIntl()
   return (
-    <Row width='100%'>
+    <Row>
       <Text fontSize='large' fontWeight='bold' fontFamily='primary'>
         {intl.formatMessage(messages.postList)}
       </Text>

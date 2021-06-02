@@ -17,4 +17,6 @@ export const widthStyles = switchProp(prop('size', 'small'), () => ({
 export const greyColorStyles = ({ theme }) =>
   createAppearanceStyles({
     borderColor: theme.colors.lightGrey,
+    fontFamily: theme.fonts.primary,
+    fontSize: theme.fontSizes.small,
   })

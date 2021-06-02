@@ -1,12 +1,12 @@
-import React, { useState }            from 'react'
+import React, { useState } from 'react'
 
-import { Button }                     from '@ui/button'
-import { Condition, LayoutCondition } from '@ui/condition'
-import { HeartIcon }                  from '@ui/icons'
-import { StarIcon }                   from '@ui/icons'
-import { TrashIcon }                  from '@ui/icons'
-import { Box, Layout }                from '@ui/layout'
-import { Text }                       from '@ui/text'
+import { Button }          from '@ui/button'
+import { Condition }       from '@ui/condition'
+import { HeartIcon }       from '@ui/icons'
+import { StarIcon }        from '@ui/icons'
+import { TrashIcon }       from '@ui/icons'
+import { Box, Layout }     from '@ui/layout'
+import { Text }            from '@ui/text'
 
 export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateState, data }) => {
   const [important, setImportant] = useState(false)
@@ -16,7 +16,6 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
     <>
       <Box backgroundColor='lightGrey' width='100%'>
         <Button
-          display='show'
           color='grey'
           onMouseOver={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
@@ -24,7 +23,9 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
           <Box borderColor='transparent' width='50%'>
             <Text>{postObject.post}</Text>
           </Box>
-          <LayoutCondition match={visible} />
+          <Condition match={!visible}>
+            <Layout flexBasis='200px' />{' '}
+          </Condition>
           <Condition match={visible}>
             <Box width='50%'>
               <Layout flexBasis='70px' />

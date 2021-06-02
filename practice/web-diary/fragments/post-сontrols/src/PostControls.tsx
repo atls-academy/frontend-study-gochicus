@@ -31,7 +31,6 @@ export const PostControls = () => {
         <Layout flexBasis='8px' />
         <Box width='60%'>
           <Button
-            display='show'
             color={status === 'all' ? 'white' : 'purple'}
             onClick={() => setStatus('all')}
           >
@@ -39,7 +38,6 @@ export const PostControls = () => {
           </Button>
           <Layout flexBasis='8px' />
           <Button
-            display='show'
             color={status === 'like' ? 'white' : 'purple'}
             onClick={() => setStatus('like')}
           >
@@ -47,7 +45,6 @@ export const PostControls = () => {
           </Button>
           <Layout flexBasis='8px' />
           <Button
-            display='show'
             color={status === 'important' ? 'white' : 'purple'}
             onClick={() => setStatus('important')}
           >
@@ -69,7 +66,6 @@ export const PostControls = () => {
         </Box>
         <Box width='35%'>
           <Button
-            display='show'
             onClick={() => {
               setPostData([])
               setStatus('')
