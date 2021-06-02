@@ -23,6 +23,7 @@ export const FormPostAdd = () => {
     <Box justifyContent='flex-start' width='100%'>
       <Layout flexBasis='17px' />
       <Input
+        size={40}
         placeholder={intl.formatMessage(messages.yourPost)}
         onChange={event => setValue(event.target.value)}
         value={value}

@@ -21,6 +21,7 @@ export const PostControls = () => {
       <Row justifyContent='center'>
         <Box width='48%'>
           <Input
+            size={40}
             placeholder={intl.formatMessage(messages.search)}
             onChange={event => {
               setStatus('search')
@@ -41,7 +42,7 @@ export const PostControls = () => {
             color={status === 'like' ? 'white' : 'purple'}
             onClick={() => setStatus('like')}
           >
-            <Text paddingLeft='10px'>{intl.formatMessage(messages.like)}</Text>
+            <Text padding='0px'>{intl.formatMessage(messages.like)}</Text>
           </Button>
           <Layout flexBasis='8px' />
           <Button

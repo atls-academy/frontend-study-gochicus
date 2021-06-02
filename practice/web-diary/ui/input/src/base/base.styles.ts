@@ -5,11 +5,13 @@ export const createBaseStyles = (): styleFn => () => ({
   margin: 0,
   border: '1px solid',
   width: '100%',
-  padding: '0 6px',
 
-  '&::placeholder ': {
+  '&::placeholder': {
     fontFamily: 'Gordita, sans-serif',
     fontSize: '14px',
     padding: '6px 6px',
+  },
+  '&:first-of-type': {
+    padding: '6px',
   },
 })

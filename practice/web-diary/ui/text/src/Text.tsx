@@ -8,4 +8,5 @@ Text.defaultProps = {
   fontSize: '16px',
   textAlign: 'center',
   padding: '10px 15px',
+  display: 'inline-block',
 }
