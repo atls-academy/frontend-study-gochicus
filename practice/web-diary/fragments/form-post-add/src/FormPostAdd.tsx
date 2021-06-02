@@ -20,7 +20,7 @@ export const FormPostAdd = () => {
     setPostData(fetchInitialData())
   }, [])
   return (
-    <Box justifyContent='flex-start' width='100%'>
+    <Box justifyContent='flex-start' width='98%'>
       <Layout flexBasis='17px' />
       <Input
         size={40}

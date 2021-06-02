@@ -7,6 +7,5 @@ Text.defaultProps = {
   fontFamily: 'primary',
   fontSize: '16px',
   textAlign: 'center',
-  padding: '10px 15px',
-  display: 'inline-block',
+  padding: '5px 15px',
 }

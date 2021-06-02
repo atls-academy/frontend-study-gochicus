@@ -14,14 +14,14 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <Box backgroundColor='lightGrey' width='auto'>
+      <Box backgroundColor='lightGrey' width='100%'>
         <Button
           color='grey'
           onMouseOver={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
         >
-          <Box borderColor='transparent' width='auto' minWidth='200px'>
-            <Text>{postObject.post}</Text>
+          <Box borderColor='transparent' width='100%' minWidth='200px'>
+            <Text textOverflowY='clip'>{postObject.post}</Text>
           </Box>
           <Condition match={!visible}>
             <Layout flexBasis='200px' />
