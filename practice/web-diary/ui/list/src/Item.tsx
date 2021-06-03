@@ -14,14 +14,19 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, setPostD
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <Box backgroundColor='lightGrey' width='100%'>
+      <Box backgroundColor='lightGrey' width='100%' maxHeight='600px'>
         <Button
-          height='normal'
           color='grey'
           onMouseOver={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
         >
-          <Button borderColor='transparent' justifyContent='start' overflowY='auto' color='grey'>
+          <Button
+            borderColor='transparent'
+            justifyContent='start'
+            color='grey'
+            overflow='auto'
+            hyphens='auto'
+          >
             <Text>{postObject.post}</Text>
           </Button>
           <Box width='100%'>

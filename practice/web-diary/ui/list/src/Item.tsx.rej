@@ -1,4 +1,0 @@
-diff a/practice/web-diary/ui/list/src/Item.tsx b/practice/web-diary/ui/list/src/Item.tsx	(rejected hunks)
-@@ -24 +24 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
--          <Button borderColor='transparent'  position='start' scroll='auto' color='grey'>
-+          <Button borderColor='transparent' position='start' scroll='auto' color='grey'>

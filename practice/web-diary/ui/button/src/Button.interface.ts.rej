@@ -1,9 +1,0 @@
-diff a/practice/web-diary/ui/button/src/Button.interface.ts b/practice/web-diary/ui/button/src/Button.interface.ts	(rejected hunks)
-@@ -6 +6 @@ export interface ButtonProps extends ButtonHTMLAttributes<any> {
--  maxHeight?:string
-+  maxHeight?: string
-@@ -11,2 +11,2 @@ export interface ButtonProps extends ButtonHTMLAttributes<any> {
--  scroll?:string
--  position?:string
-+  scroll?: string
-+  position?: string

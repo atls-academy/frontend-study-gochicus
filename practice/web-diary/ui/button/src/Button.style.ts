@@ -30,7 +30,7 @@ export const greyColorStyles = ({ theme }) =>
 export const justifyContentStartStyles = createAppearanceStyles({ justifyContent: 'flex-start' })
 export const justifyContentEndStyles = createAppearanceStyles({ justifyContent: 'flex-end' })
 
-export const normaHeightStyles = createShapeStyles({ height: '50px' })
+export const normaHeightStyles = createShapeStyles({ height: '40px' })
 export const smallHeightStyles = createShapeStyles({ height: '30px' })
 
 export const sizeStyles = switchProp(prop('height', 'normal'), () => ({
@@ -43,13 +43,6 @@ export const colorStyles = switchProp(prop('color', 'purple'), () => ({
   white: whiteColorStyles,
   red: redColorStyles,
   grey: greyColorStyles,
-}))
-export const overflowAutoStyles = createShapeStyles({ overflowValue: 'auto' })
-export const overflowInheritStyles = createShapeStyles({ overflowValue: 'inherit' })
-
-export const overflowStyles = switchProp(prop('overflowY', 'inherit'), () => ({
-  inherit: overflowInheritStyles,
-  auto: overflowAutoStyles,
 }))
 
 export const justifyContentStyles = switchProp(prop('justifyContent', 'center'), () => ({

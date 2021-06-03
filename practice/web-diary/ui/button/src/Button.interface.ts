@@ -8,6 +8,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<any> {
   width?: 'small' | 'normal'
   size?: 'small' | 'normal'
   display?: string
-  overflowY?: string
+  overflow?: string
   justifyContent?: string
+  hyphens?: string
 }
