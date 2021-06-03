@@ -17,7 +17,7 @@ export const PostList = () => {
       likeItem={likeItem}
       importantItem={importantItem}
       items={filterData(postData, status, searchResult)}
-      updateState={setPostData}
+      setPostData={setPostData}
     />
   )
 }

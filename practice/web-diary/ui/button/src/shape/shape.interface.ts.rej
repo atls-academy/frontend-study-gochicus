@@ -1,0 +1,4 @@
+diff a/practice/web-diary/ui/button/src/shape/shape.interface.ts b/practice/web-diary/ui/button/src/shape/shape.interface.ts	(rejected hunks)
+@@ -2 +2 @@ export interface ShapeInterface {
+-  value?:string
++  value?: string

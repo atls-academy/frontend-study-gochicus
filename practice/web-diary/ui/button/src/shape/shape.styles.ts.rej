@@ -1,0 +1,21 @@
+diff a/practice/web-diary/ui/button/src/shape/shape.styles.ts b/practice/web-diary/ui/button/src/shape/shape.styles.ts	(rejected hunks)
+@@ -5 +5,4 @@ import { ShapeInterface } from './shape.interface'
+-export const createBaseShape = (minSize: number | string, maxSize: number | string): styleFn => () => ({
++export const createBaseShape = (
++  minSize: number | string,
++  maxSize: number | string,
++): styleFn => () => ({
+@@ -7 +10 @@ export const createBaseShape = (minSize: number | string, maxSize: number | stri
+-  maxHeight:maxSize
++  maxHeight: maxSize,
+@@ -10,2 +13,2 @@ export const createBaseShape = (minSize: number | string, maxSize: number | stri
+-export const createOverflowStyles = (value:string):styleFn => () => ({
+-  overflowY:value
++export const createOverflowStyles = (value: string): styleFn => () => ({
++  overflowY: value,
+@@ -34 +37 @@ export const createShapeStyles = ({
+-  ...createBaseShape(minSize,maxSize)(),
++  ...createBaseShape(minSize, maxSize)(),
+@@ -36 +39 @@ export const createShapeStyles = ({
+-  ...createOverflowStyles(value)()
++  ...createOverflowStyles(value)(),

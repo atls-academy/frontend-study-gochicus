@@ -8,7 +8,7 @@ import { TrashIcon }       from '@ui/icons'
 import { Box, Layout }     from '@ui/layout'
 import { Text }            from '@ui/text'
 
-export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateState, data }) => {
+export const Item = ({ deleteItem, importantItem, likeItem, postObject, setPostData, data }) => {
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
   const [visible, setVisible] = useState(false)
@@ -16,26 +16,23 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
     <>
       <Box backgroundColor='lightGrey' width='100%'>
         <Button
+          height='normal'
           color='grey'
           onMouseOver={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
-          maxHeight='120px'
         >
-          <Button borderColor='transparent' position='start' scroll='auto' color='grey'>
+          <Button borderColor='transparent' justifyContent='start' overflowY='auto' color='grey'>
             <Text>{postObject.post}</Text>
           </Button>
-          <Condition match={!visible}>
-            <Layout flexBasis='200px' />
-          </Condition>
-          <Condition match={visible}>
-            <Box width='80%'>
+          <Box width='100%'>
+            <Condition match={visible}>
               <Layout flexBasis='70px' />
               <Box width='20%'>
                 <Button
-                  size='small'
+                  height='small'
                   color={important === true ? 'white' : 'purple'}
                   onClick={() => {
-                    updateState(importantItem(data, postObject.id, !important))
+                    setPostData(importantItem(data, postObject.id, !important))
                     setImportant(!important)
                   }}
                 >
@@ -45,10 +42,10 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
               <Layout flexBasis='5px' />
               <Box width='20%'>
                 <Button
-                  size='small'
+                  height='small'
                   color={like === true ? 'white' : 'purple'}
                   onClick={() => {
-                    updateState(likeItem(data, postObject.id, !like))
+                    setPostData(likeItem(data, postObject.id, !like))
                     setLike(!like)
                   }}
                 >
@@ -58,15 +55,15 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
               <Layout flexBasis='5px' />
               <Box width='20%'>
                 <Button
-                  size='small'
+                  height='small'
                   color='red'
-                  onClick={() => updateState(deleteItem(data, postObject.id))}
+                  onClick={() => setPostData(deleteItem(data, postObject.id))}
                 >
                   <TrashIcon color='white' />
                 </Button>
               </Box>
-            </Box>
-          </Condition>
+            </Condition>
+          </Box>
         </Button>
       </Box>
       <Layout flexBasis='10px' />

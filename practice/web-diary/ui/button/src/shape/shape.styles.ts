@@ -2,16 +2,12 @@ import { styleFn }        from 'styled-system'
 
 import { ShapeInterface } from './shape.interface'
 
-export const createBaseShape = (
-  minSize: number | string,
-  maxSize: number | string,
-): styleFn => () => ({
-  minHeight: minSize,
-  maxHeight: maxSize,
+export const createBaseShape = (height: number | string): styleFn => () => ({
+  height,
 })
 
-export const createOverflowStyles = (value: string): styleFn => () => ({
-  overflowY: value,
+export const createOverflowStyles = (overflowValue: string): styleFn => () => ({
+  overflowY: overflowValue,
 })
 
 export const createBorderStyles = (
@@ -26,15 +22,14 @@ export const createBorderStyles = (
   borderWidth,
 })
 export const createShapeStyles = ({
-  value,
-  minSize,
-  maxSize,
+  overflowValue,
+  height,
   borderStyle,
   borderRadius,
   borderWeight,
   borderWidth,
 }: ShapeInterface): styleFn => () => ({
-  ...createBaseShape(minSize, maxSize)(),
+  ...createBaseShape(height)(),
   ...createBorderStyles(borderStyle, borderRadius, borderWeight, borderWidth)(),
-  ...createOverflowStyles(value)(),
+  ...createOverflowStyles(overflowValue)(),
 })

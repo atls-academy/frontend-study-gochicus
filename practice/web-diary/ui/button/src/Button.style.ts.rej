@@ -1,0 +1,33 @@
+diff a/practice/web-diary/ui/button/src/Button.style.ts b/practice/web-diary/ui/button/src/Button.style.ts	(rejected hunks)
+@@ -30,2 +30,2 @@ export const greyColorStyles = ({ theme }) =>
+-export const justifyContentStartStyles =createAppearanceStyles({justifyContent:'flex-start'})
+-export const justifyContentEndStyles =createAppearanceStyles({justifyContent:'flex-end'})
++export const justifyContentStartStyles = createAppearanceStyles({ justifyContent: 'flex-start' })
++export const justifyContentEndStyles = createAppearanceStyles({ justifyContent: 'flex-end' })
+@@ -33,2 +33,2 @@ export const justifyContentEndStyles =createAppearanceStyles({justifyContent:'fl
+-export const normalSizeStyles = createShapeStyles({ minSize: '40px', maxSize:'120px'})
+-export const smallSizeStyles = createShapeStyles({ minSize: '30px',maxSize:'60px' })
++export const normalSizeStyles = createShapeStyles({ minSize: '40px', maxSize: '120px' })
++export const smallSizeStyles = createShapeStyles({ minSize: '30px', maxSize: '60px' })
+@@ -47,2 +47,2 @@ export const colorStyles = switchProp(prop('color', 'purple'), () => ({
+-export const  overflowAutoStyles = createShapeStyles({value:'auto'})
+-export const  overflowInheritStyles = createShapeStyles({value:'inherit'})
++export const overflowAutoStyles = createShapeStyles({ value: 'auto' })
++export const overflowInheritStyles = createShapeStyles({ value: 'inherit' })
+@@ -50,3 +50,3 @@ export const  overflowInheritStyles = createShapeStyles({value:'inherit'})
+-export const  overflowStyles = switchProp(prop('scroll','inherit'),()=> ({
+-  inherit:overflowInheritStyles,
+-  auto:overflowAutoStyles
++export const overflowStyles = switchProp(prop('scroll', 'inherit'), () => ({
++  inherit: overflowInheritStyles,
++  auto: overflowAutoStyles,
+@@ -55,4 +55,4 @@ export const  overflowStyles = switchProp(prop('scroll','inherit'),()=> ({
+-export const justifyContentStyles =switchProp(prop('position','center'),()=>({
+-  start:justifyContentStartStyles,
+-  end:justifyContentEndStyles
+-}))
+\ No newline at end of file
++export const justifyContentStyles = switchProp(prop('position', 'center'), () => ({
++  start: justifyContentStartStyles,
++  end: justifyContentEndStyles,
++}))

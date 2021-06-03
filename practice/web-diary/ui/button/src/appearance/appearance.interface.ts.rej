@@ -1,0 +1,4 @@
+diff a/practice/web-diary/ui/button/src/appearance/appearance.interface.ts b/practice/web-diary/ui/button/src/appearance/appearance.interface.ts	(rejected hunks)
+@@ -5 +5 @@ export interface AppearanceInterface {
+-  justifyContent?:string
++  justifyContent?: string
