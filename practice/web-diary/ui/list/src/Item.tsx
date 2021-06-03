@@ -19,15 +19,16 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, updateSt
           color='grey'
           onMouseOver={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
+          maxHeight='120px'
         >
-          <Box borderColor='transparent' width='100%' minWidth='200px'>
-            <Text textOverflowY='clip'>{postObject.post}</Text>
-          </Box>
+          <Button borderColor='transparent' position='start' scroll='auto' color='grey'>
+            <Text>{postObject.post}</Text>
+          </Button>
           <Condition match={!visible}>
             <Layout flexBasis='200px' />
           </Condition>
           <Condition match={visible}>
-            <Box width='65%'>
+            <Box width='80%'>
               <Layout flexBasis='70px' />
               <Box width='20%'>
                 <Button

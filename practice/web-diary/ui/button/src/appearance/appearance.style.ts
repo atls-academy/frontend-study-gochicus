@@ -10,12 +10,17 @@ export const createColorStyles = (backgroundColor, borderColor): styleFn => () =
 export const createDisplayStyles = (display): styleFn => () => ({
   display,
 })
+export const createJustifyContentStyles = (justifyContent): styleFn => () => ({
+  justifyContent,
+})
 
 export const createAppearanceStyles = ({
   backgroundColor,
   borderColor,
   display,
+  justifyContent,
 }: AppearanceInterface): styleFn => () => ({
   ...createColorStyles(backgroundColor, borderColor)(),
   ...createDisplayStyles(display)(),
+  ...createJustifyContentStyles(justifyContent)(),
 })

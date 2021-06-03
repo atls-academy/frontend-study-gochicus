@@ -8,5 +8,4 @@ export const createBaseStyles = (): styleFn => () => ({
   alignItems: 'center',
   boxSizing: 'border-box',
   width: '100%',
-  overflowY: 'auto',
 })

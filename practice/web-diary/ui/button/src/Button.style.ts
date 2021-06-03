@@ -27,8 +27,11 @@ export const greyColorStyles = ({ theme }) =>
     borderColor: 'transparent',
   })
 
-export const normalSizeStyles = createShapeStyles({ size: '40px' })
-export const smallSizeStyles = createShapeStyles({ size: '30px' })
+export const justifyContentStartStyles = createAppearanceStyles({ justifyContent: 'flex-start' })
+export const justifyContentEndStyles = createAppearanceStyles({ justifyContent: 'flex-end' })
+
+export const normalSizeStyles = createShapeStyles({ minSize: '40px', maxSize: '120px' })
+export const smallSizeStyles = createShapeStyles({ minSize: '30px', maxSize: '60px' })
 
 export const sizeStyles = switchProp(prop('size', 'normal'), () => ({
   small: smallSizeStyles,
@@ -40,4 +43,16 @@ export const colorStyles = switchProp(prop('color', 'purple'), () => ({
   white: whiteColorStyles,
   red: redColorStyles,
   grey: greyColorStyles,
+}))
+export const overflowAutoStyles = createShapeStyles({ value: 'auto' })
+export const overflowInheritStyles = createShapeStyles({ value: 'inherit' })
+
+export const overflowStyles = switchProp(prop('scroll', 'inherit'), () => ({
+  inherit: overflowInheritStyles,
+  auto: overflowAutoStyles,
+}))
+
+export const justifyContentStyles = switchProp(prop('position', 'center'), () => ({
+  start: justifyContentStartStyles,
+  end: justifyContentEndStyles,
 }))
