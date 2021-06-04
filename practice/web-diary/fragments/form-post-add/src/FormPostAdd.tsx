@@ -38,7 +38,7 @@ export const FormPostAdd = () => {
             setStatus('all')
           }}
         >
-          <Text color='white' fontWeight='bold' padding={0} fontSize='large'>
+          <Text color='white' fontWeight='bold' fontSize='large'>
             {intl.formatMessage(messages.add)}
           </Text>
         </Button>
