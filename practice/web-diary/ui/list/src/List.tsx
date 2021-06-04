@@ -15,7 +15,7 @@ export const List = ({ items, deleteItem, importantItem, likeItem, setPostData }
           likeItem={likeItem}
           postObject={item}
           setPostData={setPostData}
-          data={items}
+          postData={items}
         />
       ))}
     </Column>

@@ -5,6 +5,6 @@ export const Text = styled('span')(color, typography, space)
 
 Text.defaultProps = {
   fontFamily: 'primary',
-  fontSize: '16px',
+  fontSize: 'small',
   textAlign: 'center',
 }

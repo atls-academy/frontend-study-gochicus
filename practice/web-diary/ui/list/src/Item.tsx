@@ -6,13 +6,20 @@ import { HeartIcon, StarIcon, TrashIcon } from '@ui/icons'
 import { Box, Column, Layout, Row }       from '@ui/layout'
 import { Text }                           from '@ui/text'
 
-export const Item = ({ deleteItem, importantItem, likeItem, postObject, setPostData, data }) => {
+export const Item = ({
+  deleteItem,
+  importantItem,
+  likeItem,
+  postObject,
+  setPostData,
+  postData,
+}) => {
   const [important, setImportant] = useState(false)
   const [like, setLike] = useState(false)
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <Row
+      <Box
         backgroundColor='lightGrey'
         width='100%'
         onMouseOver={() => setVisible(true)}
@@ -23,11 +30,9 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, setPostD
         <Column width='100%'>
           <Layout flexBasis='10px' />
           <Box maxHeight='300px' borderColor='transparent'>
+            <Layout flexBasis='10px' />
             <Row overflow='auto' hyphens='auto' display='block'>
-              <Row>
-                <Layout flexBasis='10px' />
-                <Text padding='5px'>{postObject.post}</Text>
-              </Row>
+              <Text>{postObject.post}</Text>
             </Row>
           </Box>
           <Layout flexBasis='10px' />
@@ -40,7 +45,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, setPostD
                 height='small'
                 color={important === true ? 'white' : 'purple'}
                 onClick={() => {
-                  setPostData(importantItem(data, postObject.id, !important))
+                  setPostData(importantItem(postData, postObject.id, !important))
                   setImportant(!important)
                 }}
               >
@@ -53,7 +58,7 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, setPostD
                 height='small'
                 color={like === true ? 'white' : 'purple'}
                 onClick={() => {
-                  setPostData(likeItem(data, postObject.id, !like))
+                  setPostData(likeItem(postData, postObject.id, !like))
                   setLike(!like)
                 }}
               >
@@ -65,14 +70,14 @@ export const Item = ({ deleteItem, importantItem, likeItem, postObject, setPostD
               <Button
                 height='small'
                 color='red'
-                onClick={() => setPostData(deleteItem(data, postObject.id))}
+                onClick={() => setPostData(deleteItem(postData, postObject.id))}
               >
                 <TrashIcon color='white' />
               </Button>
             </Box>
           </Condition>
         </Row>
-      </Row>
+      </Box>
       <Layout flexBasis='10px' />
     </>
   )
