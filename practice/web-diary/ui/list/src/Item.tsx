@@ -19,9 +19,8 @@ export const Item = ({
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <Box
+      <Row
         backgroundColor='lightGrey'
-        width='100%'
         onMouseOver={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
         alignItems='center'
@@ -77,7 +76,7 @@ export const Item = ({
             </Box>
           </Condition>
         </Row>
-      </Box>
+      </Row>
       <Layout flexBasis='10px' />
     </>
   )
