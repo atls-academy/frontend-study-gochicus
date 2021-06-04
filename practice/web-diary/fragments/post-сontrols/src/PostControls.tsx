@@ -36,7 +36,7 @@ export const PostControls = () => {
           </Button>
           <Layout flexBasis='8px' />
           <Button color={status === 'like' ? 'white' : 'purple'} onClick={() => setStatus('like')}>
-            <Text padding='0px'>{intl.formatMessage(messages.like)}</Text>
+            <Text>{intl.formatMessage(messages.like)}</Text>
           </Button>
           <Layout flexBasis='8px' />
           <Button
@@ -51,11 +51,11 @@ export const PostControls = () => {
       <Row justifyContent='space-between'>
         <Box alignItems='center' width='30%'>
           <Layout flexBasis='5px' />
-          <Text padding='0px' fontSize='small'>
+          <Text  fontSize='small'>
             {intl.formatMessage(messages.messageCount)}
           </Text>
           <Space />
-          <Text padding='0px' fontSize='small'>
+          <Text fontSize='small'>
             {postData.length}
           </Text>
         </Box>

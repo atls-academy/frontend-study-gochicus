@@ -10,7 +10,7 @@ export const Header = () => {
   const intl = useIntl()
   return (
     <Row>
-      <Text fontSize='large' fontWeight='bold' fontFamily='primary'>
+      <Text paddingLeft='15px' fontSize='large' fontWeight='bold' fontFamily='primary'>
         {intl.formatMessage(messages.postList)}
       </Text>
     </Row>
