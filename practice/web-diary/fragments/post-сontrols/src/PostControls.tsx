@@ -21,7 +21,7 @@ export const PostControls = () => {
       <Row justifyContent='center' width='356px'>
         <Box>
           <Input
-            size={'big'}
+            size='big'
             placeholder={intl.formatMessage(messages.search)}
             onChange={event => {
               setStatus('search')
