@@ -14,8 +14,8 @@ export const Diary = () => {
         <Layout flexBasis='300px' />
         <Box backgroundColor='white' width='400px'>
           <Row justifyContent='center'>
-            <Layout flexBasis='25px' />
-            <Column alignItems='center'>
+            <Layout flexBasis='15px' />
+            <Column alignItems='center' width='100%'>
               <Layout flexBasis='25px' />
               <Header />
               <Layout flexBasis='25px' />

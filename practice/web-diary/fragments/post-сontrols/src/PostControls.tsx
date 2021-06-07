@@ -17,42 +17,42 @@ export const PostControls = () => {
   const [, setSearchValue] = useSearchValue()
   const [postData, setPostData] = usePostData()
   return (
-    <Column>
+    <Column width='100%'>
       <Row justifyContent='center'>
-        <Input
-          size='big'
-          placeholder={intl.formatMessage(messages.search)}
-          onChange={event => {
-            setStatus('search')
-            setSearchValue(event.target.value)
-          }}
-        />
-        <Layout flexBasis='8px' />
-        <Box width='100%'>
-          <Button
-            width='50px'
-            color={status === 'all' ? 'white' : 'purple'}
-            onClick={() => setStatus('all')}
-          >
-            <Text>{intl.formatMessage(messages.all)}</Text>
-          </Button>
-          <Layout flexBasis='3px' />
-          <Button
-            width='50px'
-            color={status === 'like' ? 'white' : 'purple'}
-            onClick={() => setStatus('like')}
-          >
-            <Text>{intl.formatMessage(messages.like)}</Text>
-          </Button>
-          <Layout flexBasis='3px' />
-          <Button
-            width='50px'
-            color={status === 'important' ? 'white' : 'purple'}
-            onClick={() => setStatus('important')}
-          >
-            <Text> {intl.formatMessage(messages.important)}</Text>
-          </Button>
+        <Box width='60%'>
+          <Input
+            size='big'
+            placeholder={intl.formatMessage(messages.search)}
+            onChange={event => {
+              setStatus('search')
+              setSearchValue(event.target.value)
+            }}
+          />
         </Box>
+        <Layout flexBasis='8px' />
+        <Button
+          width='50px'
+          color={status === 'all' ? 'white' : 'purple'}
+          onClick={() => setStatus('all')}
+        >
+          <Text>{intl.formatMessage(messages.all)}</Text>
+        </Button>
+        <Layout flexBasis='3px' />
+        <Button
+          width='50px'
+          color={status === 'like' ? 'white' : 'purple'}
+          onClick={() => setStatus('like')}
+        >
+          <Text>{intl.formatMessage(messages.like)}</Text>
+        </Button>
+        <Layout flexBasis='3px' />
+        <Button
+          width='50px'
+          color={status === 'important' ? 'white' : 'purple'}
+          onClick={() => setStatus('important')}
+        >
+          <Text> {intl.formatMessage(messages.important)}</Text>
+        </Button>
       </Row>
       <Layout flexBasis='25px' />
       <Row justifyContent='space-between'>
@@ -74,7 +74,6 @@ export const PostControls = () => {
               {intl.formatMessage(messages.clear)}
             </Text>
           </Button>
-          <Layout flexBasis='10px' />
         </Box>
       </Row>
     </Column>

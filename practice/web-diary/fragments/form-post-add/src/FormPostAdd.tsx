@@ -40,7 +40,6 @@ export const FormPostAdd = () => {
           {intl.formatMessage(messages.add)}
         </Text>
       </Button>
-      <Layout flexBasis='15px' />
     </Row>
   )
 }
