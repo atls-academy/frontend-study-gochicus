@@ -56,7 +56,6 @@ export const PostControls = () => {
           onClick={() => setStatus('important')}
         >
           <Text color={status === 'important' ? 'purple' : 'white'}>
-            {' '}
             {intl.formatMessage(messages.important)}
           </Text>
         </Button>

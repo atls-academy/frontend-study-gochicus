@@ -48,7 +48,7 @@ export const Item = ({
                   setImportant(!important)
                 }}
               >
-                <StarIcon color={postObject.important === true ? '#8f49e7' : 'white'} />{' '}
+                <StarIcon color={postObject.important === true ? '#8f49e7' : 'white'} />
               </Button>
             </Box>
             <Layout flexBasis='5px' />
