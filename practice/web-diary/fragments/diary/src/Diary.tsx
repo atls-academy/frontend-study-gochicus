@@ -10,12 +10,12 @@ import { Box, Column, Layout, Row } from '@ui/layout'
 export const Diary = () => {
   return (
     <Background gradient='blueAndGreenGradient' height='100vh' width='100vw'>
-      <Row justifyContent='center'>
-        <Layout flexBasis='15px' />
-        <Column alignItems='center'>
-          <Layout flexBasis='300px' />
-          <Box backgroundColor='white' width='400px'>
-            <Column alignItems='center' width='100%'>
+      <Column alignItems='center'>
+        <Layout flexBasis='300px' />
+        <Box backgroundColor='white' width='400px'>
+          <Row justifyContent='center'>
+            <Layout flexBasis='25px' />
+            <Column alignItems='center'>
               <Layout flexBasis='25px' />
               <Header />
               <Layout flexBasis='25px' />
@@ -26,11 +26,11 @@ export const Diary = () => {
               <PostControls />
               <Layout flexBasis='25px' />
             </Column>
-          </Box>
-          <Layout flexBasis='45px' />
-        </Column>
-        <Layout flexBasis='15px' />
-      </Row>
+            <Layout flexBasis='15px' />
+          </Row>
+        </Box>
+        <Layout flexBasis='45px' />
+      </Column>
     </Background>
   )
 }
