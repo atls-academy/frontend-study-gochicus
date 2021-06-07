@@ -27,12 +27,12 @@ export const greyColorStyles = ({ theme }) =>
     borderColor: 'transparent',
   })
 
-export const normaHeightStyles = createShapeStyles({ height: '40px' })
+export const normalHeightStyles = createShapeStyles({ height: '40px' })
 export const smallHeightStyles = createShapeStyles({ height: '30px' })
 
 export const sizeStyles = switchProp(prop('height', 'normal'), () => ({
   small: smallHeightStyles,
-  normal: normaHeightStyles,
+  normal: normalHeightStyles,
 }))
 
 export const colorStyles = switchProp(prop('color', 'purple'), () => ({

@@ -58,7 +58,7 @@ export const PostControls = () => {
       <Row justifyContent='space-between'>
         <Box alignItems='center'>
           <Layout flexBasis='5px' />
-          <Text fontSize='small'>{intl.formatMessage(messages.messageCount)}</Text>
+          <Text fontSize='small'>{intl.formatMessage(messages.posts)}</Text>
           <Space />
           <Text fontSize='small'>{postData.length}</Text>
         </Box>
