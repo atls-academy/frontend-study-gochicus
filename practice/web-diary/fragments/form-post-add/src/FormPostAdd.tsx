@@ -20,10 +20,10 @@ export const FormPostAdd = () => {
     setPostData(fetchInitialData())
   }, [])
   return (
-    <Box justifyContent='flex-start' width='98%'>
-      <Layout flexBasis='17px' />
+    <Box justifyContent='flex-start' width='400px'>
+      <Layout flexBasis='30px' />
       <Input
-        size={40}
+        size='big'
         placeholder={intl.formatMessage(messages.yourPost)}
         onChange={event => setValue(event.target.value)}
         value={value}

@@ -6,5 +6,6 @@ export const injectGlobalStyles = () =>
       padding: 0,
       margin: 0,
       overflow: 'hidden',
+      fontFamily: 'Gordita, sans-serif',
     },
   })

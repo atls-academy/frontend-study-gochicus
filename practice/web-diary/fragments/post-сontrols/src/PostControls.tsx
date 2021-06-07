@@ -17,11 +17,11 @@ export const PostControls = () => {
   const [, setSearchValue] = useSearchValue()
   const [postData, setPostData] = usePostData()
   return (
-    <Column width='92%'>
-      <Row justifyContent='center'>
-        <Box width='48%'>
+    <Column>
+      <Row justifyContent='center' width='356px'>
+        <Box>
           <Input
-            size={40}
+            size={'big'}
             placeholder={intl.formatMessage(messages.search)}
             onChange={event => {
               setStatus('search')
@@ -30,7 +30,7 @@ export const PostControls = () => {
           />
         </Box>
         <Layout flexBasis='8px' />
-        <Box width='60%'>
+        <Box>
           <Button color={status === 'all' ? 'white' : 'purple'} onClick={() => setStatus('all')}>
             <Text>{intl.formatMessage(messages.all)}</Text>
           </Button>
@@ -48,15 +48,16 @@ export const PostControls = () => {
         </Box>
       </Row>
       <Layout flexBasis='25px' />
-      <Row justifyContent='space-between'>
+      <Row justifyContent='space-between' width='356px'>
         <Box alignItems='center' width='30%'>
           <Layout flexBasis='5px' />
           <Text fontSize='small'>{intl.formatMessage(messages.messageCount)}</Text>
           <Space />
           <Text fontSize='small'>{postData.length}</Text>
         </Box>
-        <Box width='35%'>
+        <Box>
           <Button
+            width='big'
             onClick={() => {
               setPostData([])
               setStatus('')
