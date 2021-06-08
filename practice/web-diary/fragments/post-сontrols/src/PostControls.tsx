@@ -70,7 +70,6 @@ export const PostControls = () => {
         </Box>
         <Box>
           <Button
-            width='80px'
             onClick={() => {
               setPostData([])
               setStatus('')
