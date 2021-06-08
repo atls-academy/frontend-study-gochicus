@@ -1,5 +1,5 @@
 export const fontSizes = {
-  large: '33px',
-  basic: '25px',
-  small: '16px',
+  large: 33,
+  basic: 25,
+  small: 16,
 }

@@ -5,5 +5,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<any> {
   borderColor?: string
   height?: 'small' | 'normal'
   size?: 'small' | 'normal'
-  width?: string
+  width?: string | number
 }

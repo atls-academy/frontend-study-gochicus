@@ -24,7 +24,6 @@ export const redColorStyles = ({ theme }) =>
 export const greyColorStyles = ({ theme }) =>
   createAppearanceStyles({
     backgroundColor: theme.colors.lightGrey,
-    borderColor: 'transparent',
   })
 
 export const normalHeightStyles = createShapeStyles({ height: '40px' })

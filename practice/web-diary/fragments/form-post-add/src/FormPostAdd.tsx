@@ -29,14 +29,13 @@ export const FormPostAdd = () => {
       />
       <Layout flexBasis='10px' />
       <Button
-        width='50px'
         onClick={() => {
           setPostData(addItem(postData, value))
           setValue('')
           setStatus('all')
         }}
       >
-        <Text color='white' fontWeight='bold' fontSize='large'>
+        <Text padding='0 10px 0 5px' color='white' fontWeight='bold' fontSize='large'>
           {intl.formatMessage(messages.add)}
         </Text>
       </Button>

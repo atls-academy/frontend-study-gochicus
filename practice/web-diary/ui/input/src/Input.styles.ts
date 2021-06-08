@@ -9,7 +9,7 @@ export const baseStyles = createBaseStyles()
 export const createBigHeightStyles = createBaseShape({ size: '40px' })
 export const createSmallHeightStyles = createBaseShape({ size: '30px' })
 
-export const widthStyles = switchProp(prop('size', 'small'), () => ({
+export const heightStyles = switchProp(prop('size', 'small'), () => ({
   big: createBigHeightStyles,
   small: createSmallHeightStyles,
 }))

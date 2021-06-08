@@ -1,10 +1,10 @@
-import React                                        from 'react'
-import styled                                       from '@emotion/styled'
+import React                                         from 'react'
+import styled                                        from '@emotion/styled'
 
-import { InputProps }                               from './Input.interface'
-import { baseStyles, greyColorStyles, widthStyles } from './Input.styles'
+import { InputProps }                                from './Input.interface'
+import { baseStyles, greyColorStyles, heightStyles } from './Input.styles'
 
-export const StyledInput = styled.input<any>(baseStyles, widthStyles, greyColorStyles, () => ({
+export const StyledInput = styled.input<any>(baseStyles, heightStyles, greyColorStyles, () => ({
   '&::placeholder': {
     padding: '6px 6px',
   },
