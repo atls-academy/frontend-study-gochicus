@@ -9,5 +9,4 @@ export const createBaseStyles = (): styleFn => () => ({
   boxSizing: 'border-box',
   outline: 'none',
   wordBreak: 'auto',
-  padding: '5px',
 })

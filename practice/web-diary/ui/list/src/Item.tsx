@@ -24,22 +24,24 @@ export const Item = ({
         onMouseOver={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
         alignItems='center'
-        cursor='pointer'
+        justifyContent='space-between'
       >
-        <Column width='100%'>
-          <Layout flexBasis='10px' />
-          <Box maxHeight='300px' borderColor='transparent'>
+        <Box width='200px'>
+          <Column width='100%'>
             <Layout flexBasis='10px' />
-            <Row overflow='auto' hyphens='auto' display='block'>
-              <Text>{postObject.post}</Text>
-            </Row>
-          </Box>
-          <Layout flexBasis='10px' />
-        </Column>
-        <Row>
-          <Condition match={visible}>
-            <Layout flexBasis='70px' />
-            <Box>
+            <Box maxHeight='300px' borderColor='transparent'>
+              <Layout flexBasis='10px' />
+              <Row overflow='auto' hyphens='auto'>
+                <Text>{postObject.post}</Text>
+              </Row>
+            </Box>
+            <Layout flexBasis='10px' />
+          </Column>
+        </Box>
+        <Condition match={visible}>
+          <Box width='150px'>
+            <Row>
+              <Layout flexBasis='70px' />
               <Button
                 height='small'
                 color={important === true ? 'white' : 'purple'}
@@ -48,11 +50,11 @@ export const Item = ({
                   setImportant(!important)
                 }}
               >
-                <StarIcon color={postObject.important === true ? '#8f49e7' : 'white'} />
+                <Box padding='5px'>
+                  <StarIcon color={postObject.important === true ? '#8f49e7' : 'white'} />
+                </Box>
               </Button>
-            </Box>
-            <Layout flexBasis='5px' />
-            <Box>
+              <Layout flexBasis='5px' />
               <Button
                 height='small'
                 color={like === true ? 'white' : 'purple'}
@@ -61,21 +63,23 @@ export const Item = ({
                   setLike(!like)
                 }}
               >
-                <HeartIcon color={postObject.like === true ? '#8f49e7' : 'white'} />
+                <Box padding='5px'>
+                  <HeartIcon color={postObject.like === true ? '#8f49e7' : 'white'} />
+                </Box>
               </Button>
-            </Box>
-            <Layout flexBasis='5px' />
-            <Box>
+              <Layout flexBasis='5px' />
               <Button
                 height='small'
                 color='red'
                 onClick={() => setPostData(deleteItem(postData, postObject.id))}
               >
-                <TrashIcon color='white' />
+                <Box padding='5px'>
+                  <TrashIcon color='white' />
+                </Box>
               </Button>
-            </Box>
-          </Condition>
-        </Row>
+            </Row>
+          </Box>
+        </Condition>
       </Row>
       <Layout flexBasis='10px' />
     </>
