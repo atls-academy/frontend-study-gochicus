@@ -75,7 +75,7 @@ export const PostControls = () => {
               setStatus('')
             }}
           >
-            <Text padding='5px'color='white' fontSize='small'>
+            <Text padding='5px' color='white' fontSize='small'>
               {intl.formatMessage(messages.clear)}
             </Text>
           </Button>
