@@ -13,7 +13,6 @@
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@emotion/react": "^11.1.5",
     "@types/react": "^17.0.3",
     "@types/react-intl": "^3.0.0",
     "babel-loader": "^8.2.2",

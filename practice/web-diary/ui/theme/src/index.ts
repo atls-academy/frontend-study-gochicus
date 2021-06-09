@@ -1,2 +1,2 @@
-export * from './colors'
-export * from './fontSizes'
+export * from './ThemeProvider'
+export * from './globals'
