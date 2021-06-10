@@ -13,4 +13,5 @@ export const Background = styled('div')(
 
 Background.defaultProps = {
   padding: '0',
+  overflowY: 'auto',
 }

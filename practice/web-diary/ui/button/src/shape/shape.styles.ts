@@ -6,10 +6,6 @@ export const createBaseShape = (height: number | string): styleFn => () => ({
   height,
 })
 
-export const createOverflowStyles = (overflowValue: string): styleFn => () => ({
-  overflowY: overflowValue,
-})
-
 export const createBorderStyles = (
   borderStyle: string,
   borderRadius: string | number,
@@ -22,7 +18,6 @@ export const createBorderStyles = (
   borderWidth,
 })
 export const createShapeStyles = ({
-  overflowValue,
   height,
   borderStyle,
   borderRadius,
@@ -31,5 +26,4 @@ export const createShapeStyles = ({
 }: ShapeInterface): styleFn => () => ({
   ...createBaseShape(height)(),
   ...createBorderStyles(borderStyle, borderRadius, borderWeight, borderWidth)(),
-  ...createOverflowStyles(overflowValue)(),
 })

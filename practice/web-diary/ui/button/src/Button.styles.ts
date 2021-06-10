@@ -2,7 +2,7 @@ import { prop, switchProp }       from 'styled-tools'
 
 import { createAppearanceStyles } from './appearance'
 import { createBaseStyles }       from './base'
-import { createShapeStyles }      from './shape/shape.styles'
+import { createShapeStyles }      from './shape'
 
 export const baseStyles = createBaseStyles()
 
@@ -24,18 +24,14 @@ export const redColorStyles = ({ theme }) =>
 export const greyColorStyles = ({ theme }) =>
   createAppearanceStyles({
     backgroundColor: theme.colors.lightGrey,
-    borderColor: 'transparent',
   })
 
-export const justifyContentStartStyles = createAppearanceStyles({ justifyContent: 'flex-start' })
-export const justifyContentEndStyles = createAppearanceStyles({ justifyContent: 'flex-end' })
-
-export const normaHeightStyles = createShapeStyles({ height: '40px' })
+export const normalHeightStyles = createShapeStyles({ height: '40px' })
 export const smallHeightStyles = createShapeStyles({ height: '30px' })
 
 export const sizeStyles = switchProp(prop('height', 'normal'), () => ({
   small: smallHeightStyles,
-  normal: normaHeightStyles,
+  normal: normalHeightStyles,
 }))
 
 export const colorStyles = switchProp(prop('color', 'purple'), () => ({
@@ -43,9 +39,4 @@ export const colorStyles = switchProp(prop('color', 'purple'), () => ({
   white: whiteColorStyles,
   red: redColorStyles,
   grey: greyColorStyles,
-}))
-
-export const justifyContentStyles = switchProp(prop('justifyContent', 'center'), () => ({
-  start: justifyContentStartStyles,
-  end: justifyContentEndStyles,
 }))

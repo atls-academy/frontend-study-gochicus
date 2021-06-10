@@ -3,10 +3,10 @@ import { styleFn } from 'styled-system'
 export const createBaseStyles = (): styleFn => () => ({
   cursor: 'pointer',
   display: 'flex',
-  border: '1px solid',
+  border: '1px solid transparent',
   justifyContent: 'center',
   alignItems: 'center',
   boxSizing: 'border-box',
-  width: '100%',
-  padding: '5px',
+  outline: 'none',
+  wordBreak: 'auto',
 })

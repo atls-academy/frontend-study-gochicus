@@ -9,9 +9,11 @@ import {
   shadow,
   size,
   space,
+  system,
 } from 'styled-system'
 
 export const Box = styled.div(
+  system({ overflow: true, hyphens: true }),
   layout,
   space,
   color,

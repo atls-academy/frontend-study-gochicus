@@ -7,4 +7,5 @@ Row.defaultProps = {
   display: 'flex',
   flexDirection: 'row',
   width: '100%',
+  boxSizing: 'border-box',
 }

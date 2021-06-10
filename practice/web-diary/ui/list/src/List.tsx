@@ -6,7 +6,7 @@ import { Item as ListItem } from './Item'
 
 export const List = ({ items, deleteItem, importantItem, likeItem, setPostData }) => {
   return (
-    <Column width='92%'>
+    <Column width='100%'>
       {items.map(item => (
         <ListItem
           key={item.id}
@@ -15,7 +15,7 @@ export const List = ({ items, deleteItem, importantItem, likeItem, setPostData }
           likeItem={likeItem}
           postObject={item}
           setPostData={setPostData}
-          data={items}
+          postData={items}
         />
       ))}
     </Column>

@@ -6,17 +6,16 @@ import { createBaseShape }        from './shape'
 
 export const baseStyles = createBaseStyles()
 
-export const createBigWidthStyles = createBaseShape({ size: 20 })
-export const createSmallWidthStyles = createBaseShape({ size: 40 })
+export const createBigHeightStyles = createBaseShape({ size: '40px' })
+export const createSmallHeightStyles = createBaseShape({ size: '30px' })
 
-export const widthStyles = switchProp(prop('size', 'small'), () => ({
-  big: createBigWidthStyles,
-  small: createSmallWidthStyles,
+export const heightStyles = switchProp(prop('size', 'small'), () => ({
+  big: createBigHeightStyles,
+  small: createSmallHeightStyles,
 }))
 
 export const greyColorStyles = ({ theme }) =>
   createAppearanceStyles({
     borderColor: theme.colors.lightGrey,
-    fontFamily: theme.fonts.primary,
     fontSize: theme.fontSizes.small,
   })

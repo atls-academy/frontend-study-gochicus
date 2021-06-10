@@ -23,8 +23,8 @@ export default defineMessages({
     id: `${name}.clear`,
     defaultMessage: 'Clear all',
   },
-  messageCount: {
-    id: `${name}.message_count`,
+  posts: {
+    id: `${name}.posts`,
     defaultMessage: 'Posts:',
   },
 })

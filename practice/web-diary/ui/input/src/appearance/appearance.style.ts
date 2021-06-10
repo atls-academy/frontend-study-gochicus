@@ -4,12 +4,11 @@ export const createColorStyles = (borderColor): styleFn => () => ({
   borderColor,
 })
 
-export const createFontStyles = (fontFamily, fontSize): styleFn => () => ({
-  fontFamily,
+export const createFontStyles = (fontSize): styleFn => () => ({
   fontSize,
 })
 
-export const createAppearanceStyles = ({ borderColor, fontFamily, fontSize }): styleFn => () => ({
+export const createAppearanceStyles = ({ borderColor, fontSize }): styleFn => () => ({
   ...createColorStyles(borderColor)(),
-  ...createFontStyles(fontFamily, fontSize)(),
+  ...createFontStyles(fontSize)(),
 })

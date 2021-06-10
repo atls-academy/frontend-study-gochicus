@@ -4,8 +4,6 @@ import { color, space, typography } from 'styled-system'
 export const Text = styled('span')(color, typography, space)
 
 Text.defaultProps = {
-  fontFamily: 'primary',
-  fontSize: '16px',
+  fontSize: 'small',
   textAlign: 'center',
-  padding: '5px 15px',
 }
