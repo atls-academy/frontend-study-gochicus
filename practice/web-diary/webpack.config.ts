@@ -11,6 +11,7 @@ export const plugins = [
   new HTMLWebpackPlugin({
     inject: false,
     template,
+    mobile: true,
     appMountId: 'root',
     devServer: 'http://localhost:9000',
     title: 'My diary',

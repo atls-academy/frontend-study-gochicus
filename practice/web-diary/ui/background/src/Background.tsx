@@ -4,6 +4,9 @@ import { background, color, layout, space } from 'styled-system'
 export const Background = styled('div')(
   ({ theme, gradient }: any) => ({
     background: gradient ? theme.backgrounds[gradient] : 'none',
+    '@media (max-width:768px)': {
+      background: 'white',
+    },
   }),
   color,
   layout,
