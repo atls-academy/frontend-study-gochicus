@@ -9,18 +9,22 @@ import { Box, Column, Layout, Row } from '@ui/layout'
 
 export const Diary = () => {
   return (
-    <Background gradient='blueAndGreenGradient' height='100%' width={[1, 1, 1]}>
+    <Background gradient='blueAndGreenGradient' height='100vh' width={[1, 1, 1]}>
       <Column alignItems='center'>
-        <Layout flexBasis={['10px', '50px', '300px']} />
-        <Box backgroundColor='white' width={['100%', '400px', '400px']}>
+        <Layout flexBasis={['0px', '50px', '300px']} />
+        <Box
+          backgroundColor='white'
+          width={['100%', '400px', '400px']}
+          height={['100%', '100%', '40%']}
+        >
           <Row justifyContent='center'>
             <Layout flexBasis='15px' />
             <Column alignItems='center' width='100%'>
-              <Layout flexBasis='25px' />
+              <Layout flexBasis='45px' />
               <Header />
               <Layout flexBasis='25px' />
               <FormPostAdd />
-              <Layout flexBasis='15px' />
+              <Layout flexBasis='25px' />
               <PostList />
               <Layout flexBasis='25px' />
               <PostControls />
@@ -29,7 +33,7 @@ export const Diary = () => {
             <Layout flexBasis='15px' />
           </Row>
         </Box>
-        <Layout flexBasis='45px' />
+        <Layout flexBasis={['0px', '45px', '145px']} />
       </Column>
     </Background>
   )
