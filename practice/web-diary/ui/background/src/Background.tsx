@@ -13,4 +13,6 @@ export const Background = styled('div')(
 
 Background.defaultProps = {
   overflowY: 'auto',
+  height: '100%',
+  width: '100%',
 }

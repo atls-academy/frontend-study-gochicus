@@ -9,7 +9,7 @@ import { Box, Column, Layout } from '@ui/layout'
 
 export const Diary = () => {
   return (
-    <Background gradient='blueAndGreenGradient' height='100vh' width='100%'>
+    <Background gradient='blueAndGreenGradient'>
       <Column alignItems='center'>
         <Layout flexBasis={['0px', '0px', '300px']} />
         <Box backgroundColor='white' width={['100%', '100%', '400px']}>

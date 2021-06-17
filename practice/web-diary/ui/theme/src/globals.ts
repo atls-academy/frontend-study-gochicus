@@ -7,5 +7,9 @@ export const injectGlobalStyles = () =>
       margin: 0,
       overflow: 'hidden',
       fontFamily: 'Gordita, sans-serif',
+      height: '100%',
+    },
+    '#root': {
+      height: '100%',
     },
   })
