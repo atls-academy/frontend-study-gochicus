@@ -20,16 +20,14 @@ export const PostControls = () => {
     <Row justifyContent='center'>
       <Column width='100%'>
         <Row justifyContent='space-between'>
-          <Row>
-            <Input
-              size='big'
-              placeholder={intl.formatMessage(messages.search)}
-              onChange={event => {
-                setStatus('search')
-                setSearchValue(event.target.value)
-              }}
-            />
-          </Row>
+          <Input
+            size='big'
+            placeholder={intl.formatMessage(messages.search)}
+            onChange={event => {
+              setStatus('search')
+              setSearchValue(event.target.value)
+            }}
+          />
           <Layout flexBasis='8px' />
           <Row justifyContent='flex-end'>
             <Button
