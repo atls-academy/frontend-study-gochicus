@@ -29,7 +29,7 @@ export const PostControls = () => {
             }}
           />
           <Layout flexBasis='8px' />
-          <Row justifyContent='flex-end'>
+          <Box>
             <Button
               width='50px'
               color={status === 'all' ? 'white' : 'purple'}
@@ -59,7 +59,7 @@ export const PostControls = () => {
                 {intl.formatMessage(messages.important)}
               </Text>
             </Button>
-          </Row>
+          </Box>
         </Row>
         <Layout flexBasis='25px' />
         <Row justifyContent='space-between'>
