@@ -1,6 +1,6 @@
 import React                                               from 'react'
 
-import { Box }                                             from '@ui/layout'
+import { Row }                                             from '@ui/layout'
 import { List }                                            from '@ui/list'
 import { useButtonStatus }                                 from '@store/button-status'
 import { usePostData }                                     from '@store/post-data'
@@ -13,7 +13,7 @@ export const PostList = () => {
   const [status] = useButtonStatus()
   const [searchResult] = useSearchValue()
   return (
-    <Box width='100%' justifyContent='center'>
+    <Row width='100%' justifyContent='center'>
       <List
         deleteItem={deleteItem}
         likeItem={likeItem}
@@ -21,6 +21,6 @@ export const PostList = () => {
         items={filterData(postData, status, searchResult)}
         setPostData={setPostData}
       />
-    </Box>
+    </Row>
   )
 }

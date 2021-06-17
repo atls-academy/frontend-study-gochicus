@@ -17,7 +17,7 @@ export const PostControls = () => {
   const [, setSearchValue] = useSearchValue()
   const [postData, setPostData] = usePostData()
   return (
-    <Box width='100%' justifyContent='center'>
+    <Row width='100%' justifyContent='center'>
       <Column width='100%'>
         <Row justifyContent='center'>
           <Box width='60%'>
@@ -83,6 +83,6 @@ export const PostControls = () => {
           </Box>
         </Row>
       </Column>
-    </Box>
+    </Row>
   )
 }
