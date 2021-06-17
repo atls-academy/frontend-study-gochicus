@@ -15,7 +15,7 @@ export const Diary = () => {
         <Box backgroundColor='white' width={['100%', '400px', '400px']}>
           <Layout flexBasis='15px' />
           <Column alignItems='center' width='100%'>
-            <Layout flexBasis='45px' />
+            <Layout flexBasis='25px' />
             <Header />
             <Layout flexBasis='25px' />
             <FormPostAdd />
@@ -27,7 +27,7 @@ export const Diary = () => {
           </Column>
           <Layout flexBasis='15px' />
         </Box>
-        <Layout flexBasis={['0px', '45px', '145px']} />
+        <Layout flexBasis={['0px', '45px', '45px']} />
       </Column>
     </Background>
   )
