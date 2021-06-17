@@ -17,7 +17,7 @@ export const PostControls = () => {
   const [, setSearchValue] = useSearchValue()
   const [postData, setPostData] = usePostData()
   return (
-    <Row width='100%' justifyContent='center'>
+    <Row justifyContent='center'>
       <Column width='100%'>
         <Row justifyContent='center'>
           <Box width='60%'>

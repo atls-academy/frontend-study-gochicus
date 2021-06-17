@@ -13,7 +13,7 @@ export const PostList = () => {
   const [status] = useButtonStatus()
   const [searchResult] = useSearchValue()
   return (
-    <Row width='100%' justifyContent='center'>
+    <Row justifyContent='center'>
       <List
         deleteItem={deleteItem}
         likeItem={likeItem}
