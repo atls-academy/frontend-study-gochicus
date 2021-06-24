@@ -1,0 +1,9 @@
+{
+  "extends": "@atlantis-lab/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2015"
+  },
+  "lib": ["es2019.intl"],
+  "include": ["./"]
+}
