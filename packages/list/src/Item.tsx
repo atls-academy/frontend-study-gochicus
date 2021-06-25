@@ -1,9 +1,9 @@
-import React, { useState }               from 'react'
-
-import { Button }                         from './button/src'
-import { Condition }                      from './condition/src'
-import { HeartIcon, StarIcon, TrashIcon } from './icons/src'
-import { Box, Column, Layout, Row }       from './layout/src'
+import React, { useState }                from 'react'
+import {Box, Column, Layout, Row} from "./layout";
+import {Condition} from "./condition";
+import {HeartIcon, StarIcon, TrashIcon} from "./icons/src";
+import {Button} from "./button";
+import {Text} from "./text";
 
 export const Item = ({
   deleteItem,
