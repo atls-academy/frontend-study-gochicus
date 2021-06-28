@@ -4,12 +4,12 @@
   "license": "BSD 3-Clause",
   "main": "src/index.tsx",
   "dependencies": {
+    "@gochicus/list": "0.0.7",
     "@store/button-status": "0.0.0",
     "@store/post-data": "0.0.0",
     "@store/search-status": "0.0.0",
     "@ui/input": "0.0.0",
     "@ui/layout": "0.0.0",
-    "@ui/list": "0.0.0",
     "react": "^17.0.1",
     "react-intl": "^5.13.5"
   }

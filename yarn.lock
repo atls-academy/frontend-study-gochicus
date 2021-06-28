@@ -230,7 +230,7 @@
     import-sort-parser-typescript "^6.0.0"
     import-sort-style "^6.0.0"
 
-"@atlantis-lab/tsconfig@0.1.12":
+"@atlantis-lab/tsconfig@0.1.12", "@atlantis-lab/tsconfig@^0.1.12":
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/@atlantis-lab/tsconfig/-/tsconfig-0.1.12.tgz#58c1b1e3bc0f5a7bec1e6723f62f38672e75f34b"
   integrity sha512-TDEIDZTKQ8zHPhFNt2vOQ3Iai99/x4DeR0CjI3Rdb87YmmoO1F4aXzhY0qJGgyBXUQb6cZ9AAEwsda1lB7admg==
@@ -1689,6 +1689,16 @@
     intl-messageformat-parser "6.1.2"
     tslib "^2.0.1"
     typescript "^4.0"
+
+"@gochicus/list@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@gochicus/list/-/list-0.0.7.tgz#32ca4177bf112abed792e3e90f557c4e896d0813"
+  integrity sha512-JlKTuzGLxG/+eKNeY9FJRfTHFkHh7U437P+JVaz68WNi8gEencUI/GTWkd2/cT81p4vgdXJT9i+9UO+M/Ldadw==
+  dependencies:
+    "@atlantis-lab/tsconfig" "^0.1.12"
+    react "^17.0.1"
+    react-dom "^17.0.2"
+    react-intl "^5.13.5"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
