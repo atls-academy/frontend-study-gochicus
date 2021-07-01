@@ -15,5 +15,5 @@ export interface ListInterface {
     status: boolean,
   ) => []
   postObject: { post?: string; important?: boolean; like?: boolean; id: number }
-  setPostData: []
+  setPostData: () => []
 }
