@@ -21,6 +21,7 @@
   },
   "workspaces": [
     "lessons/**/*",
-    "practice/**/*"
+    "practice/**/*",
+    "list/**"
   ]
 }
