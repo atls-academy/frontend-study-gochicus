@@ -1,3 +1,4 @@
+import styled from '@emotion/styled'
 import {
   border,
   color,
@@ -10,8 +11,6 @@ import {
   space,
   system,
 } from 'styled-system'
-
-import styled from '@emotion/styled'
 
 export const Box = styled.div(
   system({ overflow: true, hyphens: true }),

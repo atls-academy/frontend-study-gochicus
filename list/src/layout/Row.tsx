@@ -1,6 +1,5 @@
-import { color, flexbox, layout, position, size, space } from 'styled-system'
-
 import styled                                            from '@emotion/styled'
+import { color, flexbox, layout, position, size, space } from 'styled-system'
 
 export const Row = styled.div(layout, space, flexbox, position, color, size)
 

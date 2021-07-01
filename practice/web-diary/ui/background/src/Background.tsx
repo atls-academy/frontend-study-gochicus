@@ -1,6 +1,5 @@
-import { background, color, layout, space } from 'styled-system'
-
 import styled                               from '@emotion/styled'
+import { background, color, layout, space } from 'styled-system'
 
 export const Background = styled('div')(
   ({ theme, gradient }: any) => ({
