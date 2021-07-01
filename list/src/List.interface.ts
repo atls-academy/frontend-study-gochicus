@@ -1,17 +1,19 @@
 export interface ListInterface {
-  items: [PostDataObject['object']]
-  deleteItem: (CallbackInterface) => PostDataObject['object'][]
-  importantItem: (CallbackInterface) => PostDataObject['object'][]
-  likeItem: (CallbackInterface) => PostDataObject['object'][]
-  postObject: PostDataObject['object']
-  setPostData: () => PostDataObject['object'][]
+  items: [PostDataObject]
+  deleteItem: CallbackInterface['callback']
+  importantItem: CallbackInterface['callback']
+  likeItem: CallbackInterface['callback']
+  postObject: PostDataObject
+  setPostData: () => PostDataObject[]
 }
 
 export interface PostDataObject {
-  object: { post?: string | number; important?: boolean; like?: boolean; id: number }
-}
-export interface CallbackInterface {
-  postData?: PostDataObject['object']
+  post?: string | number
+  important?: boolean
+  like?: boolean
   id: number
-  status?: boolean
+}
+
+export interface CallbackInterface {
+  callback: (id: number, postData?: PostDataObject, status?: boolean) => PostDataObject[]
 }
