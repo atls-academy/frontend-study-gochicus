@@ -1,17 +1,17 @@
 import React                from 'react'
-import { ReactJSXElement }  from '@emotion/react/types/jsx-namespace'
+import { FC }               from 'react'
 
 import { Item as ListItem } from './Item'
 import { Column }           from './layout'
 import { ListInterface }    from './List.interface'
 
-export const List = ({
+export const List: FC<ListInterface> = ({
   items,
   deleteItem,
   importantItem,
   likeItem,
   setPostData,
-}: ListInterface): ReactJSXElement => {
+}) => {
   return (
     <Column width='100%' justifyContent='center'>
       {items.map(item => (
