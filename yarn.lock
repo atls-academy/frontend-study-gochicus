@@ -230,7 +230,7 @@
     import-sort-parser-typescript "^6.0.0"
     import-sort-style "^6.0.0"
 
-"@atlantis-lab/tsconfig@0.1.12", "@atlantis-lab/tsconfig@^0.1.12":
+"@atlantis-lab/tsconfig@0.1.12":
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/@atlantis-lab/tsconfig/-/tsconfig-0.1.12.tgz#58c1b1e3bc0f5a7bec1e6723f62f38672e75f34b"
   integrity sha512-TDEIDZTKQ8zHPhFNt2vOQ3Iai99/x4DeR0CjI3Rdb87YmmoO1F4aXzhY0qJGgyBXUQb6cZ9AAEwsda1lB7admg==
@@ -1500,7 +1500,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.0.1.tgz#245f54abb02dfd82326e28689f34c27aa9b2a698"
   integrity sha512-GbIvVMe4U+Zc+929N1V7nW6YYJtidj31lidSmdYcWozwoBIObXBnaJkKNDjZrLm9Nc0BR+ZyHNaRZxqNZbof5g==
 
-"@emotion/styled@^11.0.0", "@emotion/styled@^11.1.5", "@emotion/styled@^11.3.0":
+"@emotion/styled@^11.0.0", "@emotion/styled@^11.1.5":
   version "11.3.0"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.3.0.tgz#d63ee00537dfb6ff612e31b0e915c5cf9925a207"
   integrity sha512-fUoLcN3BfMiLlRhJ8CuPUMEyKkLEoM+n+UyAbnqGEsCd5IzKQ7VQFLtzpJOaCD2/VR2+1hXQTnSZXVJeiTNltA==
@@ -1690,17 +1690,13 @@
     tslib "^2.0.1"
     typescript "^4.0"
 
-"@gochicus/list@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@gochicus/list/-/list-0.0.13.tgz#c5c49ee6dba1340ad6bdcb459e5dc1f35768fe08"
-  integrity sha512-CVVQTW6/f4HSd8AbEThCHR9sjo17/tRpUcDm2+3/C5cA2/lcrVr05Ojxjr29G2B0yPFuXG1L3YpRVVzaDRPBYg==
+"@gochicus/list@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@gochicus/list/-/list-0.0.14.tgz#e194cabc6aa87bef69cb4b2a4394a9c3bff48684"
+  integrity sha512-qqpW4wZkpKxJ04rJdVBorw2JNAAywE8VBKvk4cCINaweKLSdSjahXuK4uWr4CMhOrspWf3zrlxafsGXDJSN5og==
   dependencies:
-    "@atlantis-lab/tsconfig" "^0.1.12"
-    "@emotion/react" "^11.4.0"
-    "@emotion/styled" "^11.3.0"
     react "^17.0.1"
     react-dom "^17.0.2"
-    styled-tools "^1.7.2"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
