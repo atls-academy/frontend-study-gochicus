@@ -1,19 +1,20 @@
 export interface ListInterface {
-  items: [{ post?: string | number; important?: boolean; like?: boolean; id: number }]
-  deleteItem: (
-    postData: [{ post?: string | number; important?: boolean; like?: boolean; id: number }],
-    id: number,
-  ) => [{ post?: string | number; important?: boolean; like?: boolean; id: number }]
+  items: [PostDataObject['object']]
+  deleteItem: (postData: [PostDataObject['object']], id: number) => [PostDataObject['object']]
   importantItem: (
-    postData: [{ post?: string | number; important?: boolean; like?: boolean; id: number }],
+    postData: [PostDataObject['object']],
     id: number,
     status: boolean,
-  ) => [{ post?: string | number; important?: boolean; like?: boolean; id: number }]
+  ) => [PostDataObject['object']]
   likeItem: (
-    postData: [{ post?: string | number; important?: boolean; like?: boolean; id: number }],
+    postData: [PostDataObject['object']],
     id: number,
     status: boolean,
-  ) => [{ post?: string | number; important?: boolean; like?: boolean; id: number }]
-  postObject: { post?: string | number; important?: boolean; like?: boolean; id: number }
-  setPostData: () => [{ post?: string | number; important?: boolean; like?: boolean; id: number }]
+  ) => [PostDataObject['object']]
+  postObject: PostDataObject['object']
+  setPostData: () => [PostDataObject['object']]
+}
+
+export interface PostDataObject {
+  object: { post?: string | number; important?: boolean; like?: boolean; id: number }
 }
