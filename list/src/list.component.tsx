@@ -1,7 +1,7 @@
 import React                from 'react'
 import { FC }               from 'react'
 
-import { Item as ListItem } from './Item'
+import { Item as ListItem } from './item'
 import { Column }           from './layout'
 import { ListProps }        from './list.interface'
 

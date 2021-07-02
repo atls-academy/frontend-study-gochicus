@@ -1,7 +1,7 @@
 import styled                                  from '@emotion/styled'
 import { layout }                              from 'styled-system'
 
-import { ButtonProps }                         from './Button.interface'
-import { baseStyles, colorStyles, sizeStyles } from './Button.styles'
+import { ButtonProps }                         from './button.interface'
+import { baseStyles, colorStyles, sizeStyles } from './button.styles'
 
 export const Button = styled.div<ButtonProps>(baseStyles, sizeStyles, colorStyles, layout)
