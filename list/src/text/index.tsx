@@ -1,2 +1,2 @@
-export * from './Text'
-export * from './Space'
+export * from './text'
+export * from './space'
