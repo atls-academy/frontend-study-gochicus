@@ -7,7 +7,7 @@ export interface PostDataObject {
 
 export type Callback = (id: number, postData?: PostDataObject, status?: boolean) => PostDataObject[]
 
-export interface ListInterface {
+export interface ListProps {
   items: PostDataObject[]
   deleteItem: Callback
   importantItem: Callback

@@ -3,9 +3,9 @@ import { FC }               from 'react'
 
 import { Item as ListItem } from './Item'
 import { Column }           from './layout'
-import { ListInterface }    from './list.interface'
+import { ListProps }        from './list.interface'
 
-export const List: FC<ListInterface> = ({
+export const List: FC<ListProps> = ({
   items,
   deleteItem,
   importantItem,
