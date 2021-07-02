@@ -5,7 +5,7 @@ import { Item as ListItem } from './Item'
 import { Column }           from './layout'
 import { ListInterface }    from './List.interface'
 
-export const List: FC<ListInterface> = ({
+export const ListComponent: FC<ListInterface> = ({
   items,
   deleteItem,
   importantItem,

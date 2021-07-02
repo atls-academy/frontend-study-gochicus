@@ -30,6 +30,7 @@ export const module = {
     },
     {
       test: /\.(png|jp(e*)g|svg|gif)$/,
+      exclude: /node_modules/,
       use: [
         {
           loader: 'file-loader',
