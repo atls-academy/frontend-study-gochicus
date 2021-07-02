@@ -1,7 +1,7 @@
 import React                                               from 'react'
+import { List }                                            from '@gochicus/list'
 
 import { Row }                                             from '@ui/layout'
-import { List }                                            from '@ui/list'
 import { useButtonStatus }                                 from '@store/button-status'
 import { usePostData }                                     from '@store/post-data'
 import { useSearchValue }                                  from '@store/search-status'

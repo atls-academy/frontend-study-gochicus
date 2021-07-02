@@ -1,10 +1,10 @@
 import React, { useState }                from 'react'
 
-import { Button }                         from '@ui/button'
-import { Condition }                      from '@ui/condition'
-import { HeartIcon, StarIcon, TrashIcon } from '@ui/icons'
-import { Box, Column, Layout, Row }       from '@ui/layout'
-import { Text }                           from '@ui/text'
+import { Button }                         from './button'
+import { Condition }                      from './condition'
+import { HeartIcon, StarIcon, TrashIcon } from './icons'
+import { Box, Column, Layout, Row }       from './layout'
+import { Text }                           from './text'
 
 export const Item = ({
   deleteItem,

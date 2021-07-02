@@ -1,10 +1,17 @@
 import React                from 'react'
+import { FC }               from 'react'
 
-import { Column }           from '@ui/layout'
+import { Item as ListItem } from './item.component'
+import { Column }           from './layout'
+import { ListProps }        from './list.interface'
 
-import { Item as ListItem } from './Item'
-
-export const List = ({ items, deleteItem, importantItem, likeItem, setPostData }) => {
+export const List: FC<ListProps> = ({
+  items,
+  deleteItem,
+  importantItem,
+  likeItem,
+  setPostData,
+}) => {
   return (
     <Column width='100%' justifyContent='center'>
       {items.map(item => (
