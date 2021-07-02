@@ -1,7 +1,7 @@
 {
   "name": "@gochicus/list",
   "version": "0.0.14",
-  "description": "item iteration",
+  "description": "Renders items of list from array of objects, using map method",
   "main": "dist/index.js",
   "author": "gochicus",
   "license": "BSD-3-Clause",
