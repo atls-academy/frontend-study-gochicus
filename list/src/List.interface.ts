@@ -12,6 +12,5 @@ export interface ListInterface {
   deleteItem: Callback
   importantItem: Callback
   likeItem: Callback
-  postObject: PostDataObject
   setPostData: () => PostDataObject[]
 }
