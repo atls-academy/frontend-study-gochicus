@@ -3,7 +3,7 @@ import { FC }               from 'react'
 
 import { Item as ListItem } from './Item'
 import { Column }           from './layout'
-import { ListInterface }    from './List.interface'
+import { ListInterface }    from './list.interface'
 
 export const List: FC<ListInterface> = ({
   items,
