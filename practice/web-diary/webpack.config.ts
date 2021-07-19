@@ -45,14 +45,10 @@ export const module = {
 }
 export const resolve = {
   extensions: ['.ts', '.json', '.tsx', '.js'],
-  plugins: [
-    PnpWebpackPlugin,
-  ],
+  plugins: [PnpWebpackPlugin],
 }
-export const resolveLoader ={
-  plugins: [
-    PnpWebpackPlugin.moduleLoader(module),
-  ],
+export const resolveLoader = {
+  plugins: [PnpWebpackPlugin.moduleLoader(module)],
 }
 export const devServer = {
   contentBase: path.join(__dirname, 'dist'),

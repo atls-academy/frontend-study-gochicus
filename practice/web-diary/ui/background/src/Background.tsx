@@ -8,7 +8,7 @@ export const Background = styled('div')(
   color,
   layout,
   space,
-  background,
+  background
 )
 
 Background.defaultProps = {

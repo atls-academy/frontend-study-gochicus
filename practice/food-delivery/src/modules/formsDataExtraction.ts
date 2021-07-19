@@ -1,6 +1,7 @@
 import { sendFormData } from '../services/service'
 import { openModal }    from './modalWindow'
 import { closeModal }   from './modalWindow'
+import * as assert   from 'assert'
 
 const serverMessage = {
   loading: '../color-data/assets/img/spinner.svg',
@@ -10,8 +11,10 @@ const serverMessage = {
 
 function showThanksModal(thanksMessage: string) {
   const previousModalDialog = document.querySelector('.modal__dialog')
+  if (previousModalDialog !== null) {
+    previousModalDialog.classList.add('hide')
+  }
 
-  previousModalDialog.classList.add('hide')
   openModal()
 
   const thanksModal = document.createElement('div')
@@ -22,19 +25,25 @@ function showThanksModal(thanksMessage: string) {
                 <div class="modal__title">${thanksMessage}</div>
             </div>
         `
-  document.querySelector('.modal').append(thanksModal)
+  const resultModal = document.querySelector('.modal')!
+  resultModal.append(thanksModal)
   setTimeout(() => {
     thanksModal.remove()
-    previousModalDialog.classList.add('show')
-    previousModalDialog.classList.remove('hide')
+    if (previousModalDialog !== null) {
+      previousModalDialog.classList.add('show')
+    }
+    if (previousModalDialog !== null) {
+      previousModalDialog.classList.remove('hide')
+    }
     closeModal()
   }, 4000)
 }
 
 function formDataExtraction(formSelector: string) {
   const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll(formSelector)
+
   function postData(form: HTMLFormElement) {
-    form.addEventListener('submit', event => {
+    form.addEventListener('submit', (event) => {
       event.preventDefault()
 
       const statusMessage: HTMLImageElement = document.createElement('img')

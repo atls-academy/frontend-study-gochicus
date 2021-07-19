@@ -24,7 +24,7 @@ export const FormPostAdd = () => {
       <Input
         size='big'
         placeholder={intl.formatMessage(messages.yourPost)}
-        onChange={event => setValue(event.target.value)}
+        onChange={(event) => setValue(event.target.value)}
         value={value}
       />
       <Layout flexBasis='10px' />

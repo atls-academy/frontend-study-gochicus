@@ -14,7 +14,7 @@ const employers: Array<string> = [
 ]
 
 const employersNames: Array<string> = []
-employers.filter(employer => {
+employers.filter((employer) => {
   if (employer !== '') {
     employersNames.push(employer.toLowerCase().trim())
   }
@@ -42,11 +42,11 @@ function makeBusiness(
   mainOwner: string,
   director: string = 'Voldemort',
   investments: number,
-  mainEmployers: Array<string>,
+  mainEmployers: Array<string>
 ) {
   const sumSponsors = [...eu, ...rus, 'unexpected sponsor']
   console.log(
-    `We have a business. Owner: ${mainOwner}, director: ${director}. Our budget: ${sum}. And our employers: ${mainEmployers}`,
+    `We have a business. Owner: ${mainOwner}, director: ${director}. Our budget: ${sum}. And our employers: ${mainEmployers}`
   )
   console.log('And we have a sponsors: ')
   console.log(...sumSponsors)
