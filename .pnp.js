@@ -39,10 +39,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:practice/web-diary"
       },
       {
-        "name": "@web-diary/app",
-        "reference": "workspace:practice/web-diary/app"
-      },
-      {
         "name": "@fragments/diary",
         "reference": "workspace:practice/web-diary/fragments/diary"
       },
@@ -61,6 +57,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@fragments/post-controls",
         "reference": "workspace:practice/web-diary/fragments/post-сontrols"
+      },
+      {
+        "name": "@web-diary/app",
+        "reference": "workspace:practice/web-diary/src"
       },
       {
         "name": "@store/button-status",
@@ -130,7 +130,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@ui/layout", ["workspace:practice/web-diary/ui/layout"]],
       ["@ui/text", ["workspace:practice/web-diary/ui/text"]],
       ["@ui/theme", ["workspace:practice/web-diary/ui/theme"]],
-      ["@web-diary/app", ["workspace:practice/web-diary/app"]],
+      ["@web-diary/app", ["workspace:practice/web-diary/src"]],
       ["root-workspace-0b6124", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -143,10 +143,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@atls/actl-cli", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:0.4.45"],
+            ["@atls/actl-format", "npm:0.0.17"],
             ["@types/node", "npm:16.3.1"],
             ["@types/react", "npm:17.0.14"],
+            ["@types/react-dom", "npm:17.0.9"],
             ["husky", "npm:7.0.1"],
             ["lerna", "npm:3.22.1"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:17.0.2"],
             ["typescript", "patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"]
           ],
           "linkType": "SOFT",
@@ -6017,6 +6021,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/react-dom", [
+        ["npm:17.0.9", {
+          "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.9-046b4282f3-82da85bcfb.zip/node_modules/@types/react-dom/",
+          "packageDependencies": [
+            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react", "npm:17.0.11"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/react-intl", [
         ["npm:3.0.0", {
           "packageLocation": "./.yarn/cache/@types-react-intl-npm-3.0.0-7df66382d1-18c56db873.zip/node_modules/@types/react-intl/",
@@ -6519,18 +6533,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@web-diary/app", [
-        ["workspace:practice/web-diary/app", {
-          "packageLocation": "./practice/web-diary/app/",
+        ["workspace:practice/web-diary/src", {
+          "packageLocation": "./practice/web-diary/src/",
           "packageDependencies": [
-            ["@web-diary/app", "workspace:practice/web-diary/app"],
+            ["@web-diary/app", "workspace:practice/web-diary/src"],
             ["@fragments/diary", "workspace:practice/web-diary/fragments/diary"],
             ["@store/button-status", "workspace:practice/web-diary/store/button-status"],
             ["@store/post-data", "workspace:practice/web-diary/store/post-data"],
             ["@store/search-status", "workspace:practice/web-diary/store/search-status"],
+            ["@types/react", "npm:17.0.14"],
+            ["@types/react-dom", "npm:17.0.9"],
             ["@ui/theme", "workspace:practice/web-diary/ui/theme"],
             ["react", "npm:17.0.2"],
-            ["react-dom", "virtual:535598c27312dcd3014c1e2da80763e20eb9b8a3822e7ade7668fd9ad99a788debd39488413d14c6c1bd50e51ea393fb7ad8fed3e899986e6590b35f8d97100d#npm:17.0.2"],
-            ["react-intl", "virtual:62800dec8a6252d4bfb087dc774841ed26d65007a42a08a49ac31bfe1f119e3c150cb8488631a77cdedc3fe837518801ce61e1a83f3258947800f628b3573b6c#npm:5.20.2"]
+            ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:17.0.2"],
+            ["react-intl", "virtual:ce4d06d2773e506042506540085439f4d4070d61843aeb3c73ca2f0fe40d46097409f7421672df7b51cc1d9ce37095f9c403626a98e815aa33e642b590d77a83#npm:5.20.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -18639,6 +18655,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react"
           ],
           "linkType": "HARD",
+        }],
+        ["virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:17.0.2", {
+          "packageLocation": "./.yarn/$$virtual/react-dom-virtual-fe01f4b047/0/cache/react-dom-npm-17.0.2-f551215af1-960a74ff66.zip/node_modules/react-dom/",
+          "packageDependencies": [
+            ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:17.0.2"],
+            ["@types/react", "npm:17.0.14"],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"],
+            ["react", "npm:17.0.2"],
+            ["scheduler", "npm:0.20.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["react-intl", [
@@ -19468,10 +19500,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["root-workspace-0b6124", "workspace:."],
             ["@atls/actl-cli", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:0.4.45"],
+            ["@atls/actl-format", "npm:0.0.17"],
             ["@types/node", "npm:16.3.1"],
             ["@types/react", "npm:17.0.14"],
+            ["@types/react-dom", "npm:17.0.9"],
             ["husky", "npm:7.0.1"],
             ["lerna", "npm:3.22.1"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:17.0.2"],
             ["typescript", "patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"]
           ],
           "linkType": "SOFT",

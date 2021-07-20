@@ -16,7 +16,7 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: yarn install
-      - name: build app
+      - name: build src
         run: yarn workspace @practice/web-diary build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
