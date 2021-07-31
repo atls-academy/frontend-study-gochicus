@@ -2,14 +2,10 @@
   "license": "BSD 3-Clause",
   "private": true,
   "scripts": {
-    "lint": "actl lint",
-    "commit": "actl commit",
-    "typecheck": "actl typecheck",
-    "format": "actl format",
     "diary": "yarn workspace @practice/web-diary run start"
   },
   "devDependencies": {
-    "@atls/actl-cli": "^0.4.45",
+    "@atls/actl-cli": "^0.4.48",
     "@types/node": "^16.3.1",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
@@ -24,7 +20,8 @@
   },
   "workspaces": [
     "lessons/**/*",
-    "practice/**/*"
+    "practice/**/*",
+    "pages/**/*"
   ],
   "dependencies": {
     "@atls/actl-format": "^0.0.17",
