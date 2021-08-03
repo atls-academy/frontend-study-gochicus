@@ -20,8 +20,7 @@
   },
   "workspaces": [
     "lessons/**/*",
-    "practice/**/*",
-    "pages/**/*"
+    "web-diary/**/*"
   ],
   "dependencies": {
     "@atls/actl-format": "^0.0.17",
