@@ -1,5 +1,5 @@
 import React                                               from 'react'
-import { List }                                            from '@gochicus/list'
+import { List }                                            from '@gochicus/list/'
 
 import { Row }                                             from '@ui/layout'
 import { useButtonStatus }                                 from '@store/button-status'

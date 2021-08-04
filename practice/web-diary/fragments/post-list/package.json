@@ -4,7 +4,7 @@
   "license": "BSD 3-Clause",
   "main": "src/index.tsx",
   "dependencies": {
-    "@gochicus/list": "^0.0.14",
+    "@gochicus/list": "0.0.15",
     "@store/button-status": "0.0.0",
     "@store/post-data": "0.0.0",
     "@store/search-status": "0.0.0",
