@@ -7,6 +7,7 @@ import { PostList }            from '@fragments/post-list'
 import { Background }          from '@ui/background'
 import { Box, Column, Layout } from '@ui/layout'
 
+
 export const Diary = () => {
   return (
     <Background gradient='blueAndGreenGradient'>

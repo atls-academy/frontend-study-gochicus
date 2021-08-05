@@ -1383,28 +1383,35 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/post-list@workspace:practice/web-diary/fragments/post-list"
   dependencies:
-    "@gochicus/list": 0.0.15
+    "@emotion/react": ^11.4.0
+    "@emotion/styled": ^11.3.0
+    "@gochicus/list": 0.0.20
     "@store/button-status": 0.0.0
     "@store/post-data": 0.0.0
     "@store/search-status": 0.0.0
     "@types/react": ^17.0.14
+    "@types/styled-system": ^5.1.11
     "@ui/input": 0.0.0
     "@ui/layout": 0.0.0
     react: ^17.0.1
     react-intl: ^5.13.5
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   languageName: unknown
   linkType: soft
 
-"@gochicus/list@npm:0.0.15":
-  version: 0.0.15
-  resolution: "@gochicus/list@npm:0.0.15"
+"@gochicus/list@npm:0.0.20":
+  version: 0.0.20
+  resolution: "@gochicus/list@npm:0.0.20"
   dependencies:
-    "@emotion/react": ^11.4.0
-    "@emotion/styled": ^11.3.0
     react: ^17.0.1
     react-dom: ^17.0.2
+  peerDependencies:
+    "@emotion/react": ^11.4.0
+    "@emotion/styled": ^11.3.0
     styled-system: ^5.1.5
-  checksum: f6be7e1174a503895baac36d7ca6965b7280ce30be1c19926b5c492e27c988d001062a20189c22ae53aeaf956d1899268f27d880fceb519d3268f13a1e591468
+    styled-tools: ^1.7.2
+  checksum: 772bacbc8351ba1d69612d0a7efb8f271e1edce88a13a92804f35f54ed95dd61f549ff4f7f307876582b56227f0d7c20ffde8bd1fd2e4be1c6c7b352314273d9
   languageName: node
   linkType: hard
 
@@ -3132,9 +3139,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^16.3.1":
-  version: 16.4.10
-  resolution: "@types/node@npm:16.4.10"
-  checksum: b2b550c2330df479a41b2c166814df6f1be45a62535742ad88a42bc0739897b79c1b2fef716635ae0ccd77c42af9a5e1e7c891215e909e10980c469bceebbfdc
+  version: 16.4.11
+  resolution: "@types/node@npm:16.4.11"
+  checksum: 9c50c79acc587d90be4d2a408772a53239d9532b7a4b88e27baadb652a15a4a57e3bb6a242a1b153a30b6cf55cb69db87992494f47b2aa2683f2f28cfd5c3bd4
   languageName: node
   linkType: hard
 
@@ -3497,9 +3504,32 @@ __metadata:
     "@types/react": ^17.0.3
     "@types/react-intl": ^3.0.0
     "@ui/theme": 0.0.0
+    "@web-diary/compose": 0.0.0
     babel-plugin-react-intl: ^8.2.25
     next: ^10.0.5
     next-compose-plugins: ^2.2.1
+    pnp-webpack-plugin: ^1.6.4
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: ^5.13.5
+    styled-system: ^5.1.5
+    typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
+"@web-diary/compose@0.0.0, @web-diary/compose@workspace:practice/web-diary/compose":
+  version: 0.0.0-use.local
+  resolution: "@web-diary/compose@workspace:practice/web-diary/compose"
+  dependencies:
+    "@fragments/diary": 0.0.0
+    "@store/button-status": 0.0.0
+    "@store/post-data": 0.0.0
+    "@store/search-status": 0.0.0
+    "@types/node": ^14.15.4
+    "@types/react": ^17.0.3
+    "@types/react-intl": ^3.0.0
+    "@ui/theme": 0.0.0
+    babel-plugin-react-intl: ^8.2.25
     pnp-webpack-plugin: ^1.6.4
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -13576,10 +13606,12 @@ resolve@^2.0.0-next.3:
     "@types/node": ^16.3.1
     "@types/react": ^17.0.14
     "@types/react-dom": ^17.0.9
+    "@types/styled-system": ^5.1.11
     husky: ^7.0.1
     lerna: 3.22.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    styled-system: ^5.1.5
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft

@@ -9,6 +9,7 @@
     "@types/node": "^16.3.1",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
+    "@types/styled-system": "^5.1.11",
     "husky": "^7.0.1",
     "lerna": "3.22.1",
     "typescript": "^4.3.5"
@@ -25,6 +26,7 @@
   "dependencies": {
     "@atls/actl-format": "^0.0.17",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.5"
   }
 }

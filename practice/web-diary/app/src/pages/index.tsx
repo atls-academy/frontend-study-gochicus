@@ -1,7 +1,3 @@
-import App from "../App";
+export {default} from "@web-diary/compose"
 
-let Result
 
-export default Result = () => {
-  <App/>
-}
