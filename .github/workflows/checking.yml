@@ -23,4 +23,4 @@ jobs:
       - name: TypeCheck
         run: yarn typecheck
       - name: build src
-        run: yarn workspace @practice/web-diary build
+        run: yarn workspace @web-diary/app build
