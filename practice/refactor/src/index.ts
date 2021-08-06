@@ -32,9 +32,7 @@ const sponsors = {
 const { cash, eu, rus } = sponsors
 
 function calculateCash(...money): number {
-  return money.reduce((sum, currentValue) => {
-    return sum + currentValue
-  })
+  return money.reduce((sum, currentValue) => sum + currentValue)
 }
 const sum: number = calculateCash(...cash)
 

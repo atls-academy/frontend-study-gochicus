@@ -2,7 +2,7 @@
   "license": "BSD 3-Clause",
   "private": true,
   "scripts": {
-    "diary": "yarn workspace @practice/web-diary run start"
+    "diary": "yarn workspace @web-diary/app run start"
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",

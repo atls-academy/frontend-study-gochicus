@@ -1,3 +1,1 @@
-export {default} from "@web-diary/compose"
-
-
+export { default } from '@fragments/diary'

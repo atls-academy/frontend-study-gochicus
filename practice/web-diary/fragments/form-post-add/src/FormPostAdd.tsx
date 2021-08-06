@@ -18,7 +18,7 @@ export const FormPostAdd = () => {
   const [value, setValue] = useState('')
   useEffect(() => {
     setPostData(fetchInitialData())
-  }, [])
+  }, [setPostData])
   return (
     <Row justifyContent='space-between'>
       <Input

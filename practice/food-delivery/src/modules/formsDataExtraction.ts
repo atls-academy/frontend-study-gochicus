@@ -1,7 +1,6 @@
 import { sendFormData } from '../services/service'
 import { openModal }    from './modalWindow'
 import { closeModal }   from './modalWindow'
-import * as assert      from 'assert'
 
 const serverMessage = {
   loading: '../color-data/assets/img/spinner.svg',
