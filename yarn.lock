@@ -1178,7 +1178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl@npm:1.13.5":
+"@formatjs/intl@npm:1.13.5, @formatjs/intl@npm:^1.13.5":
   version: 1.13.5
   resolution: "@formatjs/intl@npm:1.13.5"
   dependencies:
@@ -2477,6 +2477,7 @@ __metadata:
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
+    "@formatjs/intl": ^1.13.5
     "@fragments/diary": 0.0.0
     "@store/button-status": 0.0.0
     "@store/post-data": 0.0.0

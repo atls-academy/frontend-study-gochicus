@@ -1724,6 +1724,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["virtual:122f67d6ca5b12d2857fcb1dac8af722ee61a37afdf7510e0a2b6e331f86b67299bb71641e4ea11fdf2817e2316754fbe2ed936a5815af3f7db24fdfecfb3e6b#npm:1.13.5", {
+          "packageLocation": "./.yarn/__virtual__/@formatjs-intl-virtual-aec3a4b5fd/0/cache/@formatjs-intl-npm-1.13.5-c71ae0ad8e-1e73fc117e.zip/node_modules/@formatjs/intl/",
+          "packageDependencies": [
+            ["@formatjs/intl", "virtual:122f67d6ca5b12d2857fcb1dac8af722ee61a37afdf7510e0a2b6e331f86b67299bb71641e4ea11fdf2817e2316754fbe2ed936a5815af3f7db24fdfecfb3e6b#npm:1.13.5"],
+            ["@formatjs/ecma402-abstract", "npm:1.9.6"],
+            ["@formatjs/fast-memoize", "npm:1.1.2"],
+            ["@formatjs/intl-displaynames", "npm:5.2.1"],
+            ["@formatjs/intl-listformat", "npm:6.3.1"],
+            ["@types/node", "npm:14.17.9"],
+            ["@types/typescript", null],
+            ["intl-messageformat", "npm:9.8.2"],
+            ["tslib", "npm:2.3.0"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "packagePeers": [
+            "@types/node",
+            "@types/typescript",
+            "typescript"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:131c7d6da5459e1631b6469214273993b760f3394ad83a88fb358c4742a0599d13a63618991835b7c2d5240dc82b7f6a28acb04f3e9db709984044eb50fc102f#npm:1.13.5", {
           "packageLocation": "./.yarn/__virtual__/@formatjs-intl-virtual-78db130e70/0/cache/@formatjs-intl-npm-1.13.5-c71ae0ad8e-1e73fc117e.zip/node_modules/@formatjs/intl/",
           "packageDependencies": [
@@ -3362,6 +3383,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls/next-config-with-pnp-workspaces", "npm:0.0.1"],
             ["@emotion/react", "virtual:8e110aa26078f1b5c5254d8448bd6eb873e5f66896ee6fa3aa504151ffd3c8d9244f7e83d16bc0851890bd7cad8ac50a6563cb10590b260952c1f6a1f8a8f8c9#npm:11.4.0"],
             ["@emotion/styled", "virtual:8e110aa26078f1b5c5254d8448bd6eb873e5f66896ee6fa3aa504151ffd3c8d9244f7e83d16bc0851890bd7cad8ac50a6563cb10590b260952c1f6a1f8a8f8c9#npm:11.3.0"],
+            ["@formatjs/intl", "virtual:122f67d6ca5b12d2857fcb1dac8af722ee61a37afdf7510e0a2b6e331f86b67299bb71641e4ea11fdf2817e2316754fbe2ed936a5815af3f7db24fdfecfb3e6b#npm:1.13.5"],
             ["@fragments/diary", "workspace:practice/web-diary/fragments/diary"],
             ["@store/button-status", "workspace:practice/web-diary/store/button-status"],
             ["@store/post-data", "workspace:practice/web-diary/store/post-data"],

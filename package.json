@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "yarn workspace @web-diary/app run dev",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "precommit": "yarn commit staged"
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",
@@ -13,11 +14,6 @@
     "@types/styled-system": "^5.1.11",
     "husky": "^7.0.1",
     "typescript": "^4.3.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "actl precommit"
-    }
   },
   "workspaces": [
     "lessons/**/*",
