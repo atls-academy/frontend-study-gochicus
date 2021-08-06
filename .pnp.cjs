@@ -27,6 +27,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:practice/web-diary/app"
       },
       {
+        "name": "@web-diary/with-aliases",
+        "reference": "workspace:practice/web-diary/app/src/helpers/withAliases"
+      },
+      {
+        "name": "@web-diary/with-webpack5",
+        "reference": "workspace:practice/web-diary/app/src/helpers/withFutureWebpack5"
+      },
+      {
         "name": "@fragments/diary",
         "reference": "workspace:practice/web-diary/fragments/diary"
       },
@@ -111,6 +119,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@ui/text", ["workspace:practice/web-diary/ui/text"]],
       ["@ui/theme", ["workspace:practice/web-diary/ui/theme"]],
       ["@web-diary/app", ["workspace:practice/web-diary/app"]],
+      ["@web-diary/with-aliases", ["workspace:practice/web-diary/app/src/helpers/withAliases"]],
+      ["@web-diary/with-webpack5", ["workspace:practice/web-diary/app/src/helpers/withFutureWebpack5"]],
       ["root-workspace-0b6124", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -4545,6 +4555,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-intl", "virtual:122f67d6ca5b12d2857fcb1dac8af722ee61a37afdf7510e0a2b6e331f86b67299bb71641e4ea11fdf2817e2316754fbe2ed936a5815af3f7db24fdfecfb3e6b#npm:5.20.6"],
             ["styled-system", "npm:5.1.5"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@web-diary/with-aliases", [
+        ["workspace:practice/web-diary/app/src/helpers/withAliases", {
+          "packageLocation": "./practice/web-diary/app/src/helpers/withAliases/",
+          "packageDependencies": [
+            ["@web-diary/with-aliases", "workspace:practice/web-diary/app/src/helpers/withAliases"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@web-diary/with-webpack5", [
+        ["workspace:practice/web-diary/app/src/helpers/withFutureWebpack5", {
+          "packageLocation": "./practice/web-diary/app/src/helpers/withFutureWebpack5/",
+          "packageDependencies": [
+            ["@web-diary/with-webpack5", "workspace:practice/web-diary/app/src/helpers/withFutureWebpack5"]
           ],
           "linkType": "SOFT",
         }]

@@ -9,9 +9,6 @@ export const injectGlobalStyles = () =>
       fontFamily: 'Gordita, sans-serif',
       height: '100%',
     },
-    '#root': {
-      height: '100%',
-    },
     '#__next': {
       height: '100%',
     },

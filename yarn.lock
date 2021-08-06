@@ -3568,6 +3568,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@web-diary/with-aliases@workspace:practice/web-diary/app/src/helpers/withAliases":
+  version: 0.0.0-use.local
+  resolution: "@web-diary/with-aliases@workspace:practice/web-diary/app/src/helpers/withAliases"
+  languageName: unknown
+  linkType: soft
+
+"@web-diary/with-webpack5@workspace:practice/web-diary/app/src/helpers/withFutureWebpack5":
+  version: 0.0.0-use.local
+  resolution: "@web-diary/with-webpack5@workspace:practice/web-diary/app/src/helpers/withFutureWebpack5"
+  languageName: unknown
+  linkType: soft
+
 "@webassemblyjs/ast@npm:1.11.1":
   version: 1.11.1
   resolution: "@webassemblyjs/ast@npm:1.11.1"

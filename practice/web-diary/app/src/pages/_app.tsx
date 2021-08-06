@@ -6,7 +6,7 @@ import { ButtonStatusProvider }              from '@store/button-status'
 import { SearchValueProvider }               from '@store/search-status'
 import { useState }                          from 'react'
 
-function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   injectGlobalStyles()
   const [postData, setPostData] = useState([])
   const [status, setStatus] = useState('all')
@@ -26,4 +26,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default App
