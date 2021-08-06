@@ -2,7 +2,7 @@
   "name": "@web-diary/app",
   "version": "0.0.0",
   "license": "BSD 3-Clause",
-  "main": "index.tsx",
+  "main": "src/index.ts",
   "scripts": {
     "build": "yarn app renderer build --export",
     "dev": "yarn app renderer dev",
