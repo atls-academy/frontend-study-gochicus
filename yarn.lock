@@ -1107,7 +1107,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ecma402-abstract@npm:1.9.6":
+"@formatjs/ecma402-abstract@npm:1.9.6, @formatjs/ecma402-abstract@npm:^1.9.6":
   version: 1.9.6
   resolution: "@formatjs/ecma402-abstract@npm:1.9.6"
   dependencies:
@@ -1126,7 +1126,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:2.0.9":
+"@formatjs/icu-messageformat-parser@npm:2.0.9, @formatjs/icu-messageformat-parser@npm:^2.0.9":
   version: 2.0.9
   resolution: "@formatjs/icu-messageformat-parser@npm:2.0.9"
   dependencies:
@@ -2477,6 +2477,8 @@ __metadata:
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
+    "@formatjs/ecma402-abstract": ^1.9.6
+    "@formatjs/icu-messageformat-parser": ^2.0.9
     "@formatjs/intl": ^1.13.5
     "@fragments/diary": 0.0.0
     "@store/button-status": 0.0.0
@@ -2494,7 +2496,7 @@ __metadata:
     next-compose-plugins: ^2.2.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    react-intl: ^5.13.5
+    react-intl: ^5.20.7
     styled-system: ^5.1.5
     typescript: ^4.3.5
   languageName: unknown
@@ -5227,9 +5229,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.723, electron-to-chromium@npm:^1.3.793":
-  version: 1.3.798
-  resolution: "electron-to-chromium@npm:1.3.798"
-  checksum: 60804d86ae238b7965244ceb098288d628c64e3e969f10bdac6c3f8ac796656f27ff0ff55383beccef4de8589c6e6e1aa1253ac0fd1f4843033bd62d0291688d
+  version: 1.3.799
+  resolution: "electron-to-chromium@npm:1.3.799"
+  checksum: 92efd7606ad0380238aafe455ce7030b85d68f5e4a2336711370e83b49c79dbd081f8b62aa308552562ea500f548a83be2146a2b779449f31817d2a23fd9e68d
   languageName: node
   linkType: hard
 
@@ -7243,9 +7245,9 @@ __metadata:
   linkType: hard
 
 "is-bigint@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "is-bigint@npm:1.0.2"
-  checksum: 5268edbde844583d8d5ce86f8e47669bf9dd9b3d4de0238b25bb2ddfc620b47e0e226171a906f19ac4c10debba160353fb98c134d0309898495e1b691efcfb80
+  version: 1.0.3
+  resolution: "is-bigint@npm:1.0.3"
+  checksum: d52ab4fa6491a315b0c1d09f91cc538c242dd134d2ace3751341f3f38c036d37b5d6b6153b927b57bb78ed9f839415144a966c9141132ed870c65368cba0bf9c
   languageName: node
   linkType: hard
 
@@ -7579,7 +7581,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-typed-array@npm:^1.1.3, is-typed-array@npm:^1.1.5":
+"is-typed-array@npm:^1.1.3, is-typed-array@npm:^1.1.6":
   version: 1.1.6
   resolution: "is-typed-array@npm:1.1.6"
   dependencies:
@@ -10447,7 +10449,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intl@npm:*, react-intl@npm:^5.13.5":
+"react-intl@npm:*, react-intl@npm:^5.13.5, react-intl@npm:^5.20.7":
   version: 5.20.7
   resolution: "react-intl@npm:5.20.7"
   dependencies:
@@ -11236,9 +11238,9 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "smart-buffer@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "smart-buffer@npm:4.1.0"
-  checksum: 1db847dcf92c06b36e96aace965e00aec5caccd65c8fd60e0c284c5ad9dabe7f16ef4a60a34dd3c4ccc245a8393071e646fc94fc95f111c25e8513fd9efa6ed5
+  version: 4.2.0
+  resolution: "smart-buffer@npm:4.2.0"
+  checksum: b5167a7142c1da704c0e3af85c402002b597081dd9575031a90b4f229ca5678e9a36e8a374f1814c8156a725d17008ae3bde63b92f9cfd132526379e580bec8b
   languageName: node
   linkType: hard
 
@@ -12865,16 +12867,16 @@ typescript@^3.2.4:
   linkType: hard
 
 "which-typed-array@npm:^1.1.2":
-  version: 1.1.5
-  resolution: "which-typed-array@npm:1.1.5"
+  version: 1.1.6
+  resolution: "which-typed-array@npm:1.1.6"
   dependencies:
     available-typed-arrays: ^1.0.4
     call-bind: ^1.0.2
     es-abstract: ^1.18.5
     foreach: ^2.0.5
     has-tostringtag: ^1.0.0
-    is-typed-array: ^1.1.5
-  checksum: 278d8b0de09979b14320a7f7cfa397d97b29fcc5e29ad1d1161b339e4df8196002dee6215c3e57434fd0a9140b51f94dd8b8dc25795624aa2176f2ab0445c833
+    is-typed-array: ^1.1.6
+  checksum: 95527a7b546150be6de849834b150296cd05056fed94c4364980c8f3c2970172976d878bb8f1fd924b894dd91033d95f351c58575944e0e770abb938e52fb33f
   languageName: node
   linkType: hard
 

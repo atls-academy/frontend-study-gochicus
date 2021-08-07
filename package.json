@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn workspace @web-diary/app run dev",
-    "postinstall": "husky install",
+    "postinstall": "husky install .config/husky",
     "precommit": "yarn commit staged"
   },
   "devDependencies": {
