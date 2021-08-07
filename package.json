@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn workspace @web-diary/app run dev",
-    "postinstall": "husky install .config/husky",
-    "precommit": "yarn commit staged"
+    "postinstall": "husky install .config/husky"
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",

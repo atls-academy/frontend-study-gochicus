@@ -1126,7 +1126,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:2.0.9, @formatjs/icu-messageformat-parser@npm:^2.0.9":
+"@formatjs/icu-messageformat-parser@npm:*, @formatjs/icu-messageformat-parser@npm:2.0.9":
   version: 2.0.9
   resolution: "@formatjs/icu-messageformat-parser@npm:2.0.9"
   dependencies:
@@ -2477,8 +2477,6 @@ __metadata:
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
-    "@formatjs/ecma402-abstract": ^1.9.6
-    "@formatjs/icu-messageformat-parser": ^2.0.9
     "@formatjs/intl": ^1.13.5
     "@fragments/diary": 0.0.0
     "@store/button-status": 0.0.0

@@ -10,8 +10,6 @@
   },
   "devDependencies": {
     "@atls/next-config-with-pnp-workspaces": "^0.0.1",
-    "@formatjs/ecma402-abstract": "^1.9.6",
-    "@formatjs/icu-messageformat-parser": "^2.0.9",
     "@formatjs/intl": "^1.13.5",
     "@types/events": "^3",
     "@types/express": "^4",
