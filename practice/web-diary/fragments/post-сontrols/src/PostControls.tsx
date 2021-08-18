@@ -23,7 +23,7 @@ export const PostControls = () => {
           <Input
             size='big'
             placeholder={intl.formatMessage(messages.search)}
-            onChange={event => {
+            onChange={(event) => {
               setStatus('search')
               setSearchValue(event.target.value)
             }}

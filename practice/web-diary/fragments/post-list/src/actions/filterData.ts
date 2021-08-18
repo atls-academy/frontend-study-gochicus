@@ -1,5 +1,5 @@
 export const filterData = (postData, status, searchValue) => {
-  const filtered = postData.filter(item => {
+  const filtered = postData.filter((item) => {
     let result
     if (status === 'all') {
       result = true

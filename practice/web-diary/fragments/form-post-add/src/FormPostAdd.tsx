@@ -18,13 +18,13 @@ export const FormPostAdd = () => {
   const [value, setValue] = useState('')
   useEffect(() => {
     setPostData(fetchInitialData())
-  }, [])
+  }, [setPostData])
   return (
     <Row justifyContent='space-between'>
       <Input
         size='big'
         placeholder={intl.formatMessage(messages.yourPost)}
-        onChange={event => setValue(event.target.value)}
+        onChange={(event) => setValue(event.target.value)}
         value={value}
       />
       <Layout flexBasis='10px' />

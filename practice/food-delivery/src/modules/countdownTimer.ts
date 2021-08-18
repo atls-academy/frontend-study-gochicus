@@ -21,11 +21,11 @@ function getZero(num: number): string | number {
   return num
 }
 function setTimer(selector: any, endTime: string) {
-  const timer: HTMLElement = document.querySelector(selector)
-  const days: HTMLElement = timer.querySelector('#days')
-  const hours: HTMLElement = timer.querySelector('#hours')
-  const minutes: HTMLElement = timer.querySelector('#minutes')
-  const seconds: HTMLElement = timer.querySelector('#seconds')
+  const timer = document.querySelector(selector) as HTMLElement
+  const days = timer.querySelector('#days') as HTMLElement
+  const hours = timer.querySelector('#hours') as HTMLElement
+  const minutes = timer.querySelector('#minutes') as HTMLElement
+  const seconds = timer.querySelector('#seconds') as HTMLElement
 
   function updateTimer() {
     const timeInterval = setInterval(updateTimer, 1000)

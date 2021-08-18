@@ -1,5 +1,5 @@
 function closeModal() {
-  const modalWindow: HTMLElement = document.querySelector('.modal')
+  const modalWindow = document.querySelector('.modal') as HTMLElement
 
   modalWindow.classList.add('hide')
   modalWindow.classList.remove('show')
@@ -7,7 +7,7 @@ function closeModal() {
 }
 
 function openModal() {
-  const modalWindow: HTMLElement = document.querySelector('.modal')
+  const modalWindow = document.querySelector('.modal') as HTMLElement
 
   modalWindow.classList.add('show')
   modalWindow.classList.remove('hide')
@@ -15,12 +15,12 @@ function openModal() {
 }
 function userModalWindow(triggerSelector: string, modalSelector: string) {
   const modalTrigger: NodeListOf<Element> = document.querySelectorAll(triggerSelector)
-  const modalWindow: HTMLElement = document.querySelector(modalSelector)
+  const modalWindow = document.querySelector(modalSelector) as HTMLElement
 
-  modalTrigger.forEach(button => {
+  modalTrigger.forEach((button) => {
     button.addEventListener('click', openModal)
   })
-  modalWindow.addEventListener('click', event => {
+  modalWindow.addEventListener('click', (event) => {
     if (
       event.target === modalWindow ||
       (event.target as HTMLElement).getAttribute('data-close') === ''

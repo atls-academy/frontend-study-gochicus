@@ -1,5 +1,5 @@
 export const importantItem = (postData, id, value) => {
-  const index = postData.findIndex(customElements => customElements.id === id)
+  const index = postData.findIndex((customElements) => customElements.id === id)
   const currentPost = postData[index]
   const newPost = { ...currentPost, important: value }
 

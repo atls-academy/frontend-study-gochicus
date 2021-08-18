@@ -1,1 +1,3 @@
-export * from './Diary'
+import { Diary } from './Diary'
+
+export default Diary

@@ -3,7 +3,7 @@ const movieDB = {
 }
 function replaceOrder() {
   const filmOrder: Array<string> = movieDB.movies.sort()
-  const ul: HTMLElement = document.querySelector('.promo__interactive-list')
+  const ul = document.querySelector('.promo__interactive-list') as HTMLElement
   ul.innerHTML = ''
   filmOrder.forEach((item, i): void => {
     ul.innerHTML += ` <li class="promo__interactive-item"> ${i + 1}) ${item}
@@ -21,13 +21,13 @@ function removeAds(): void {
 }
 removeAds()
 function changeGenre() {
-  const genre: HTMLElement = document.querySelector('.promo__genre')
+  const genre = document.querySelector('.promo__genre') as HTMLElement
   genre.textContent = 'Драма'
 }
 changeGenre()
 
 function changeBackground() {
-  const backgroundImage: HTMLElement = document.querySelector('.promo__bg')
+  const backgroundImage = document.querySelector('.promo__bg') as HTMLElement
   backgroundImage.style.backgroundImage = 'url("img/bg.jpg")'
 }
 changeBackground()
